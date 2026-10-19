@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+# Environment and local settings
+.env
+.env.*
+!.env.example
+!.env.*.example
+.claude/settings.local.json
+.codex/settings.local.json
+.Codex/settings.local.json
+# Credentials and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials*.json
+service-account*.json
+.aws/
+.ssh/
+# Build outputs and caches
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.cache/
+.vite/
+coverage/
+# Logs
+*.log
+# Database dumps and backups
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+backups/
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo

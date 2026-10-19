@@ -84,7 +84,7 @@
   }
   </script>
 </head>
-<body>
+<body class="case" style="--case-bg:#e8e5de">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="page case">
@@ -116,7 +116,7 @@
         </dl>
       </section>
 
-      <figure class="fig-full" style="padding-bottom:48px">
+      <figure class="fig-full case-hero-image">
         <img src="assets/img/sorbot-home.webp" alt="Sorbot’s dedicated workspace: a greeting, a message composer, four starter actions and a model selector reading Llama V3 70B Instruct" width="1440" height="900" fetchpriority="high">
         <figcaption class="fig-caption">Sorbot’s dedicated workspace: a familiar composer, starter actions and a visible model selector.</figcaption>
       </figure>
@@ -138,7 +138,7 @@
       </section>
 
       <!-- 01 Context -->
-      <section class="ed" aria-labelledby="s-context">
+      <section class="ed" data-nav="Context" aria-labelledby="s-context">
         <p class="label">Context</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-context">Helping users navigate technical complexity.</h2>
@@ -153,7 +153,7 @@
       <hr class="rule">
 
       <!-- 02 Design challenge -->
-      <section class="ed" aria-labelledby="s-challenge">
+      <section class="ed" data-nav="Challenge" aria-labelledby="s-challenge">
         <p class="label">Design challenge</p>
         <div class="quote">
           <h2 class="quote__title" id="s-challenge" style="font-size:clamp(32px,4.2vw,60px);letter-spacing:-0.042em">How can AI help users configure a complex workspace?</h2>
@@ -178,7 +178,7 @@
       <hr class="rule">
 
       <!-- 03 Pattern research -->
-      <section class="ed" aria-labelledby="s-research">
+      <section class="ed" data-nav="Research" aria-labelledby="s-research">
         <p class="label">Pattern research</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-research">Learning from familiar AI interfaces.</h2>
@@ -199,7 +199,7 @@
       <hr class="rule">
 
       <!-- 04 Design decisions -->
-      <section class="ed" aria-labelledby="s-decisions">
+      <section class="ed" data-nav="Decisions" aria-labelledby="s-decisions">
         <p class="label">Design decisions</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-decisions">Two places to ask for help.</h2>
@@ -263,7 +263,7 @@
       <hr class="rule">
 
       <!-- 05 Stakeholder review -->
-      <section class="ed" aria-labelledby="s-review">
+      <section class="ed" data-nav="Review" aria-labelledby="s-review">
         <p class="label">Iteration &amp; stakeholder review</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-review">Reviewing beyond the project team.</h2>
@@ -275,7 +275,7 @@
       </section>
 
       <!-- 06 Outcome -->
-      <section class="ed" aria-labelledby="s-outcome">
+      <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
         <p class="label">Design outcome &amp; next validation</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-outcome">An assistant designed around the task.</h2>
@@ -300,8 +300,13 @@
       </section>
 
       <hr class="rule">
-      <nav class="next" aria-label="More work">
-        <span class="label">Continue exploring</span>
+      <nav class="next-case" aria-label="Next case study">
+        <a class="next-case__card" href="vision.html" style="--case-bg:#d6e3de">
+          <span class="label">Next case study</span>
+          <span class="next-case__title">Vision</span>
+          <span class="next-case__tag">From forms to a node canvas</span>
+          <span class="next-case__arrow arrow" aria-hidden="true">→</span>
+        </a>
         <a class="textlink textlink--accent textlink--up" href="./#work">Back to selected work <span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
 

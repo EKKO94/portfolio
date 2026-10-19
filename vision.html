@@ -84,7 +84,7 @@
   }
   </script>
 </head>
-<body>
+<body class="case" style="--case-bg:#d6e3de">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="page case">
@@ -139,7 +139,7 @@
       </section>
 
       <!-- 01 Context -->
-      <section class="section" aria-labelledby="s-context">
+      <section class="section" data-nav="Context" aria-labelledby="s-context">
         <div class="split">
           <div class="split__left">
             <p class="label">Context</p>
@@ -162,7 +162,7 @@
       </section>
 
       <!-- 02 Problem -->
-      <section class="section" aria-labelledby="s-problem">
+      <section class="section" data-nav="Problem" aria-labelledby="s-problem">
         <div class="section__stack">
           <div class="split">
             <div class="split__left">
@@ -209,7 +209,7 @@
       </section>
 
       <!-- 03 Research -->
-      <section class="section--tight" aria-labelledby="s-research">
+      <section class="section--tight" data-nav="Research" aria-labelledby="s-research">
         <div class="quote">
           <p class="label">Research</p>
           <h2 class="quote__title" id="s-research">Finding a visual model for a technical workflow.</h2>
@@ -269,7 +269,7 @@
       </section>
 
       <!-- 04 Solution -->
-      <section class="section" aria-labelledby="s-solution">
+      <section class="section" data-nav="Solution" aria-labelledby="s-solution">
         <div class="section__stack" style="gap:56px">
           <div class="split">
             <div class="split__left">
@@ -319,7 +319,7 @@
       </section>
 
       <!-- 05 Iteration -->
-      <section class="section" aria-labelledby="s-iteration">
+      <section class="section" data-nav="Iteration" aria-labelledby="s-iteration">
         <div class="section__stack">
           <div class="split">
             <div class="split__left">
@@ -332,10 +332,10 @@
           </div>
 
           <ol class="quad">
-            <li class="card card--loop" data-reveal><span class="card__num">01</span><h3 class="card__title">Design</h3><p>Explore interactions and map the configuration flow.</p></li>
-            <li class="card card--loop" data-reveal style="--d:60ms"><span class="card__num">02</span><h3 class="card__title">Build</h3><p>Work with developers to implement the flow.</p></li>
-            <li class="card card--loop" data-reveal style="--d:120ms"><span class="card__num">03</span><h3 class="card__title">Feedback</h3><p>Review the working interface and technical constraints.</p></li>
-            <li class="card card--loop" data-reveal style="--d:180ms"><span class="card__num">04</span><h3 class="card__title">Iterate</h3><p>Revise the design and repeat the loop.</p></li>
+            <li class="card card--loop" data-reveal><span class="card__num">01</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M240-120q-45 0-89-22t-71-58q26 0 53-20.5t27-59.5q0-50 35-85t85-35q50 0 85 35t35 85q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 23-5.5 42T220-202q5 2 10 2h10Zm230-160L360-470l358-358q11-11 27.5-11.5T774-828l54 54q12 12 12 28t-12 28L470-360Zm-190 80Z"/></svg></span><h3 class="card__title">Design</h3><p>Explore interactions and map the configuration flow.</p></li>
+            <li class="card card--loop" data-reveal style="--d:60ms"><span class="card__num">02</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg></span><h3 class="card__title">Build</h3><p>Work with developers to implement the flow.</p></li>
+            <li class="card card--loop" data-reveal style="--d:120ms"><span class="card__num">03</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></span><h3 class="card__title">Feedback</h3><p>Review the working interface and technical constraints.</p></li>
+            <li class="card card--loop" data-reveal style="--d:180ms"><span class="card__num">04</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z"/></svg></span><h3 class="card__title">Iterate</h3><p>Revise the design and repeat the loop.</p></li>
           </ol>
 
           <div class="section__stack" style="gap:40px">
@@ -389,7 +389,7 @@
       </section>
 
       <!-- 06 Reflection -->
-      <section class="section" aria-labelledby="s-reflection">
+      <section class="section" data-nav="Reflection" aria-labelledby="s-reflection">
         <div class="split">
           <div class="split__left">
             <p class="label">Reflection</p>
@@ -410,8 +410,13 @@
       </section>
 
       <hr class="divider">
-      <nav class="next" aria-label="More work">
-        <span class="label">Continue exploring</span>
+      <nav class="next-case" aria-label="Next case study">
+        <a class="next-case__card" href="sorbot.html" style="--case-bg:#e8e5de">
+          <span class="label">Next case study</span>
+          <span class="next-case__title">Sorbot</span>
+          <span class="next-case__tag">AI assistant inside the workflow</span>
+          <span class="next-case__arrow arrow" aria-hidden="true">→</span>
+        </a>
         <a class="textlink textlink--accent textlink--up" href="./#work">Back to selected work <span class="arrow" aria-hidden="true">↗</span></a>
       </nav>
 

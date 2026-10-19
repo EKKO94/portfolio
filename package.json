@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "description": "Static portfolio site. No dependencies; scripts only serve the folder locally.",
+  "scripts": {
+    "dev": "pnpm dlx serve@14.2.4 -l 3000 .",
+    "start": "pnpm dlx serve@14.2.4 -l 3000 ."
+  }
+}

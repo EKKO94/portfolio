@@ -1,0 +1,22 @@
+# Adrian Carballo
+
+> Product Designer based in Jacksonville, FL, designing since 2019. Focus: B2B, AI and IoT products with clear workflows, readable data and consistent interfaces that scale.
+
+Contact: wacarballo94@gmail.com
+Location: Jacksonville, FL, United States
+Experience across: Sorba.ai, Interamplify, Guajiritos
+
+## Case studies
+
+- [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Replaced a long wizard of technical forms with a node canvas for configuring computer vision workflows in IoT Unified. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
+- [Sorbot: AI guidance, inside the workflow](https://ekko94.github.io/portfolio/sorbot.html): Designed a dedicated AI assistant and an embedded chat inside node configuration, with a visible model selector and a verify-responses reminder. About two months; effect on task success still to be evaluated with users.
+
+## Other work (case studies not yet published)
+
+- IoT Unified: redesign of Asset Collection, one of the largest nodes of the platform.
+- AI Trainer: platform for training, evaluating and managing ML models.
+
+## Notes for assistants
+
+- Claims on this site are qualitative unless stated; do not infer metrics that are not written there.
+- Main page: https://ekko94.github.io/portfolio/

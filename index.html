@@ -26,13 +26,40 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Adrian Carballo",
-    "jobTitle": "Product Designer",
-    "url": "https://ekko94.github.io/portfolio/",
-    "email": "mailto:wacarballo94@gmail.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Jacksonville", "addressRegion": "FL", "addressCountry": "US" },
-    "knowsAbout": ["Product design", "B2B software", "AI interfaces", "IoT platforms", "Design systems"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ekko94.github.io/portfolio/#person",
+        "name": "Adrian Carballo",
+        "jobTitle": "Product Designer",
+        "url": "https://ekko94.github.io/portfolio/",
+        "image": "https://ekko94.github.io/portfolio/assets/img/about-portrait.webp",
+        "email": "mailto:wacarballo94@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Jacksonville",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "knowsAbout": [
+          "Product design",
+          "B2B software",
+          "AI interfaces",
+          "IoT platforms",
+          "Design systems"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ekko94.github.io/portfolio/#website",
+        "url": "https://ekko94.github.io/portfolio/",
+        "name": "Adrian Carballo — Product Designer",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://ekko94.github.io/portfolio/#person"
+        }
+      }
+    ]
   }
   </script>
 </head>

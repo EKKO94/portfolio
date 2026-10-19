@@ -655,7 +655,7 @@ section[id] { scroll-margin-top: 24px; }
   letter-spacing: -0.024em;
   text-wrap: balance;
 }
-.lead, .ed__text p, .card p, .cap__text, .principle__text { text-wrap: pretty; }
+.lead, .ed__text p, .card p, .cap__text { text-wrap: pretty; }
 .lead { font-size: clamp(16px, 1.25vw, 18px); line-height: 1.56; color: var(--muted); }
 .lead--ink { color: var(--ink); font-size: 17px; line-height: 1.53; }
 
@@ -670,7 +670,6 @@ section[id] { scroll-margin-top: 24px; }
 
 .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .triple { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.triple--wide { gap: 40px; }
 .quad { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 
 .figure { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
@@ -709,14 +708,6 @@ section[id] { scroll-margin-top: 24px; }
 .statement { max-width: 1100px; font-weight: 500; font-size: clamp(20px, 1.7vw, 24px); line-height: 1.42; }
 .footnote { font-family: var(--mono); font-weight: 500; font-size: 12px; line-height: 1.5; letter-spacing: 0.3px; color: var(--muted-2); }
 
-.principle { display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 1px solid var(--ink); }
-.principle__num { font-family: var(--mono); font-weight: 500; font-size: 12px; color: var(--muted); }
-.principle__title { font-weight: 800; font-size: clamp(20px, 1.7vw, 24px); line-height: 1.3; letter-spacing: -0.017em; }
-.principle__text { font-size: 16px; line-height: 1.5; color: var(--muted); }
-.principle--wide { gap: 10px; padding-top: 20px; }
-.principle__big { font-weight: 800; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.3; letter-spacing: -0.019em; max-width: 1180px; }
-.question { display: flex; flex-direction: column; gap: 8px; padding-top: 16px; border-top: 1px solid var(--ink); }
-.question p { font-weight: 500; font-size: 19px; line-height: 1.4; }
 
 .decision { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 840px); gap: 80px; align-items: center; justify-content: space-between; }
 .decision--flip { grid-template-columns: minmax(0, 840px) minmax(0, 400px); }
@@ -745,9 +736,6 @@ section[id] { scroll-margin-top: 24px; }
 .ed__text p { font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--muted); }
 .ed__text p.small { font-size: clamp(16px, 1.25vw, 18px); line-height: 1.56; }
 .ed .h2--ed { font-size: clamp(30px, 3.1vw, 44px); line-height: 1.11; letter-spacing: -0.03em; }
-.ed .triple h3 { font-weight: 800; font-size: clamp(20px, 1.7vw, 24px); line-height: 1.25; letter-spacing: -0.054em; }
-.ed .triple p { font-size: clamp(16px, 1.25vw, 18px); line-height: 1.56; color: var(--muted); }
-.ed .triple > div { display: flex; flex-direction: column; gap: 14px; }
 .refs { display: flex; flex-wrap: wrap; gap: 8px 24px; font-weight: 800; font-size: 26px; line-height: 1.23; letter-spacing: -0.05em; color: var(--ink); }
 .refs li { min-width: 120px; flex: 1 1 120px; max-width: 264px; }
 .note { display: flex; flex-direction: column; gap: 12px; padding: 24px 32px; background: var(--surface); color: var(--muted); }
@@ -766,7 +754,7 @@ section[id] { scroll-margin-top: 24px; }
   .split, .decision, .decision--flip { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .decision--flip .shot { order: 2; }
   .glance { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 64px; }
-  .pair, .triple, .triple--wide { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .pair, .triple { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section { padding-bottom: 72px; }
   .case-hero { padding-block: 40px 40px; gap: 28px; }
@@ -777,8 +765,6 @@ section[id] { scroll-margin-top: 24px; }
 @media (max-width: 520px) {
   .quad { grid-template-columns: minmax(0, 1fr); }
   .meta { gap: 20px 40px; }
-  .shot--hero { aspect-ratio: 4 / 3; }
-  .shot--decision { aspect-ratio: 4 / 3; }
 }
 
 /* --------------------------------------------------------------------------
@@ -962,8 +948,7 @@ h1, h2, h3 { text-wrap: balance; }
 .case-validation li::before { content: counter(validation, decimal-leading-zero); font: 500 13px/1.5 var(--mono); color: var(--accent); }
 .case-validation h4 { font-size: 20px; line-height: 1.3; font-weight: 600; }
 .case-validation p { max-width: 70ch; color: var(--muted); font-size: 17px; line-height: 1.55; }
-.placeholder { padding: 24px; border: 1px dashed var(--muted); border-radius: 12px; background: var(--case-bg); }
-.placeholder figcaption { display: flex; flex-direction: column; gap: 10px; max-width: 78ch; }
+.placeholder { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px dashed var(--muted); border-radius: 12px; background: var(--case-bg); }
 .placeholder strong { color: var(--ink); font-size: 17px; line-height: 1.4; font-weight: 600; }
 .placeholder p, .card .placeholder p { color: var(--ink-2); font-size: 16px; line-height: 1.5; }
 

@@ -149,14 +149,14 @@
             <p>IoT Unified brings together a large volume of data and many configurable nodes. The company wanted an assistant for questions about node setup and configuration. The design needed to offer help while leaving room for the task itself.</p>
             <div class="contrib">
               <h3 class="label">My contribution</h3>
-              <ul>
+              <ul role="list">
                 <li>Reviewed conversational interface patterns and adapted them to IoT Unified.</li>
                 <li>Designed the dedicated workspace and embedded assistant panel.</li>
                 <li>Designed model selection, starter actions and prompt suggestions.</li>
               </ul>
             </div>
             <p class="small">I reviewed proposals with developers from unrelated projects. They were peer reviewers, not the industrial users who would configure nodes. Direct user access was unavailable, so I could not validate their needs or working habits firsthand.</p>
-            <p class="small">This case covers the interface design: how people ask, choose a model and check an answer.</p>
+            <p class="small">This case covers the interface design: how people ask questions, choose a model and are prompted to verify responses.</p>
           </div>
         </div>
       </section>
@@ -170,7 +170,7 @@
           <h2 class="h2 h2--ed" id="s-research">Learning from familiar AI interfaces.</h2>
           <div class="ed__text">
             <p>I explored ChatGPT, Gemini, DeepSeek and other AI products as references, then iterated on what could fit IoT Unified. This was a review of interface patterns, separate from research with end users.</p>
-            <ul class="refs" aria-label="Reference products">
+            <ul class="refs" role="list" aria-label="Reference products">
               <li>ChatGPT</li>
               <li>Gemini</li>
               <li>DeepSeek</li>
@@ -196,7 +196,7 @@
         <figure class="case-map" aria-labelledby="sorbot-map-caption">
           <div class="case-map__head">
             <p class="label">Illustrative map of the design intent</p>
-            <p class="statement">Two entry points. The same need to check an answer.</p>
+            <p class="statement">Two entry points. One intended flow.</p>
           </div>
           <div class="pair case-map__routes">
             <div class="reflect"><h3>Dedicated workspace</h3><p>Room for a broader conversation, starter actions and model selection.</p></div>
@@ -259,17 +259,17 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-verify">Guidance still needs verification.</h2>
           <div class="ed__text">
-            <p>I included a reminder to verify Sorbot’s responses. An answer should be checked before it informs a configuration change. The reminder alone does not show whether users can do that.</p>
+            <p>I included a reminder to verify Sorbot’s responses. An answer should be checked before it informs a configuration change. Next, I would test whether users can verify an answer before changing configuration.</p>
             <div class="note note--tall">
               <p class="label">In-product reminder</p>
               <blockquote class="big">SORBOT isn’t perfect—it’s a good idea to verify its responses.</blockquote>
             </div>
-            <p class="small">A next design task is to make uncertainty actionable: what should someone see when an answer is incomplete, unsupported or cannot be checked? Those response states are not established by the screens shown here.</p>
+            <p class="small">A next design task is to make uncertainty actionable: what should someone see when an answer is incomplete, unsupported or cannot be checked?</p>
           </div>
         </div>
-        <figure class="placeholder" data-placeholder="sorbot-response-states">
-          <figcaption><strong>Placeholder · answer and uncertainty states</strong><p>If designed: two 4:3 conversation crops, a configuration answer and an uncertain or unsupported response, with any verification or recovery controls. Otherwise, remove this block.</p></figcaption>
-        </figure>
+        <aside class="placeholder" data-placeholder="sorbot-response-states">
+          <strong>Placeholder · answer and uncertainty states</strong><p>A configuration answer and an unsupported response, with any verification or recovery controls (4:3 crops).</p>
+        </aside>
       </section>
 
       <hr class="rule">
@@ -281,12 +281,12 @@
           <h2 class="h2 h2--ed" id="s-review">Reviewing beyond the project team.</h2>
           <div class="ed__text">
             <p>The project took approximately two months. Company practice did not give me direct access to real users in the industrial sector, so I invited developers from other, unrelated projects to review the design as I iterated.</p>
-            <p class="small">That gave me an outside perspective on the interface. It did not replace validation with people configuring nodes in their day-to-day work, and the screens here do not document a specific feedback-to-revision example.</p>
+            <p class="small">That gave me an outside perspective on the interface. It did not replace validation with people configuring nodes in their day-to-day work.</p>
           </div>
         </div>
-        <figure class="placeholder" data-placeholder="sorbot-review-iteration">
-          <figcaption><strong>Placeholder · review-driven revision</strong><p>Two matched 16:10 design exports, before and after a real review, with the reviewer’s role and the note that explains the change.</p></figcaption>
-        </figure>
+        <aside class="placeholder" data-placeholder="sorbot-review-iteration">
+          <strong>Placeholder · review-driven revision</strong><p>An earlier and a revised design side by side (16:10), with the reviewer’s role and the change it prompted.</p>
+        </aside>
       </section>
 
       <!-- 06 Outcome -->
@@ -295,13 +295,13 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-outcome">Two ways to ask.<br>Next: validate with users.</h2>
           <div class="ed__text">
-            <p>The design work brings together a dedicated assistant, chat within a node flow, model selection and starting prompts. The designs show those interface decisions.</p>
+            <p>The design work brings together a dedicated assistant, chat within a node flow, model selection and starting prompts.</p>
             <p>Configuration success, completion time and support needs are the outcomes to evaluate next with end users.</p>
           </div>
         </div>
-        <figure class="placeholder" data-placeholder="sorbot-walkthrough">
-          <figcaption><strong>Placeholder · Sorbot walkthrough</strong><p>A 10 to 15 second silent recording: open Sorbot, choose a model, use a starter action, then show the embedded panel beside a form.</p></figcaption>
-        </figure>
+        <aside class="placeholder" data-placeholder="sorbot-walkthrough">
+          <strong>Placeholder · Sorbot walkthrough</strong><p>Short silent recording: open Sorbot, choose a model, use a starter action, then the embedded panel beside a form.</p>
+        </aside>
 
         <div class="reflect">
           <h3 class="decision__title">What I would test next</h3>
@@ -320,7 +320,7 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-reflection">A familiar chat UI is only the starting point.</h2>
           <div class="ed__text">
-            <p>Looking back, the unresolved part is what happens after the answer. A visible model name and a verification reminder expose choices, but neither explains how to make them well.</p>
+            <p>My next priority is to test how users choose a model and verify an answer during configuration.</p>
             <p>I would bring industrial users in earlier and test one configuration task end to end before expanding the interface. That would help me decide which prompts, model controls and response states earn their place.</p>
           </div>
         </div>

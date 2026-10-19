@@ -154,7 +154,7 @@
             <p class="lead">The task was to connect a video source, choose how to process it and configure detection. The old setup exposed technical settings before it showed how those parts fit together.</p>
             <div class="contrib">
               <h3 class="label">My contribution</h3>
-              <ul>
+              <ul role="list">
                 <li>Researched node-based tools and adapted the pattern to Vision.</li>
                 <li>Defined the canvas, tools palette and contextual configuration.</li>
                 <li>Designed the guided setup flow around stream processing.</li>
@@ -182,7 +182,7 @@
           <figure class="flowcmp" aria-label="Setup flow, before and after (schematic)">
             <div class="flowrow">
               <p class="flowrow__label">Before · a wizard of forms</p>
-              <ol class="flow">
+              <ol class="flow" role="list">
                 <li class="flow__step"><span class="flow__name">General Information</span></li>
                 <li class="flow__step"><span class="flow__name">Camera Configuration</span><span class="flow__sub">Five sub-steps: Information, Motion, Detections, Records, Snapshots</span></li>
                 <li class="flow__step"><span class="flow__name">Analytics</span></li>
@@ -191,14 +191,14 @@
             </div>
             <div class="flowrow flowrow--after">
               <p class="flowrow__label">After · guided setup with one canvas</p>
-              <ol class="flow">
+              <ol class="flow" role="list">
                 <li class="flow__step"><span class="flow__name">General Information</span></li>
                 <li class="flow__step"><span class="flow__name">Video Input</span></li>
                 <li class="flow__step flow__step--key"><span class="flow__name">Stream Processors</span><span class="flow__sub">The canvas: the whole pipeline visible as connected nodes</span></li>
                 <li class="flow__step"><span class="flow__name">Custom Fields</span></li>
               </ol>
             </div>
-            <figcaption class="diagram__cap">Schematic built from the step names in the product. Illustrative, not a screenshot.</figcaption>
+            <figcaption class="diagram__cap">Illustrative summary of the previous form flow and the redesigned four-step setup, using step names from the product screens.</figcaption>
           </figure>
 
           <div class="pair">
@@ -275,9 +275,9 @@
 
           <p class="footnote">Reference screenshots: Blender, NodeGraphQt and PixiEditor. © their respective owners.</p>
 
-          <figure class="placeholder" data-placeholder="vision-early-explorations">
-            <figcaption><strong>Placeholder · early explorations</strong><p>Two or three rough canvas sketches or wireframes from before the final design, each with one line on what it tested. 16:9 images.</p></figcaption>
-          </figure>
+          <aside class="placeholder" data-placeholder="vision-early-explorations">
+            <strong>Placeholder · early explorations</strong><p>Rough canvas sketches or wireframes from before the final design (16:9).</p>
+          </aside>
         </div>
       </section>
 
@@ -294,13 +294,13 @@
             </div>
           </div>
 
-          <figure class="placeholder" data-placeholder="vision-canvas-recording">
-            <figcaption><strong>Placeholder · canvas walkthrough</strong><p>A 10 to 15 second silent screen recording: add a Video Input and a processor, connect them, open the inspector.</p></figcaption>
-          </figure>
+          <aside class="placeholder" data-placeholder="vision-canvas-recording">
+            <strong>Placeholder · canvas walkthrough</strong><p>Short silent screen recording of building a pipeline: add nodes, connect them, open the inspector.</p>
+          </aside>
 
           <div class="reflect">
             <h3 class="decision__title">Why keep the wizard around the canvas?</h3>
-            <p class="lead">The graph makes relationships visible, but it introduces a new interaction model. Keeping it inside the setup flow gives the canvas a defined place in the task. It does not establish that a new user can understand nodes without help.</p>
+            <p class="lead">The graph makes relationships visible, but it introduces a new interaction model. Keeping it inside the setup flow gives the canvas a defined place in the task. Next, I would test whether first-time users can connect nodes without help.</p>
             <dl class="case-options">
               <div><dt>Forms only <span>Previous setup</span></dt><dd>A fixed sequence gives users an order to follow, but leaves the pipeline’s relationships spread across steps.</dd></div>
               <div><dt>Canvas only <span>Hypothetical alternative</span></dt><dd>More room to arrange nodes, but less guidance about the wider setup task and where to begin.</dd></div>
@@ -361,7 +361,7 @@
             </div>
           </div>
 
-          <ol class="quad">
+          <ol class="quad" role="list">
             <li class="card card--loop" data-reveal><span class="card__num">01</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M240-120q-45 0-89-22t-71-58q26 0 53-20.5t27-59.5q0-50 35-85t85-35q50 0 85 35t35 85q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T320-280q0-17-11.5-28.5T280-320q-17 0-28.5 11.5T240-280q0 23-5.5 42T220-202q5 2 10 2h10Zm230-160L360-470l358-358q11-11 27.5-11.5T774-828l54 54q12 12 12 28t-12 28L470-360Zm-190 80Z"/></svg></span><h3 class="card__title">Design</h3><p>Explore interactions and map the configuration flow.</p></li>
             <li class="card card--loop" data-reveal style="--d:60ms"><span class="card__num">02</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/></svg></span><h3 class="card__title">Build</h3><p>Work with developers to implement the flow.</p></li>
             <li class="card card--loop" data-reveal style="--d:120ms"><span class="card__num">03</span><span class="card__icon" aria-hidden="true"><svg viewBox="0 -960 960 960" width="24" height="24" fill="currentColor"><path d="M80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg></span><h3 class="card__title">Feedback</h3><p>Review the working interface and technical constraints.</p></li>
@@ -384,9 +384,9 @@
                 </div>
                 <div class="shot shot--inline"><img src="assets/img/vision-canvas-in-page.webp" alt="The canvas inside the page with a side panel open" width="1440" height="900" loading="lazy"></div>
                 <p class="footnote">The embedded canvas before expansion.</p>
-                <figure class="placeholder" data-placeholder="vision-fullscreen-comparison">
-                  <figcaption><strong>Placeholder · expanded canvas</strong><p>A real 16:10 capture of this pipeline maximized, including the expand/restore control. Pair it with the embedded state above.</p></figcaption>
-                </figure>
+                <aside class="placeholder" data-placeholder="vision-fullscreen-comparison">
+                  <strong>Placeholder · expanded canvas</strong><p>The same pipeline maximized, with the expand and restore control visible (16:10).</p>
+                </aside>
               </article>
               <article class="card card--change">
                 <p class="card__num">ITERATION 2</p>
@@ -417,7 +417,7 @@
             </div>
             <div class="split__right">
               <p class="lead">Vision launched after four months. Sales and support, who worked directly with clients, relayed positive feedback. Support reported good customer acceptance and said Vision was one of the products the team was promoting most actively.</p>
-              <p class="lead">That feedback is secondhand and qualitative, so the next step is to measure setup completion, errors and where people need help.</p>
+              <p class="lead">Next, I would complement that qualitative feedback with measures of setup completion, errors and requests for help.</p>
             </div>
           </div>
           <div class="reflect">

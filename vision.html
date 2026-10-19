@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision case study — From forms to a node canvas · Adrian Carballo</title>
+  <meta name="description" content="Case study: designing a visual way to connect and configure computer vision workflows in IoT Unified, from technical forms to a node canvas.">
+  <meta name="theme-color" content="#f8f8f8">
+  <link rel="canonical" href="https://ekko94.github.io/portfolio/vision.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Adrian Carballo">
+  <meta property="og:title" content="From forms to a node canvas — Vision case study">
+  <meta property="og:description" content="Designing a visual way to connect and configure computer vision workflows in IoT Unified.">
+  <meta property="og:url" content="https://ekko94.github.io/portfolio/vision.html">
+  <meta property="og:image" content="https://ekko94.github.io/portfolio/assets/og-image.jpg">
+  <meta property="og:image:alt" content="Vision node canvas in IoT Unified">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page case">
+    <header>
+      <nav class="nav nav--case" aria-label="Primary">
+        <a class="nav__brand" href="./">Adrian Carballo</a>
+        <div class="nav__links">
+          <a href="./#work" aria-current="page">Work</a>
+          <a href="./#about">About</a>
+          <!-- TODO: replace with the real resume URL -->
+          <a href="#" data-todo="resume-url">Resume</a>
+          <a href="./#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="case-hero" aria-labelledby="case-title">
+        <p class="kicker">Case study 04 &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; IoT Unified Cloud</p>
+        <h1 class="case-hero__title" id="case-title">From forms to a node canvas.</h1>
+        <p class="case-hero__sub">Designing a visual way to connect and configure computer vision workflows in IoT Unified.</p>
+        <dl class="meta">
+          <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value" style="margin:0">Product Designer</dd></div>
+          <div class="meta__item"><dt class="meta__label">Company</dt><dd class="meta__value" style="margin:0">Sorba.ai</dd></div>
+          <div class="meta__item"><dt class="meta__label">Product</dt><dd class="meta__value" style="margin:0">IoT Unified · Vision node</dd></div>
+          <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value" style="margin:0">Web · Desktop</dd></div>
+          <div class="meta__item"><dt class="meta__label">Timeline</dt><dd class="meta__value" style="margin:0">4 months to launch</dd></div>
+        </dl>
+      </section>
+
+      <div class="case-hero-image">
+        <div class="shot shot--hero">
+          <img src="assets/img/vision-hero.webp" alt="The Vision Stream Processors step: a tools palette beside a canvas where a Video Input node connects to a Raw Streamer, an Interests Zone and event nodes" width="1440" height="900" fetchpriority="high">
+        </div>
+      </div>
+
+      <!-- At a glance -->
+      <section class="glance" aria-label="At a glance">
+        <div class="glance__item" data-reveal>
+          <p class="glance__label">The challenge</p>
+          <p class="glance__text">A technical setup flow that hid how the pipeline connected.</p>
+        </div>
+        <div class="glance__item" data-reveal style="--d:80ms">
+          <p class="glance__label">The research</p>
+          <p class="glance__text">Studying node-based tools to find a visual configuration model.</p>
+        </div>
+        <div class="glance__item" data-reveal style="--d:160ms">
+          <p class="glance__label">The design</p>
+          <p class="glance__text">A guided flow with connected nodes and settings in context.</p>
+        </div>
+      </section>
+
+      <!-- 01 Context -->
+      <section class="section" aria-labelledby="s-context">
+        <div class="split">
+          <div class="split__left">
+            <p class="label">01 — Context</p>
+            <h2 class="h2" id="s-context">Connecting video, processors and events.</h2>
+          </div>
+          <div class="split__right">
+            <p class="lead">IoT Unified is Sorba’s platform for managing IoT infrastructure. Its Vision node connects video sources, processes the stream and defines what the system should detect.</p>
+            <p class="lead">The design challenge was to make those connections and their configuration easier to understand.</p>
+            <div class="contrib">
+              <p class="label">My contribution</p>
+              <ul>
+                <li>Researched node-based tools and adapted the pattern to Vision.</li>
+                <li>Defined the canvas, tools palette and contextual configuration.</li>
+                <li>Designed the guided setup flow around stream processing.</li>
+                <li>Designed processing nodes and the Interests Zone editor.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Problem -->
+      <section class="section" aria-labelledby="s-problem">
+        <div class="section__stack">
+          <div class="split">
+            <div class="split__left">
+              <p class="label">02 — Problem</p>
+              <h2 class="h2" id="s-problem">A pipeline hidden behind technical forms.</h2>
+            </div>
+            <div class="split__right">
+              <p class="lead">The previous setup used a long wizard of technical forms. Camera configuration alone had five sub-steps before Analytics and Custom Fields. Fields such as FPS, thresholds and hardware arguments appeared before users could see how the processing stages connected.</p>
+            </div>
+          </div>
+
+          <div class="pair">
+            <figure class="figure" data-reveal>
+              <div class="shot shot--wide"><img src="assets/img/vision-before-camera.webp" alt="Previous wizard, camera configuration step: a template dropdown and several technical argument fields" width="1440" height="900" loading="lazy"></div>
+              <figcaption class="cap">
+                <p class="cap__title">Before: camera configuration</p>
+                <p class="cap__text">Camera settings and technical arguments spread across form steps.</p>
+              </figcaption>
+            </figure>
+            <figure class="figure" data-reveal style="--d:80ms">
+              <div class="shot shot--wide"><img src="assets/img/vision-before-detections.webp" alt="Previous wizard, detections step: FPS, width, height and threshold as isolated numeric fields" width="1440" height="900" loading="lazy"></div>
+              <figcaption class="cap">
+                <p class="cap__title">Before: detections</p>
+                <p class="cap__text">Processing parameters presented as isolated numeric fields.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="pair">
+            <div class="card card--before">
+              <p class="card__head sub-label">Before</p>
+              <p>A fixed sequence of forms; camera setup alone took five sub-steps.</p>
+              <p>Technical fields up front: FPS, thresholds, hardware arguments.</p>
+              <p>Pipeline structure had to be inferred across form steps.</p>
+            </div>
+            <div class="card">
+              <p class="card__head sub-label">After</p>
+              <p>One canvas where the whole pipeline is visible as connected nodes.</p>
+              <p>Predefined nodes that users reconfigure instead of building from zero.</p>
+              <p>Contextual settings alongside the selected node.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Research -->
+      <section class="section--tight" aria-labelledby="s-research">
+        <div class="quote">
+          <p class="label">03 — Research</p>
+          <h2 class="quote__title" id="s-research">Finding a visual model for a technical workflow.</h2>
+          <p class="quote__text">I needed a clearer way to connect video inputs, processing steps and their settings. I researched how other tools use nodes and graphs to make complex workflows visible. That search led me to Blender’s Shader Editor, NodeGraphQt and PixiEditor.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="s-refs">
+        <div class="section__stack" style="gap:24px">
+          <h3 class="label" id="s-refs">Reference review — what I looked for</h3>
+          <div class="triple">
+            <figure class="figure figure--tight" data-reveal>
+              <div class="shot shot--ref"><img src="assets/img/vision-ref-blender.webp" alt="Blender Shader Editor showing linked nodes on a graph" width="537" height="571" loading="lazy"></div>
+              <figcaption class="cap" style="gap:4px">
+                <p class="cap__title cap__title--accent"><a href="https://docs.blender.org/manual/en/latest/editors/shader_editor.html" target="_blank" rel="noopener">Blender · Shader Editor<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+                <p class="cap__text">How visible links reveal the relationship between processing steps.</p>
+              </figcaption>
+            </figure>
+            <figure class="figure figure--tight" data-reveal style="--d:80ms">
+              <div class="shot shot--ref"><img src="assets/img/vision-ref-nodegraphqt.webp" alt="NodeGraphQt example with curved pipes connecting nodes through input and output ports" width="810" height="461" loading="lazy"></div>
+              <figcaption class="cap" style="gap:4px">
+                <p class="cap__title cap__title--accent"><a href="https://github.com/jchanvfx/NodeGraphQt" target="_blank" rel="noopener">NodeGraphQt<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+                <p class="cap__text">How input and output ports make connection points explicit.</p>
+              </figcaption>
+            </figure>
+            <figure class="figure figure--tight" data-reveal style="--d:160ms">
+              <div class="shot shot--ref"><img src="assets/img/vision-ref-pixieditor.webp" alt="PixiEditor graph view with nodes, a layers panel and a live preview" width="1500" height="844" loading="lazy"></div>
+              <figcaption class="cap" style="gap:4px">
+                <p class="cap__title cap__title--accent"><a href="https://pixieditor.net/docs/handbook/node-graph/tutorials/your-first-graph/" target="_blank" rel="noopener">PixiEditor · Graph View<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+                <p class="cap__text">How inputs, outputs and previews stay close to the graph.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <p class="statement" style="margin-top:8px">What I adapted for Vision: a visible pipeline, predefined components and configuration in context.</p>
+
+          <div class="triple triple--wide" style="margin-top:8px">
+            <div class="principle" data-reveal>
+              <p class="principle__num">01</p>
+              <h3 class="principle__title">Make the pipeline visible</h3>
+              <p class="principle__text">Represent inputs, processors and events as connected nodes on one canvas.</p>
+            </div>
+            <div class="principle" data-reveal style="--d:80ms">
+              <p class="principle__num">02</p>
+              <h3 class="principle__title">Start with predefined nodes</h3>
+              <p class="principle__text">Provide components such as Raw Streamer and Object Detector that users can configure.</p>
+            </div>
+            <div class="principle" data-reveal style="--d:160ms">
+              <p class="principle__num">03</p>
+              <h3 class="principle__title">Keep settings in context</h3>
+              <p class="principle__text">Show the selected node’s settings beside the graph, while keeping the pipeline visible.</p>
+            </div>
+          </div>
+
+          <p class="footnote">Reference screenshots: Blender, NodeGraphQt and PixiEditor. © their respective owners.</p>
+        </div>
+      </section>
+
+      <!-- 04 Solution -->
+      <section class="section" aria-labelledby="s-solution">
+        <div class="section__stack" style="gap:56px">
+          <div class="split">
+            <div class="split__left">
+              <p class="label">04 — Solution</p>
+              <h2 class="h2" id="s-solution">Configuration around the graph.</h2>
+            </div>
+            <div class="split__right">
+              <p class="lead">The canvas sits inside a four-step setup: General Information, Video Input, Stream Processors and Custom Fields. It makes the processing pipeline visible while retaining a guided path through the wider task.</p>
+            </div>
+          </div>
+
+          <div class="decision" data-reveal>
+            <div class="decision__text">
+              <p class="sub-label sub-label--accent">Design decision / 01</p>
+              <h3 class="decision__title">Keep configuration in context</h3>
+              <p class="lead">Selecting a node opens its settings beside the graph. Buffer size, recording options and trigger types can be configured while the pipeline remains visible.</p>
+            </div>
+            <div class="shot shot--decision"><img src="assets/img/vision-inspector.webp" alt="Raw Streamer node selected on the canvas with its inspector open beside the graph" width="1440" height="900" loading="lazy"></div>
+          </div>
+
+          <div class="decision decision--flip" data-reveal>
+            <div class="shot shot--decision"><img src="assets/img/vision-interests-zone.webp" alt="Interests Zone editor: a camera image with drawn masks listed beside the node configuration" width="1440" height="900" loading="lazy"></div>
+            <div class="decision__text">
+              <p class="sub-label sub-label--accent">Design decision / 02</p>
+              <h3 class="decision__title">Define detection areas visually</h3>
+              <p class="lead">The Interests Zone editor lets users draw masks over the camera image and manage them alongside the node configuration.</p>
+            </div>
+          </div>
+
+          <div class="pair">
+            <figure class="figure" data-reveal>
+              <div class="shot shot--wide"><img src="assets/img/vision-general-info.webp" alt="General Information step with a four-step progress list on the left" width="1440" height="900" loading="lazy"></div>
+              <figcaption class="cap">
+                <p class="cap__title cap__title--md">Keep the wider task guided</p>
+                <p class="cap__text">Four steps frame the canvas as one stage of setup, with the current stage visible.</p>
+              </figcaption>
+            </figure>
+            <figure class="figure" data-reveal style="--d:80ms">
+              <div class="shot shot--wide"><img src="assets/img/vision-tools-palette.webp" alt="Tools palette grouping inputs, events and processors by type beside the canvas" width="568" height="352" loading="lazy"></div>
+              <figcaption class="cap">
+                <p class="cap__title cap__title--md">Make processing tools identifiable</p>
+                <p class="cap__text">Inputs, events and processors are grouped by type in a palette beside the canvas.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Iteration -->
+      <section class="section" aria-labelledby="s-iteration">
+        <div class="section__stack">
+          <div class="split">
+            <div class="split__left">
+              <p class="label">05 — Iteration</p>
+              <h2 class="h2" id="s-iteration">Refining the design with developers.</h2>
+            </div>
+            <div class="split__right">
+              <p class="lead">I did not have access to end users for usability testing. I worked with developers through a loop of design, implementation, feedback and revision. Their feedback helped refine the interaction and what the team could build.</p>
+            </div>
+          </div>
+
+          <ol class="quad">
+            <li class="card card--loop" data-reveal><span class="card__num">01</span><h3 class="card__title">Design</h3><p>Explore interactions and map the configuration flow.</p></li>
+            <li class="card card--loop" data-reveal style="--d:60ms"><span class="card__num">02</span><h3 class="card__title">Build</h3><p>Work with developers to implement the flow.</p></li>
+            <li class="card card--loop" data-reveal style="--d:120ms"><span class="card__num">03</span><h3 class="card__title">Feedback</h3><p>Review the working interface and technical constraints.</p></li>
+            <li class="card card--loop" data-reveal style="--d:180ms"><span class="card__num">04</span><h3 class="card__title">Iterate</h3><p>Revise the design and repeat the loop.</p></li>
+          </ol>
+
+          <div class="section__stack" style="gap:40px">
+            <h3 class="sub-label">Developer feedback → design changes</h3>
+            <div class="pair" style="align-items:stretch">
+              <article class="card card--change">
+                <p class="card__num">ITERATION 1</p>
+                <h4 class="card__title">Give the canvas more room</h4>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--muted" style="font-size:11px;letter-spacing:1px">Raised</p>
+                  <p>The developers found the embedded canvas too cramped.</p>
+                </div>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--accent" style="font-size:11px;letter-spacing:1px">Changed</p>
+                  <p style="color:var(--ink)">I added a way to maximize the canvas to full screen.</p>
+                </div>
+                <div class="shot shot--inline"><img src="assets/img/vision-canvas-in-page.webp" alt="The canvas inside the page with a side panel open" width="1440" height="900" loading="lazy"></div>
+                <p class="footnote" style="color:var(--muted)">THE CANVAS INSIDE THE PAGE, WITH A SIDE PANEL OPEN</p>
+              </article>
+              <article class="card card--change">
+                <p class="card__num">ITERATION 2</p>
+                <h4 class="card__title">Keep related forms together</h4>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--muted" style="font-size:11px;letter-spacing:1px">Raised</p>
+                  <p>The interface needed to display two related forms at once.</p>
+                </div>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--accent" style="font-size:11px;letter-spacing:1px">Changed</p>
+                  <p style="color:var(--ink)">I placed the forms side by side and added a close control to the second one. I checked feasibility with the developers before committing to the layout.</p>
+                </div>
+                <div class="shot shot--inline"><img src="assets/img/vision-interests-zone.webp" alt="Two related forms displayed side by side, the second with a close control" width="1440" height="900" loading="lazy"></div>
+              </article>
+            </div>
+
+            <div class="principle principle--wide">
+              <p class="principle__num" style="letter-spacing:0.5px">DESIGN AND DELIVERY</p>
+              <p class="principle__big">Technical conversations shaped the interactions before implementation.</p>
+            </div>
+          </div>
+
+          <div class="section__stack" style="gap:14px">
+            <h3 class="sub-label">Next validation — questions to test with users</h3>
+            <div class="triple">
+              <div class="question"><p>Can a new user build a working pipeline using only predefined nodes?</p></div>
+              <div class="question"><p>Do people find the inspector and the tools palette where they expect them?</p></div>
+              <div class="question"><p>Is the canvas understandable to non-technical users, or does it need a simpler mode?</p></div>
+            </div>
+            <p class="footnote" style="font-size:14px;line-height:22px">Developer feedback informed the design. These usability questions remain open.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 Reflection -->
+      <section class="section" aria-labelledby="s-reflection">
+        <div class="split">
+          <div class="split__left">
+            <p class="label">06 — Reflection</p>
+            <h2 class="h2" id="s-reflection">What I learned.<br>What comes next.</h2>
+          </div>
+          <div class="split__right">
+            <p class="lead">Vision launched after four months. Sales and support teams, who worked directly with clients, relayed positive feedback. Support reported good customer acceptance and said Vision was one of the products the team was promoting most actively. This was qualitative feedback; setup time and successful completion still need to be measured with users.</p>
+            <div class="reflect">
+              <h3 class="sub-label">What I would do differently</h3>
+              <p class="lead">Bring users into the process earlier. Developer feedback helped refine feasibility, but user sessions are needed to understand whether the canvas works for people without a technical background.</p>
+            </div>
+            <div class="reflect">
+              <h3 class="sub-label">What I took away</h3>
+              <p class="lead">This was my first project with nodes and graphs. Studying other tools helped me see how a canvas could make relationships and configuration visible in a web product.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider">
+      <nav class="next" aria-label="More work">
+        <span class="label">Continue exploring</span>
+        <a class="textlink textlink--accent textlink--up" href="./#work">Back to selected work <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="case-contact" aria-labelledby="c-title">
+        <h2 class="case-contact__title" id="c-title">Let’s talk about<br>your next product.</h2>
+        <a class="btn btn--primary btn--sm" href="mailto:wacarballo94@gmail.com">Email me <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="case-contact__email" href="mailto:wacarballo94@gmail.com">wacarballo94@gmail.com</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Adrian Carballo</p>
+      <div class="footer__links">
+        <!-- TODO: replace with the real LinkedIn and resume URLs -->
+        <a href="#" data-todo="linkedin-url">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="#" data-todo="resume-url">Resume <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

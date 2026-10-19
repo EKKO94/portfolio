@@ -20,7 +20,12 @@ Si ya tienes archivos del portfolio en otra carpeta, conserva esa carpeta y comp
 
 ## Desarrollo
 
-La web aún no está implementada ni publicada. El comando de desarrollo y la publicación se documentarán al elegir el stack e implementar el diseño. Para dependencias JavaScript, usar pnpm.
+Sitio estático (HTML, CSS y JS sin dependencias ni build), publicado con GitHub Pages desde la rama `main`.
+
+- Páginas: `index.html` (Home), `vision.html` y `sorbot.html` (casos de estudio).
+- Estilos en `assets/css/styles.css`, imágenes optimizadas en `assets/img`, fuentes self-hosted en `assets/fonts`.
+- Vista previa local: `pnpm dlx serve .`
+- Pendiente: URLs reales de Resume y LinkedIn (buscar `data-todo` en los HTML).
 
 ## Guardar cambios
 

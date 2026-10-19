@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorbot case study — AI guidance inside the workflow · Adrian Carballo</title>
+  <meta name="description" content="Case study: designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.">
+  <meta name="theme-color" content="#f8f8f8">
+  <link rel="canonical" href="https://ekko94.github.io/portfolio/sorbot.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Adrian Carballo">
+  <meta property="og:title" content="AI guidance, inside the workflow — Sorbot case study">
+  <meta property="og:description" content="Designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.">
+  <meta property="og:url" content="https://ekko94.github.io/portfolio/sorbot.html">
+  <meta property="og:image" content="https://ekko94.github.io/portfolio/assets/og-image.jpg">
+  <meta property="og:image:alt" content="Sorbot AI assistant home screen">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page case">
+    <header>
+      <nav class="nav nav--case" aria-label="Primary">
+        <a class="nav__brand" href="./">Adrian Carballo</a>
+        <div class="nav__links">
+          <a href="./#work" aria-current="page">Work</a>
+          <a href="./#about">About</a>
+          <!-- TODO: replace with the real resume URL -->
+          <a href="#" data-todo="resume-url">Resume</a>
+          <a href="./#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="case-hero" aria-labelledby="case-title">
+        <p class="kicker">Case study 03 &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; Sorbot</p>
+        <h1 class="case-hero__title" id="case-title">AI guidance,<br>inside the workflow.</h1>
+        <p class="case-hero__sub">Designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.</p>
+        <dl class="meta">
+          <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
+          <div class="meta__item"><dt class="meta__label">Company</dt><dd class="meta__value">Sorba.ai</dd></div>
+          <div class="meta__item"><dt class="meta__label">Product</dt><dd class="meta__value">IoT Unified · Sorbot</dd></div>
+          <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value">Web · Desktop</dd></div>
+          <div class="meta__item"><dt class="meta__label">Timeline</dt><dd class="meta__value">≈ 2 months</dd></div>
+        </dl>
+      </section>
+
+      <figure class="fig-full" style="padding-bottom:48px">
+        <img src="assets/img/sorbot-home.webp" alt="Sorbot’s dedicated workspace: a greeting, a message composer, four starter actions and a model selector reading Llama V3 70B Instruct" width="1440" height="900" fetchpriority="high">
+        <figcaption class="fig-caption">Sorbot’s dedicated workspace: a familiar composer, starter actions and a visible model selector.</figcaption>
+      </figure>
+
+      <!-- At a glance -->
+      <section class="glance" aria-label="At a glance">
+        <div class="glance__item" data-reveal>
+          <p class="glance__label">The need</p>
+          <p class="glance__text">Guidance through a complex, data-rich workspace.</p>
+        </div>
+        <div class="glance__item" data-reveal style="--d:80ms">
+          <p class="glance__label">The approach</p>
+          <p class="glance__text">A dedicated assistant and help within node configuration.</p>
+        </div>
+        <div class="glance__item" data-reveal style="--d:160ms">
+          <p class="glance__label">The control</p>
+          <p class="glance__text">A visible choice of AI model.</p>
+        </div>
+      </section>
+
+      <!-- 01 Context -->
+      <section class="ed" aria-labelledby="s-context">
+        <p class="label">01 — Context</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-context">Helping users navigate technical complexity.</h2>
+          <div class="ed__text">
+            <p>IoT Unified brings together a large volume of data and many configurable nodes. The company needed an AI assistant that users could turn to for guidance on setting up a node or resolving configuration questions.</p>
+            <p class="label">My contribution</p>
+            <p class="small">Reviewed conversational AI references, iterated on the interface and designed the dedicated and embedded experiences, including model selection. I used developers from unrelated projects as stakeholders because direct access to industrial users was unavailable.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- 02 Design challenge -->
+      <section class="ed" aria-labelledby="s-challenge">
+        <p class="label">02 — Design challenge</p>
+        <div class="quote">
+          <h2 class="quote__title" id="s-challenge" style="font-size:clamp(32px,4.2vw,60px);letter-spacing:-0.042em">How can AI help users configure a complex workspace?</h2>
+          <p class="quote__text">The interface needed to support broad questions and focused configuration tasks, while keeping the choice of model understandable.</p>
+        </div>
+        <div class="triple triple--wide">
+          <div data-reveal>
+            <h3>Help with configuration</h3>
+            <p>Give users a place to ask about nodes, settings and the information in their workspace.</p>
+          </div>
+          <div data-reveal style="--d:80ms">
+            <h3>Keep the task nearby</h3>
+            <p>Offer an assistant within the node flow, so the form and the conversation can remain on screen.</p>
+          </div>
+          <div data-reveal style="--d:160ms">
+            <h3>Expose the model choice</h3>
+            <p>Make the active model visible and give users control over which one they use.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- 03 Pattern research -->
+      <section class="ed" aria-labelledby="s-research">
+        <p class="label">03 — Pattern research</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-research">Learning from familiar AI interfaces.</h2>
+          <div class="ed__text">
+            <p>I explored ChatGPT, Gemini, DeepSeek and other AI products as references, then iterated on what could fit IoT Unified. This was a review of interface patterns, separate from research with end users.</p>
+            <ul class="refs" aria-label="Reference products">
+              <li>ChatGPT</li>
+              <li>Gemini</li>
+              <li>DeepSeek</li>
+            </ul>
+            <p class="small">The design questions: how should someone begin a conversation, understand the available controls and choose a model? I adapted those patterns to questions about industrial data and configuration.</p>
+            <p class="label">What I adapted</p>
+            <p>A familiar message composer, task-oriented starting points, a visible model selector and a reminder to verify responses.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- 04 Design decisions -->
+      <section class="ed" aria-labelledby="s-decisions">
+        <p class="label">04 — Design decisions</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-decisions">Two places to ask for help.</h2>
+          <div class="ed__text">
+            <p>The dedicated Sorbot workspace gives the conversation its own space. Within a node flow, a side panel places help alongside configuration. The purpose is the same; the amount of space and the surrounding task are different.</p>
+            <p class="label">Decision 01 — Keep help close to the task</p>
+          </div>
+        </div>
+        <figure class="fig-full">
+          <img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy">
+          <figcaption class="fig-caption">Embedded chat shown in the Groups configuration flow. The form and conversation are visible together.</figcaption>
+        </figure>
+        <div class="note">
+          <p class="label">The trade-off</p>
+          <p>A side panel also takes space from the form. A key validation question is whether users can still see and reach important fields while asking for help.</p>
+        </div>
+      </section>
+
+      <section class="ed" aria-labelledby="s-model">
+        <p class="label">Decision 02 — Make the model choice visible</p>
+        <div class="split">
+          <div class="ed__text" style="gap:24px">
+            <h2 class="h2 h2--ed" id="s-model">The user chooses the model.</h2>
+            <p>Sorbot supports more than one model. I kept the selector visible in the dedicated workspace and used an explicit list of model names, so the choice is available without hiding it in settings.</p>
+          </div>
+          <div class="model">
+            <img src="assets/img/sorbot-model.webp" alt="Model selector open, listing Llama V3 70B Instruct, Mixtral 8×7B Instruct, FireFunction V1 and ChatGPT 4o" width="656" height="524" loading="lazy">
+            <p>Model options shown in the design. No performance ranking is implied.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ed" aria-labelledby="s-begin">
+        <p class="label">Decision 03 — Give users a way to begin</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-begin">Turn a blank prompt into a starting point.</h2>
+          <div class="ed__text">
+            <p>The home offers starter actions, while this exploration suggests questions about channels, flows, smart rules, alerts and permissions. The intent was to connect a familiar chat pattern to the language of IoT Unified.</p>
+          </div>
+        </div>
+        <figure class="fig-full">
+          <div class="fig-white"><img src="assets/img/sorbot-suggestions.webp" alt="Prompt suggestions exploration: typing “Give ideas” lists five suggested questions about channels, flows, smart rules, alerts and permissions" width="1440" height="900" loading="lazy"></div>
+          <figcaption class="fig-caption">Prompt suggestions exploration: configuration tasks become examples of what users can ask.</figcaption>
+        </figure>
+      </section>
+
+      <section class="ed" aria-labelledby="s-verify">
+        <p class="label">Decision 04 — Set expectations about AI responses</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-verify">Guidance still needs verification.</h2>
+          <div class="ed__text">
+            <p>The interface includes a reminder to verify Sorbot’s responses. It sets a boundary around the assistant: an answer should be checked before it informs a configuration change.</p>
+            <div class="note note--tall">
+              <p class="label">In-product reminder</p>
+              <p class="big">SORBOT isn't perfect—it's a good idea to verify its responses.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- 05 Stakeholder review -->
+      <section class="ed" aria-labelledby="s-review">
+        <p class="label">05 — Iteration &amp; stakeholder review</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-review">Reviewing beyond the project team.</h2>
+          <div class="ed__text">
+            <p>The project took approximately two months. Company practice did not give me direct access to real users in the industrial sector, so I involved developers from other, unrelated projects as stakeholders while iterating on the design.</p>
+            <p class="small">Their outside perspective gave me people to review the proposals with. It did not replace validation with the people who would configure nodes in their day-to-day work.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 Outcome -->
+      <section class="ed" aria-labelledby="s-outcome">
+        <p class="label">06 — Design outcome &amp; next validation</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-outcome">An assistant designed around the task.</h2>
+          <div class="ed__text">
+            <p>The design brings together a dedicated assistant, chat within a node flow and user-controlled model selection. Its effect on configuration success, time to complete a task and support needs still needs to be evaluated with end users.</p>
+          </div>
+        </div>
+        <div class="triple triple--wide">
+          <div data-reveal>
+            <h3>Find the right help</h3>
+            <p>Can users identify when to open Sorbot and when to use help inside the node flow?</p>
+          </div>
+          <div data-reveal style="--d:80ms">
+            <h3>Understand the model</h3>
+            <p>Can users identify the active model and understand what changes when they select another one?</p>
+          </div>
+          <div data-reveal style="--d:160ms">
+            <h3>Check before changing</h3>
+            <p>Can users verify an answer and apply it while keeping important configuration fields visible?</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule">
+      <nav class="next" aria-label="More work">
+        <span class="label">Continue exploring</span>
+        <a class="textlink textlink--accent textlink--up" href="./#work">Back to selected work <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+
+      <section class="case-contact" aria-labelledby="c-title">
+        <h2 class="case-contact__title" id="c-title">Let’s talk about<br>your next product.</h2>
+        <a class="btn btn--primary btn--sm" href="mailto:wacarballo94@gmail.com">Email me <span class="arrow" aria-hidden="true">↗</span></a>
+        <a class="case-contact__email" href="mailto:wacarballo94@gmail.com">wacarballo94@gmail.com</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 Adrian Carballo</p>
+      <div class="footer__links">
+        <!-- TODO: replace with the real LinkedIn and resume URLs -->
+        <a href="#" data-todo="linkedin-url">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="#" data-todo="resume-url">Resume <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

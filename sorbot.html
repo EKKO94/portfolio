@@ -94,9 +94,7 @@
         <div class="nav__links">
           <a href="./#work" data-current>Work</a>
           <a href="./#about">About</a>
-          <!-- TODO: replace with the real resume URL -->
-          <a href="#" data-todo="resume-url">Resume</a>
-          <a href="./#contact">Contact</a>
+          <a href="mailto:wacarballo94@gmail.com">Email me</a>
         </div>
       </nav>
     </header>
@@ -106,40 +104,41 @@
       <section class="case-hero" aria-labelledby="case-title">
         <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; Sorbot</p>
         <h1 class="case-hero__title" id="case-title">AI guidance,<br>inside the workflow.</h1>
-        <p class="case-hero__sub">Designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.</p>
+        <p class="case-hero__sub">I designed two ways to ask for help in IoT Unified: a dedicated assistant for broader questions and a panel beside node configuration.</p>
         <dl class="meta">
           <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
-          <div class="meta__item"><dt class="meta__label">Company</dt><dd class="meta__value">Sorba.ai</dd></div>
-          <div class="meta__item"><dt class="meta__label">Product</dt><dd class="meta__value">IoT Unified · Sorbot</dd></div>
+          <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Dedicated + embedded assistant</dd></div>
           <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value">Web · Desktop</dd></div>
           <div class="meta__item"><dt class="meta__label">Timeline</dt><dd class="meta__value">≈ 2 months</dd></div>
         </dl>
       </section>
 
-      <figure class="fig-full case-hero-image">
-        <img src="assets/img/sorbot-home.webp" alt="Sorbot’s dedicated workspace: a greeting, a message composer, four starter actions and a model selector reading Llama V3 70B Instruct" width="1440" height="900" fetchpriority="high">
-        <figcaption class="fig-caption">Sorbot’s dedicated workspace: a familiar composer, starter actions and a visible model selector.</figcaption>
-      </figure>
-
       <!-- At a glance -->
-      <section class="glance glance--4" aria-label="At a glance">
-        <div class="glance__item" data-reveal>
+      <section class="glance" aria-label="At a glance">
+        <div class="glance__item">
           <p class="glance__label">The need</p>
           <p class="glance__text">Guidance through a complex, data-rich workspace.</p>
         </div>
-        <div class="glance__item" data-reveal style="--d:80ms">
-          <p class="glance__label">The approach</p>
+        <div class="glance__item">
+          <p class="glance__label">My design</p>
           <p class="glance__text">A dedicated assistant and help within node configuration.</p>
         </div>
-        <div class="glance__item" data-reveal style="--d:160ms">
-          <p class="glance__label">The control</p>
-          <p class="glance__text">A visible choice of AI model.</p>
-        </div>
-        <div class="glance__item" data-reveal style="--d:240ms">
-          <p class="glance__label">The status</p>
-          <p class="glance__text">Designed and iterated in about two months. Its effect still needs validation with end users.</p>
+        <div class="glance__item">
+          <p class="glance__label">The outcome</p>
+          <p class="glance__text">Two assistant surfaces designed and peer-reviewed in about two months. Next: test with industrial users.</p>
         </div>
       </section>
+
+      <nav class="case-jump" aria-label="Case study shortcuts">
+        <a href="#s-context">Problem &amp; scope</a>
+        <a href="#s-decisions">Design decisions</a>
+        <a href="#s-outcome">Outcome &amp; next steps</a>
+      </nav>
+
+      <figure class="fig-full case-hero-image">
+        <img src="assets/img/sorbot-home.webp" alt="Sorbot’s dedicated workspace: a greeting, a message composer, four starter actions and a model selector reading Llama V3 70B Instruct" width="1440" height="900" fetchpriority="high">
+        <figcaption class="fig-caption">Sorbot’s dedicated workspace: composer, starter actions and model selector. Interface design shown; select any product image to enlarge it.</figcaption>
+      </figure>
 
       <!-- 01 Context -->
       <section class="ed" data-nav="Context" aria-labelledby="s-context">
@@ -147,45 +146,17 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-context">Helping users navigate technical complexity.</h2>
           <div class="ed__text">
-            <p>IoT Unified brings together a large volume of data and many configurable nodes. The company needed an AI assistant that users could turn to for guidance on setting up a node or resolving configuration questions.</p>
+            <p>IoT Unified brings together a large volume of data and many configurable nodes. The company wanted an assistant for questions about node setup and configuration. The design needed to offer help while leaving room for the task itself.</p>
             <div class="contrib">
-              <p class="label">My contribution</p>
+              <h3 class="label">My contribution</h3>
               <ul>
-                <li>Reviewed conversational AI references and iterated on the interface.</li>
-                <li>Designed the dedicated and embedded experiences, including model selection.</li>
-                <li>Reviewed proposals with developers from unrelated projects, because direct access to industrial users was unavailable.</li>
+                <li>Reviewed conversational interface patterns and adapted them to IoT Unified.</li>
+                <li>Designed the dedicated workspace and embedded assistant panel.</li>
+                <li>Designed model selection, starter actions and prompt suggestions.</li>
               </ul>
             </div>
-            <figure class="placeholder" data-placeholder="team-and-timeline">
-              <span class="placeholder__tag">Placeholder · to confirm</span>
-              <p class="placeholder__title">Team, collaboration and timeline</p>
-              <p class="placeholder__text">Who I worked with (roles only: developers, product, stakeholders) and how the two months split into phases: references, exploration, review and handoff. A one-line timeline strip works well here.</p>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <hr class="rule">
-
-      <!-- 02 Design challenge -->
-      <section class="ed" data-nav="Challenge" aria-labelledby="s-challenge">
-        <p class="label">Design challenge</p>
-        <div class="quote">
-          <h2 class="quote__title" id="s-challenge" style="font-size:clamp(32px,4.2vw,60px);letter-spacing:-0.042em">How can AI help users configure a complex workspace?</h2>
-          <p class="quote__text">The interface needed to support broad questions and focused configuration tasks, while keeping the choice of model understandable.</p>
-        </div>
-        <div class="triple triple--wide">
-          <div data-reveal>
-            <h3>Help with configuration</h3>
-            <p>Give users a place to ask about nodes, settings and the information in their workspace.</p>
-          </div>
-          <div data-reveal style="--d:80ms">
-            <h3>Keep the task nearby</h3>
-            <p>Offer an assistant within the node flow, so the form and the conversation can remain on screen.</p>
-          </div>
-          <div data-reveal style="--d:160ms">
-            <h3>Expose the model choice</h3>
-            <p>Make the active model visible and give users control over which one they use.</p>
+            <p class="small">I reviewed proposals with developers from unrelated projects. They were peer reviewers, not the industrial users who would configure nodes. Direct user access was unavailable, so I could not validate their needs or working habits firsthand.</p>
+            <p class="small">This case covers the interface design: how people ask, choose a model and check an answer.</p>
           </div>
         </div>
       </section>
@@ -209,22 +180,6 @@
             <p>A familiar message composer, task-oriented starting points, a visible model selector and a reminder to verify responses.</p>
           </div>
         </div>
-
-        <table class="compare" data-reveal>
-          <caption>Familiar pattern and how it was adapted</caption>
-          <tbody>
-            <tr><th scope="row">Message composer</th><td>Kept the familiar composer so starting a conversation needs no explanation.</td></tr>
-            <tr><th scope="row">Starting points</th><td>Replaced generic prompts with task-oriented starters and suggestions about channels, flows, smart rules, alerts and permissions.</td></tr>
-            <tr><th scope="row">Model picker</th><td>Kept the selector visible with an explicit list of model names instead of hiding it in settings.</td></tr>
-            <tr><th scope="row">Caution about answers</th><td>Added an in-product reminder to verify responses before they inform a configuration change.</td></tr>
-          </tbody>
-        </table>
-
-        <figure class="placeholder placeholder--wide" data-placeholder="reference-screens">
-          <span class="placeholder__tag">Placeholder · asset needed</span>
-          <p class="placeholder__title">Annotated reference screens</p>
-          <p class="placeholder__text">Three cropped screens from ChatGPT, Gemini and DeepSeek, each with a short callout on the pattern you borrowed (composer, starters, model picker). Add a credit line for the owners. 3 across, WebP.</p>
-        </figure>
       </section>
 
       <hr class="rule">
@@ -235,37 +190,37 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-decisions">Two places to ask for help.</h2>
           <div class="ed__text">
-            <p>The dedicated Sorbot workspace gives the conversation its own space. Within a node flow, a side panel places help alongside configuration. The purpose is the same; the amount of space and the surrounding task are different.</p>
-            <p class="label">Decision 01 — Keep help close to the task</p>
+            <p>I gave broader questions a dedicated workspace and put focused help beside node configuration. That second entry point keeps the form nearby, but it also competes for space.</p>
           </div>
         </div>
-        <figure class="sysmap" data-reveal aria-label="How Sorbot fits into IoT Unified (schematic)">
-          <div class="sysmap__pair">
-            <div class="sysmap__card">
-              <span class="sysmap__tag">Entry point 1</span>
-              <h3>Dedicated workspace</h3>
-              <p>Room for open questions about nodes, settings and workspace data, with starter actions to begin.</p>
-            </div>
-            <div class="sysmap__card">
-              <span class="sysmap__tag">Entry point 2</span>
-              <h3>Embedded panel</h3>
-              <p>A side panel inside a node flow, so the form and the conversation stay on screen together.</p>
-            </div>
+        <figure class="case-map" aria-labelledby="sorbot-map-caption">
+          <div class="case-map__head">
+            <p class="label">Illustrative map of the design intent</p>
+            <p class="statement">Two entry points. The same need to check an answer.</p>
           </div>
-          <div class="sysmap__base">
-            <span class="sysmap__tag">Shared by both</span>
-            <p>A visible model selector, task-oriented starting points and a reminder to verify responses.</p>
+          <div class="pair case-map__routes">
+            <div class="reflect"><h3>Dedicated workspace</h3><p>Room for a broader conversation, starter actions and model selection.</p></div>
+            <div class="reflect"><h3>Embedded panel</h3><p>A question beside the configuration form, with less space for both.</p></div>
           </div>
-          <figcaption class="diagram__cap">Schematic of the two experiences. Illustrative, not a screenshot.</figcaption>
+          <ol class="case-flow" role="list">
+            <li><span class="case-flow__step">01</span><strong>Ask</strong><p>Start a conversation in either location.</p></li>
+            <li><span class="case-flow__step">02</span><strong>Read</strong><p>Review the assistant’s response.</p></li>
+            <li class="case-flow__focus"><span class="case-flow__step">03 · User action</span><strong>Verify</strong><p>Check the answer before relying on it.</p></li>
+            <li><span class="case-flow__step">04 · User action</span><strong>Configure</strong><p>Decide what to change in the form.</p></li>
+          </ol>
+          <figcaption id="sorbot-map-caption">Intended sequence, not observed behavior. Verification is an action expected of the user; the screens do not demonstrate how they check answers or what context the assistant receives.</figcaption>
         </figure>
-
         <figure class="fig-full">
           <img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy">
           <figcaption class="fig-caption">Embedded chat shown in the Groups configuration flow. The form and conversation are visible together.</figcaption>
         </figure>
-        <div class="note">
-          <p class="label">The trade-off</p>
-          <p>A side panel also takes space from the form. A key validation question is whether users can still see and reach important fields while asking for help.</p>
+        <div class="reflect">
+          <h3 class="decision__title">The trade-off: conversation space or task context</h3>
+          <dl class="case-options">
+            <div><dt>Dedicated assistant only <span>Hypothetical alternative</span></dt><dd>Gives the conversation more room, but asking about a field means moving away from its configuration screen.</dd></div>
+            <div><dt>Dedicated + embedded <span>Design shown</span></dt><dd>Keeps help close to the form. The panel can obscure fields, and users must understand when to use each entry point.</dd></div>
+          </dl>
+          <p class="footnote">Retrospective comparison, not a record of tested alternatives. Whether both entry points are needed remains a validation question.</p>
         </div>
       </section>
 
@@ -274,7 +229,8 @@
         <div class="split">
           <div class="ed__text" style="gap:24px">
             <h2 class="h2 h2--ed" id="s-model">The user chooses the model.</h2>
-            <p>Sorbot supports more than one model. I kept the selector visible in the dedicated workspace and used an explicit list of model names, so the choice is available without hiding it in settings.</p>
+            <p>The design exposes more than one model. I kept the selector visible in the dedicated workspace and used an explicit list of names, so the choice is available without opening settings.</p>
+            <p>Visibility does not explain which model fits a task. I would test whether people can make that choice, or need descriptions and a recommended default.</p>
           </div>
           <div class="model">
             <img src="assets/img/sorbot-model.webp" alt="Model selector open, listing Llama V3 70B Instruct, Mixtral 8×7B Instruct, FireFunction V1 and ChatGPT 4o" width="656" height="524" loading="lazy">
@@ -288,7 +244,8 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-begin">Turn a blank prompt into a starting point.</h2>
           <div class="ed__text">
-            <p>The home offers starter actions, while this exploration suggests questions about channels, flows, smart rules, alerts and permissions. The intent was to connect a familiar chat pattern to the language of IoT Unified.</p>
+            <p>The home offers starter actions, while this exploration suggests questions about channels, flows, smart rules, alerts and permissions. I used the language of IoT Unified to make the blank composer less abstract.</p>
+            <p>Each suggestion also sets an expectation about what Sorbot can answer. Those prompts still need to be checked against the assistant’s actual capabilities.</p>
           </div>
         </div>
         <figure class="fig-full">
@@ -302,68 +259,69 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-verify">Guidance still needs verification.</h2>
           <div class="ed__text">
-            <p>The interface includes a reminder to verify Sorbot’s responses. It sets a boundary around the assistant: an answer should be checked before it informs a configuration change.</p>
+            <p>I included a reminder to verify Sorbot’s responses. An answer should be checked before it informs a configuration change. The reminder alone does not show whether users can do that.</p>
             <div class="note note--tall">
               <p class="label">In-product reminder</p>
-              <p class="big">SORBOT isn’t perfect—it’s a good idea to verify its responses.</p>
+              <blockquote class="big">SORBOT isn’t perfect—it’s a good idea to verify its responses.</blockquote>
             </div>
+            <p class="small">A next design task is to make uncertainty actionable: what should someone see when an answer is incomplete, unsupported or cannot be checked? Those response states are not established by the screens shown here.</p>
           </div>
         </div>
+        <figure class="placeholder" data-placeholder="sorbot-response-states">
+          <figcaption><strong>Placeholder · answer and uncertainty states</strong><p>If designed: two 4:3 conversation crops, a configuration answer and an uncertain or unsupported response, with any verification or recovery controls. Otherwise, remove this block.</p></figcaption>
+        </figure>
       </section>
 
       <hr class="rule">
 
-      <!-- 05 Stakeholder review -->
+      <!-- 05 Peer review -->
       <section class="ed" data-nav="Review" aria-labelledby="s-review">
-        <p class="label">Iteration &amp; stakeholder review</p>
+        <p class="label">Iteration &amp; peer review</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-review">Reviewing beyond the project team.</h2>
           <div class="ed__text">
-            <p>The project took approximately two months. Company practice did not give me direct access to real users in the industrial sector, so I involved developers from other, unrelated projects as stakeholders while iterating on the design.</p>
-            <p class="small">Their outside perspective gave me people to review the proposals with. It did not replace validation with the people who would configure nodes in their day-to-day work.</p>
+            <p>The project took approximately two months. Company practice did not give me direct access to real users in the industrial sector, so I invited developers from other, unrelated projects to review the design as I iterated.</p>
+            <p class="small">That gave me an outside perspective on the interface. It did not replace validation with people configuring nodes in their day-to-day work, and the screens here do not document a specific feedback-to-revision example.</p>
           </div>
         </div>
-
-        <figure class="placeholder" data-placeholder="feedback-to-changes">
-          <span class="placeholder__tag">Placeholder · to confirm</span>
-          <p class="placeholder__title">What the review changed</p>
-          <p class="placeholder__text">Two or three concrete changes that came out of the developer reviews, each as "Raised, then Changed", plus the early wireframes or earlier version they refer to. Use the same format as the Vision iteration cards.</p>
-        </figure>
-
-        <figure class="placeholder placeholder--wide" data-placeholder="prototype-recording">
-          <span class="placeholder__tag">Placeholder · asset needed</span>
-          <p class="placeholder__title">Short recording of Sorbot in use</p>
-          <p class="placeholder__text">A 10 to 15 second silent loop: open Sorbot, pick a model, use a starter action, read the verify reminder. Also show the embedded panel beside a form if possible. MP4 or WebM, under 3 MB.</p>
+        <figure class="placeholder" data-placeholder="sorbot-review-iteration">
+          <figcaption><strong>Placeholder · review-driven revision</strong><p>Two matched 16:10 design exports, before and after a real review, with the reviewer’s role and the note that explains the change.</p></figcaption>
         </figure>
       </section>
 
       <!-- 06 Outcome -->
       <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
-        <p class="label">Design outcome &amp; next validation</p>
+        <p class="label">Design outcome &amp; next steps</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-outcome">An assistant designed around the task.</h2>
+          <h2 class="h2 h2--ed" id="s-outcome">Two ways to ask.<br>Next: validate with users.</h2>
           <div class="ed__text">
-            <p>The design brings together a dedicated assistant, chat within a node flow and user-controlled model selection. Its effect on configuration success, time to complete a task and support needs still needs to be evaluated with end users.</p>
+            <p>The design work brings together a dedicated assistant, chat within a node flow, model selection and starting prompts. The designs show those interface decisions.</p>
+            <p>Configuration success, completion time and support needs are the outcomes to evaluate next with end users.</p>
           </div>
         </div>
-        <figure class="placeholder" data-placeholder="outcome-evidence">
-          <span class="placeholder__tag">Placeholder · to confirm</span>
-          <p class="placeholder__title">Outcome evidence, if available</p>
-          <p class="placeholder__text">Whether Sorbot shipped, who uses it, any usage or support signal, or a short quote from a stakeholder (with permission). If there is nothing real yet, delete this block and keep the honest "still to validate" framing.</p>
+        <figure class="placeholder" data-placeholder="sorbot-walkthrough">
+          <figcaption><strong>Placeholder · Sorbot walkthrough</strong><p>A 10 to 15 second silent recording: open Sorbot, choose a model, use a starter action, then show the embedded panel beside a form.</p></figcaption>
         </figure>
 
-        <div class="triple triple--wide">
-          <div data-reveal>
-            <h3>Find the right help</h3>
-            <p>Can users identify when to open Sorbot and when to use help inside the node flow?</p>
-          </div>
-          <div data-reveal style="--d:80ms">
-            <h3>Understand the model</h3>
-            <p>Can users identify the active model and understand what changes when they select another one?</p>
-          </div>
-          <div data-reveal style="--d:160ms">
-            <h3>Check before changing</h3>
-            <p>Can users verify an answer and apply it while keeping important configuration fields visible?</p>
+        <div class="reflect">
+          <h3 class="decision__title">What I would test next</h3>
+          <p class="lead">Proposed tasks. I would use representative configuration questions and check the answers independently.</p>
+          <ol class="case-validation" role="list">
+            <li><h4>Find help during setup</h4><p>Ask someone to resolve a configuration question. Watch which entry point they choose and whether the panel blocks fields they need.</p></li>
+            <li><h4>Explain the model choice</h4><p>Ask them to identify the active model and explain what they expect from another option. Look for uncertainty before adding more controls.</p></li>
+            <li><h4>Check an answer before editing</h4><p>In a test environment, observe whether they can spot an incomplete answer, verify it and make a deliberate change. Record where the interface gives too little help.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <hr class="rule">
+      <section class="ed" data-nav="Reflection" aria-labelledby="s-reflection">
+        <p class="label">Reflection</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-reflection">A familiar chat UI is only the starting point.</h2>
+          <div class="ed__text">
+            <p>Looking back, the unresolved part is what happens after the answer. A visible model name and a verification reminder expose choices, but neither explains how to make them well.</p>
+            <p>I would bring industrial users in earlier and test one configuration task end to end before expanding the interface. That would help me decide which prompts, model controls and response states earn their place.</p>
           </div>
         </div>
       </section>
@@ -389,9 +347,7 @@
     <footer class="footer">
       <p>© 2026 Adrian Carballo</p>
       <div class="footer__links">
-        <!-- TODO: replace the resume URL -->
         <a href="https://www.linkedin.com/in/adrian-carballo-guilarte-aa6b32187/" target="_blank" rel="noopener me">LinkedIn <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
-        <a href="#" data-todo="resume-url">Resume <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </footer>
   </div>

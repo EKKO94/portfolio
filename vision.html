@@ -104,7 +104,7 @@
     <main id="main">
       <!-- Hero -->
       <section class="case-hero" aria-labelledby="case-title">
-        <p class="kicker">Case study 04 &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; IoT Unified Cloud</p>
+        <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; IoT Unified Cloud</p>
         <h1 class="case-hero__title" id="case-title">From forms to a node canvas.</h1>
         <p class="case-hero__sub">Designing a visual way to connect and configure computer vision workflows in IoT Unified.</p>
         <dl class="meta">
@@ -123,7 +123,7 @@
       </div>
 
       <!-- At a glance -->
-      <section class="glance" aria-label="At a glance">
+      <section class="glance glance--4" aria-label="At a glance">
         <div class="glance__item" data-reveal>
           <p class="glance__label">The challenge</p>
           <p class="glance__text">A technical setup flow that hid how the pipeline connected.</p>
@@ -135,6 +135,10 @@
         <div class="glance__item" data-reveal style="--d:160ms">
           <p class="glance__label">The design</p>
           <p class="glance__text">A guided flow with connected nodes and settings in context.</p>
+        </div>
+        <div class="glance__item" data-reveal style="--d:240ms">
+          <p class="glance__label">The outcome</p>
+          <p class="glance__text">Launched after four months, with positive qualitative feedback from sales and support.</p>
         </div>
       </section>
 
@@ -157,6 +161,11 @@
                 <li>Designed processing nodes and the Interests Zone editor.</li>
               </ul>
             </div>
+            <figure class="placeholder" data-placeholder="team-and-timeline">
+              <span class="placeholder__tag">Placeholder · to confirm</span>
+              <p class="placeholder__title">Team, collaboration and timeline</p>
+              <p class="placeholder__text">Who I worked with (developers, product, stakeholders; roles only) and how the four months split into phases: research, design, build and launch. A one-line timeline strip works well here.</p>
+            </figure>
           </div>
         </div>
       </section>
@@ -173,6 +182,28 @@
               <p class="lead">The previous setup used a long wizard of technical forms. Camera configuration alone had five sub-steps before Analytics and Custom Fields. Fields such as FPS, thresholds and hardware arguments appeared before users could see how the processing stages connected.</p>
             </div>
           </div>
+
+          <figure class="flowcmp" data-reveal aria-label="Setup flow, before and after (schematic)">
+            <div class="flowrow">
+              <p class="flowrow__label">Before · a wizard of forms</p>
+              <ol class="flow">
+                <li class="flow__step"><span class="flow__name">General Information</span></li>
+                <li class="flow__step"><span class="flow__name">Camera Configuration</span><span class="flow__sub">Five sub-steps: Information, Motion, Detections, Records, Snapshots</span></li>
+                <li class="flow__step"><span class="flow__name">Analytics</span></li>
+                <li class="flow__step"><span class="flow__name">Custom Fields</span></li>
+              </ol>
+            </div>
+            <div class="flowrow flowrow--after">
+              <p class="flowrow__label">After · a guided setup around one canvas</p>
+              <ol class="flow">
+                <li class="flow__step"><span class="flow__name">General Information</span></li>
+                <li class="flow__step"><span class="flow__name">Video Input</span></li>
+                <li class="flow__step flow__step--key"><span class="flow__name">Stream Processors</span><span class="flow__sub">The canvas: the whole pipeline visible as connected nodes</span></li>
+                <li class="flow__step"><span class="flow__name">Custom Fields</span></li>
+              </ol>
+            </div>
+            <figcaption class="diagram__cap">Schematic built from the step names in the product. Illustrative, not a screenshot.</figcaption>
+          </figure>
 
           <div class="pair">
             <figure class="figure" data-reveal>
@@ -265,6 +296,12 @@
           </div>
 
           <p class="footnote">Reference screenshots: Blender, NodeGraphQt and PixiEditor. © their respective owners.</p>
+
+          <figure class="placeholder placeholder--wide" data-placeholder="early-explorations">
+            <span class="placeholder__tag">Placeholder · asset needed</span>
+            <p class="placeholder__title">Early sketches and low-fidelity explorations</p>
+            <p class="placeholder__text">Two or three rough canvases, wireframes or whiteboard photos from before the final design, with one line on what each one tested (for example, free-form graph versus predefined nodes). 16:9, WebP.</p>
+          </figure>
         </div>
       </section>
 
@@ -280,6 +317,38 @@
               <p class="lead">The canvas sits inside a four-step setup: General Information, Video Input, Stream Processors and Custom Fields. It makes the processing pipeline visible while retaining a guided path through the wider task.</p>
             </div>
           </div>
+
+          <figure class="diagram" data-reveal aria-label="Vision node model (schematic)">
+            <div class="nodes">
+              <div class="nodes__col">
+                <p class="nodes__head">Source</p>
+                <div class="nodes__box nodes__box--key">Video Input</div>
+              </div>
+              <span class="nodes__arrow" aria-hidden="true">→</span>
+              <div class="nodes__col">
+                <p class="nodes__head">Processors</p>
+                <div class="nodes__zone">
+                  <div class="nodes__box">Raw Streamer</div>
+                  <div class="nodes__box">Motion Detector</div>
+                  <div class="nodes__box">Object Detector</div>
+                  <p class="nodes__zone-label">Interests Zone limits what these look at</p>
+                </div>
+              </div>
+              <span class="nodes__arrow" aria-hidden="true">→</span>
+              <div class="nodes__col">
+                <p class="nodes__head">Events</p>
+                <div class="nodes__box">Event</div>
+                <div class="nodes__box">Event</div>
+              </div>
+            </div>
+            <figcaption>How the node model reads: source, processors, events. Schematic of the concept, not a screenshot.</figcaption>
+          </figure>
+
+          <figure class="placeholder placeholder--wide" data-placeholder="canvas-recording">
+            <span class="placeholder__tag">Placeholder · asset needed</span>
+            <p class="placeholder__title">Short screen recording of building a pipeline</p>
+            <p class="placeholder__text">A 10 to 15 second silent loop: drag a Video Input and a processor onto the canvas, connect them, open the inspector. MP4 or WebM, under 3 MB, with a poster frame.</p>
+          </figure>
 
           <div class="decision" data-reveal>
             <div class="decision__text">
@@ -315,6 +384,18 @@
               </figcaption>
             </figure>
           </div>
+
+          <figure class="placeholder" data-placeholder="node-anatomy">
+            <span class="placeholder__tag">Placeholder · asset needed</span>
+            <p class="placeholder__title">Node anatomy and states</p>
+            <p class="placeholder__text">A component sheet of one node: header, ports in and out, default, selected, connected and error states, with the color coding by type (input, event, processor). Shows the system thinking behind the canvas.</p>
+          </figure>
+
+          <figure class="placeholder" data-placeholder="alternatives-considered">
+            <span class="placeholder__tag">Placeholder · to confirm</span>
+            <p class="placeholder__title">Alternatives considered</p>
+            <p class="placeholder__text">Two or three options weighed before this one (for example, keeping the wizard, a free-form graph, predefined nodes) with one line each on why they were set aside. Only include what really happened.</p>
+          </figure>
         </div>
       </section>
 
@@ -397,6 +478,11 @@
           </div>
           <div class="split__right">
             <p class="lead">Vision launched after four months. Sales and support teams, who worked directly with clients, relayed positive feedback. Support reported good customer acceptance and said Vision was one of the products the team was promoting most actively. This was qualitative feedback; setup time and successful completion still need to be measured with users.</p>
+            <figure class="placeholder" data-placeholder="launch-metrics">
+              <span class="placeholder__tag">Placeholder · to confirm</span>
+              <p class="placeholder__title">Launch evidence, if available</p>
+              <p class="placeholder__text">Any measurable signal since launch: adoption of Vision, setup time, support tickets, or a short quote from support or sales (with permission). Remove this block if there is nothing real to show.</p>
+            </figure>
             <div class="reflect">
               <h3 class="sub-label">What I would do differently</h3>
               <p class="lead">Bring users into the process earlier. Developer feedback helped refine feasibility, but user sessions are needed to understand whether the canvas works for people without a technical background.</p>

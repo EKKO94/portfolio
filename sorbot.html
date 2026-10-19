@@ -104,7 +104,7 @@
     <main id="main">
       <!-- Hero -->
       <section class="case-hero" aria-labelledby="case-title">
-        <p class="kicker">Case study 03 &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; Sorbot</p>
+        <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; Sorbot</p>
         <h1 class="case-hero__title" id="case-title">AI guidance,<br>inside the workflow.</h1>
         <p class="case-hero__sub">Designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.</p>
         <dl class="meta">
@@ -122,7 +122,7 @@
       </figure>
 
       <!-- At a glance -->
-      <section class="glance" aria-label="At a glance">
+      <section class="glance glance--4" aria-label="At a glance">
         <div class="glance__item" data-reveal>
           <p class="glance__label">The need</p>
           <p class="glance__text">Guidance through a complex, data-rich workspace.</p>
@@ -135,6 +135,10 @@
           <p class="glance__label">The control</p>
           <p class="glance__text">A visible choice of AI model.</p>
         </div>
+        <div class="glance__item" data-reveal style="--d:240ms">
+          <p class="glance__label">The status</p>
+          <p class="glance__text">Designed and iterated in about two months. Its effect still needs validation with end users.</p>
+        </div>
       </section>
 
       <!-- 01 Context -->
@@ -144,8 +148,19 @@
           <h2 class="h2 h2--ed" id="s-context">Helping users navigate technical complexity.</h2>
           <div class="ed__text">
             <p>IoT Unified brings together a large volume of data and many configurable nodes. The company needed an AI assistant that users could turn to for guidance on setting up a node or resolving configuration questions.</p>
-            <p class="label">My contribution</p>
-            <p class="small">Reviewed conversational AI references, iterated on the interface and designed the dedicated and embedded experiences, including model selection. I used developers from unrelated projects as stakeholders because direct access to industrial users was unavailable.</p>
+            <div class="contrib">
+              <p class="label">My contribution</p>
+              <ul>
+                <li>Reviewed conversational AI references and iterated on the interface.</li>
+                <li>Designed the dedicated and embedded experiences, including model selection.</li>
+                <li>Reviewed proposals with developers from unrelated projects, because direct access to industrial users was unavailable.</li>
+              </ul>
+            </div>
+            <figure class="placeholder" data-placeholder="team-and-timeline">
+              <span class="placeholder__tag">Placeholder · to confirm</span>
+              <p class="placeholder__title">Team, collaboration and timeline</p>
+              <p class="placeholder__text">Who I worked with (roles only: developers, product, stakeholders) and how the two months split into phases: references, exploration, review and handoff. A one-line timeline strip works well here.</p>
+            </figure>
           </div>
         </div>
       </section>
@@ -194,6 +209,22 @@
             <p>A familiar message composer, task-oriented starting points, a visible model selector and a reminder to verify responses.</p>
           </div>
         </div>
+
+        <table class="compare" data-reveal>
+          <caption>Familiar pattern and how it was adapted</caption>
+          <tbody>
+            <tr><th scope="row">Message composer</th><td>Kept the familiar composer so starting a conversation needs no explanation.</td></tr>
+            <tr><th scope="row">Starting points</th><td>Replaced generic prompts with task-oriented starters and suggestions about channels, flows, smart rules, alerts and permissions.</td></tr>
+            <tr><th scope="row">Model picker</th><td>Kept the selector visible with an explicit list of model names instead of hiding it in settings.</td></tr>
+            <tr><th scope="row">Caution about answers</th><td>Added an in-product reminder to verify responses before they inform a configuration change.</td></tr>
+          </tbody>
+        </table>
+
+        <figure class="placeholder placeholder--wide" data-placeholder="reference-screens">
+          <span class="placeholder__tag">Placeholder · asset needed</span>
+          <p class="placeholder__title">Annotated reference screens</p>
+          <p class="placeholder__text">Three cropped screens from ChatGPT, Gemini and DeepSeek, each with a short callout on the pattern you borrowed (composer, starters, model picker). Add a credit line for the owners. 3 across, WebP.</p>
+        </figure>
       </section>
 
       <hr class="rule">
@@ -208,6 +239,26 @@
             <p class="label">Decision 01 — Keep help close to the task</p>
           </div>
         </div>
+        <figure class="sysmap" data-reveal aria-label="How Sorbot fits into IoT Unified (schematic)">
+          <div class="sysmap__pair">
+            <div class="sysmap__card">
+              <span class="sysmap__tag">Entry point 1</span>
+              <h3>Dedicated workspace</h3>
+              <p>Room for open questions about nodes, settings and workspace data, with starter actions to begin.</p>
+            </div>
+            <div class="sysmap__card">
+              <span class="sysmap__tag">Entry point 2</span>
+              <h3>Embedded panel</h3>
+              <p>A side panel inside a node flow, so the form and the conversation stay on screen together.</p>
+            </div>
+          </div>
+          <div class="sysmap__base">
+            <span class="sysmap__tag">Shared by both</span>
+            <p>A visible model selector, task-oriented starting points and a reminder to verify responses.</p>
+          </div>
+          <figcaption class="diagram__cap">Schematic of the two experiences. Illustrative, not a screenshot.</figcaption>
+        </figure>
+
         <figure class="fig-full">
           <img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy">
           <figcaption class="fig-caption">Embedded chat shown in the Groups configuration flow. The form and conversation are visible together.</figcaption>
@@ -272,6 +323,18 @@
             <p class="small">Their outside perspective gave me people to review the proposals with. It did not replace validation with the people who would configure nodes in their day-to-day work.</p>
           </div>
         </div>
+
+        <figure class="placeholder" data-placeholder="feedback-to-changes">
+          <span class="placeholder__tag">Placeholder · to confirm</span>
+          <p class="placeholder__title">What the review changed</p>
+          <p class="placeholder__text">Two or three concrete changes that came out of the developer reviews, each as "Raised, then Changed", plus the early wireframes or earlier version they refer to. Use the same format as the Vision iteration cards.</p>
+        </figure>
+
+        <figure class="placeholder placeholder--wide" data-placeholder="prototype-recording">
+          <span class="placeholder__tag">Placeholder · asset needed</span>
+          <p class="placeholder__title">Short recording of Sorbot in use</p>
+          <p class="placeholder__text">A 10 to 15 second silent loop: open Sorbot, pick a model, use a starter action, read the verify reminder. Also show the embedded panel beside a form if possible. MP4 or WebM, under 3 MB.</p>
+        </figure>
       </section>
 
       <!-- 06 Outcome -->
@@ -283,6 +346,12 @@
             <p>The design brings together a dedicated assistant, chat within a node flow and user-controlled model selection. Its effect on configuration success, time to complete a task and support needs still needs to be evaluated with end users.</p>
           </div>
         </div>
+        <figure class="placeholder" data-placeholder="outcome-evidence">
+          <span class="placeholder__tag">Placeholder · to confirm</span>
+          <p class="placeholder__title">Outcome evidence, if available</p>
+          <p class="placeholder__text">Whether Sorbot shipped, who uses it, any usage or support signal, or a short quote from a stakeholder (with permission). If there is nothing real yet, delete this block and keep the honest "still to validate" framing.</p>
+        </figure>
+
         <div class="triple triple--wide">
           <div data-reveal>
             <h3>Find the right help</h3>

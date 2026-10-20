@@ -101,46 +101,48 @@
 
     <main id="main">
       <!-- Hero -->
-      <section class="case-hero" aria-labelledby="case-title">
-        <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; IoT Unified Cloud</p>
-        <h1 class="case-hero__title" id="case-title">From forms to a node canvas.</h1>
-        <p class="case-hero__sub">I designed a node canvas inside a guided setup, so people configuring Vision could see how video inputs, processors and events connect.</p>
-        <dl class="meta">
-          <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
-          <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Vision setup · Node canvas</dd></div>
-          <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value">Web · Desktop</dd></div>
-          <div class="meta__item"><dt class="meta__label">Timeline</dt><dd class="meta__value">4 months to launch</dd></div>
-        </dl>
-      </section>
+      <div class="case-opening">
+        <section class="case-hero" aria-labelledby="case-title">
+          <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; IoT Unified Cloud</p>
+          <h1 class="case-hero__title" id="case-title">From forms to a node canvas.</h1>
+          <p class="case-hero__sub">I designed a node canvas inside a guided setup, so people configuring Vision could see how video inputs, processors and events connect.</p>
+          <dl class="meta">
+            <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
+            <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Vision setup · Node canvas</dd></div>
+            <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value">Web · Desktop</dd></div>
+            <div class="meta__item"><dt class="meta__label">Timeline</dt><dd class="meta__value">4 months to launch</dd></div>
+          </dl>
+        </section>
 
-      <!-- At a glance -->
-      <section class="glance" aria-label="At a glance">
-        <div class="glance__item">
-          <p class="glance__label">The challenge</p>
-          <p class="glance__text">A technical setup flow that hid how the pipeline connected.</p>
-        </div>
-        <div class="glance__item">
-          <p class="glance__label">My design</p>
-          <p class="glance__text">A guided setup with a node canvas and settings in context.</p>
-        </div>
-        <div class="glance__item">
-          <p class="glance__label">The outcome</p>
-          <p class="glance__text">Launched in four months, with positive feedback relayed by sales and support.</p>
-        </div>
-      </section>
+        <!-- At a glance -->
+        <section class="glance" aria-label="At a glance">
+          <div class="glance__item">
+            <p class="glance__label">The challenge</p>
+            <p class="glance__text">A technical setup flow that hid how the pipeline connected.</p>
+          </div>
+          <div class="glance__item">
+            <p class="glance__label">My design</p>
+            <p class="glance__text">A guided setup with a node canvas and settings in context.</p>
+          </div>
+          <div class="glance__item">
+            <p class="glance__label">The outcome</p>
+            <p class="glance__text">Launched in four months, with positive feedback relayed by sales and support.</p>
+          </div>
+        </section>
 
-      <nav class="case-jump" aria-label="Case study shortcuts">
-        <a href="#s-problem">Problem &amp; before</a>
-        <a href="#s-solution">Design decisions</a>
-        <a href="#s-outcome">Outcome &amp; next steps</a>
-      </nav>
+        <nav class="case-jump" aria-label="Case study shortcuts">
+          <a href="#s-problem">Problem &amp; before</a>
+          <a href="#s-solution">Design decisions</a>
+          <a href="#s-outcome">Outcome &amp; next steps</a>
+        </nav>
 
-      <figure class="case-hero-image figure">
-        <div class="shot shot--hero">
-          <img src="assets/img/vision-hero.webp" alt="The Vision Stream Processors step: a tools palette beside a canvas where a Video Input node connects to a Raw Streamer, an Interests Zone and event nodes, with an expand control at the top right of the canvas" width="1440" height="900" fetchpriority="high">
-        </div>
-        <figcaption class="fig-caption">Vision’s Stream Processors step. The canvas makes connections visible; the wider setup stays guided. Select any product image to enlarge it.</figcaption>
-      </figure>
+        <figure class="case-hero-image figure">
+          <div class="shot shot--hero">
+            <img src="assets/img/vision-hero.webp" alt="The Vision Stream Processors step: a tools palette beside a canvas where a Video Input node connects to a Raw Streamer, an Interests Zone and event nodes, with an expand control at the top right of the canvas" width="1440" height="900" fetchpriority="high">
+          </div>
+          <figcaption class="fig-caption">Vision’s Stream Processors step. The canvas makes connections visible; the wider setup stays guided. Select any product image to enlarge it.</figcaption>
+        </figure>
+      </div>
 
       <!-- 01 Context -->
       <section class="section" data-nav="Context" aria-labelledby="s-context">
@@ -314,7 +316,20 @@
             </div>
           </div>
 
-                    <div class="reflect">
+                    <figure class="video" data-reveal>
+            <div class="video__frame">
+              <video class="video__el" muted loop playsinline preload="none" poster="assets/img/vision-walkthrough-poster.webp" width="1248" height="592" aria-label="Screen recording of the node canvas: nodes are dragged from the tools palette, connected, and edited in the inspector">
+                <source src="assets/vision-canvas-walkthrough.mp4" type="video/mp4">
+              </video>
+              <button class="video__toggle" type="button" aria-pressed="false">Pause</button>
+            </div>
+            <figcaption class="cap">
+              <p class="cap__title">Building a pipeline on the canvas</p>
+              <p class="cap__text">Screen recording: nodes come from the tools palette, links connect them, and the inspector edits the selected node.</p>
+            </figcaption>
+          </figure>
+
+          <div class="reflect">
             <h3 class="decision__title">Why keep the wizard around the canvas?</h3>
             <p class="lead">The graph makes relationships visible, but it introduces a new interaction model. Keeping it inside the setup flow gives the canvas a defined place in the task. Next, I would test whether first-time users can connect nodes without help.</p>
             <dl class="case-options">

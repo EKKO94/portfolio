@@ -125,7 +125,7 @@
         </div>
         <div class="glance__item">
           <p class="glance__label">The outcome</p>
-          <p class="glance__text">Two assistant surfaces designed and peer-reviewed in about two months. Next: test with industrial users.</p>
+          <p class="glance__text">In use at Sorba.ai. Two assistant surfaces designed in about two months; next, test with industrial users.</p>
         </div>
       </section>
 
@@ -147,6 +147,7 @@
           <h2 class="h2 h2--ed" id="s-context">Helping users navigate technical complexity.</h2>
           <div class="ed__text">
             <p>IoT Unified brings together a large volume of data and many configurable nodes. The company wanted an assistant for questions about node setup and configuration. The design needed to offer help while leaving room for the task itself.</p>
+            <p>The project manager defined the requirements together with the heads of the development department.</p>
             <div class="contrib">
               <h3 class="label">My contribution</h3>
               <ul role="list">
@@ -264,12 +265,41 @@
               <p class="label">In-product reminder</p>
               <blockquote class="big">SORBOT isn’t perfect—it’s a good idea to verify its responses.</blockquote>
             </div>
-            <p class="small">A next design task is to make uncertainty actionable: what should someone see when an answer is incomplete, unsupported or cannot be checked?</p>
+            <p class="small">The interface also shows what Sorbot is doing: it lists its steps while it thinks, ends answers with their sources and says so when the connection drops.</p>
           </div>
         </div>
-        <aside class="placeholder" data-placeholder="sorbot-response-states">
-          <strong>Placeholder · answer and uncertainty states</strong><p>A configuration answer and an unsupported response, with any verification or recovery controls (4:3 crops).</p>
-        </aside>
+        <div class="pair">
+          <figure class="figure" data-reveal>
+            <div class="shot shot--wide"><img src="assets/img/sorbot-chat-thinking.webp" alt="Sorbot after a question about configuring a pump: a status line reads “I’m finding the best answer for you” above a collapsed Thoughts panel" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Working</p>
+              <p class="cap__text">A status line and a collapsed Thoughts panel show that Sorbot is working on the question.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--wide"><img src="assets/img/sorbot-chat-answer.webp" alt="Sorbot’s expanded Thoughts panel listing four steps, followed by the start of a numbered answer" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Thought process</p>
+              <p class="cap__text">The Thoughts panel lists the steps (detecting intent, planning, checking the context), then the answer follows.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="pair">
+          <figure class="figure" data-reveal>
+            <div class="shot shot--wide"><img src="assets/img/sorbot-chat-sources.webp" alt="The end of a Sorbot answer with numbered sources, site links with icons and icon actions to listen, copy, like, dislike and regenerate" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Sources</p>
+              <p class="cap__text">The answer ends with numbered sources, linked sites and icon actions: listen, copy, like, dislike, regenerate.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--wide"><img src="assets/img/sorbot-chat-offline.webp" alt="Sorbot mid-answer with a warning that reads “Oops! Looks like we lost connection. Trying to reconnect”" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Connection lost</p>
+              <p class="cap__text">If the connection drops, the interface says so and that it is trying to reconnect.</p>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <hr class="rule">
@@ -284,9 +314,36 @@
             <p class="small">That gave me an outside perspective on the interface. It did not replace validation with people configuring nodes in their day-to-day work.</p>
           </div>
         </div>
-        <aside class="placeholder" data-placeholder="sorbot-review-iteration">
-          <strong>Placeholder · review-driven revision</strong><p>An earlier and a revised design side by side (16:10), with the reviewer’s role and the change it prompted.</p>
-        </aside>
+        <div class="section__stack" style="gap:24px">
+          <h3 class="sub-label">Reviewer feedback → design changes</h3>
+          <div class="pair" style="align-items:stretch">
+            <article class="card card--change">
+              <p class="card__num">REVIEW 1</p>
+              <h4 class="card__title">Show where answers come from</h4>
+              <div class="reflect" style="gap:4px">
+                <p class="sub-label sub-label--muted">Raised</p>
+                <p>The reviewers asked where the information in an answer comes from.</p>
+              </div>
+              <div class="reflect" style="gap:4px">
+                <p class="sub-label sub-label--accent">Changed</p>
+                <p style="color:var(--ink)">Answers end with numbered sources and a Learn more row of linked sites with their icons.</p>
+              </div>
+              <div class="shot shot--inline"><img src="assets/img/sorbot-chat-sources.webp" alt="The end of a Sorbot answer with numbered sources and linked sites" width="1440" height="900" loading="lazy"></div>
+            </article>
+            <article class="card card--change">
+              <p class="card__num">REVIEW 2</p>
+              <h4 class="card__title">Use icons, not names</h4>
+              <div class="reflect" style="gap:4px">
+                <p class="sub-label sub-label--muted">Raised</p>
+                <p>The reviewers asked for icons instead of text labels to choose a search type and for other controls.</p>
+              </div>
+              <div class="reflect" style="gap:4px">
+                <p class="sub-label sub-label--accent">Changed</p>
+                <p style="color:var(--ink)">Message actions are icons: listen, copy, like, dislike and regenerate.</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
 
       <!-- 06 Outcome -->
@@ -296,13 +353,10 @@
           <h2 class="h2 h2--ed" id="s-outcome">Two ways to ask.<br>Next: validate with users.</h2>
           <div class="ed__text">
             <p>The design work brings together a dedicated assistant, chat within a node flow, model selection and starting prompts.</p>
+            <p>Sorbot is in use at Sorba.ai, and anyone can try it through the Sorba trial, which is limited until a paid plan. I no longer have access to the product, so I have no usage data to share.</p>
             <p>Configuration success, completion time and support needs are the outcomes to evaluate next with end users.</p>
           </div>
         </div>
-        <aside class="placeholder" data-placeholder="sorbot-walkthrough">
-          <strong>Placeholder · Sorbot walkthrough</strong><p>Short silent recording: open Sorbot, choose a model, use a starter action, then the embedded panel beside a form.</p>
-        </aside>
-
         <div class="reflect">
           <h3 class="decision__title">What I would test next</h3>
           <p class="lead">Proposed tasks. I would use representative configuration questions and check the answers independently.</p>

@@ -996,3 +996,6 @@ h1, h2, h3 { text-wrap: balance; }
   .lightbox { overflow: auto; place-items: start; padding: 64px 16px 16px; }
   .lightbox img { max-width: none; max-height: none; width: auto; height: 78dvh; }
 }
+
+/* Reference screenshots fill their frame edge to edge (no white letterbox). */
+.case .shot--ref img { object-fit: cover; }

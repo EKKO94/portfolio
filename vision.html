@@ -179,26 +179,46 @@
             </div>
           </div>
 
-          <figure class="flowcmp" aria-label="Setup flow, before and after (schematic)">
-            <div class="flowrow">
-              <p class="flowrow__label">Before · a wizard of forms</p>
-              <ol class="flow" role="list">
-                <li class="flow__step"><span class="flow__name">General Information</span></li>
-                <li class="flow__step"><span class="flow__name">Camera Configuration</span><span class="flow__sub">Five sub-steps: Information, Motion, Detections, Records, Snapshots</span></li>
-                <li class="flow__step"><span class="flow__name">Analytics</span></li>
-                <li class="flow__step"><span class="flow__name">Custom Fields</span></li>
+          <figure class="fj" data-reveal aria-labelledby="fj-cap">
+            <div class="fj-board">
+              <p class="fj-title">Before · a wizard of forms</p>
+              <ol class="fj-flow">
+                <li class="fj-node fj-node--pill">Start</li>
+                <li class="fj-node">General Information</li>
+                <li class="fj-node fj-node--group">
+                  <span>Camera Configuration</span>
+                  <ol class="fj-sub" aria-label="Five sub-steps">
+                    <li>Information</li><li>Motion</li><li>Detections</li><li>Records</li><li>Snapshots</li>
+                  </ol>
+                </li>
+                <li class="fj-node">Analytics</li>
+                <li class="fj-node">Custom Fields</li>
               </ol>
+              <div class="fj-notes">
+                <p class="fj-note fj-note--yellow">FPS, thresholds and hardware arguments came before users could see how the stages connect.</p>
+                <p class="fj-note fj-note--pink">The pipeline had to be inferred across form steps.</p>
+              </div>
             </div>
-            <div class="flowrow flowrow--after">
-              <p class="flowrow__label">After · guided setup with one canvas</p>
-              <ol class="flow" role="list">
-                <li class="flow__step"><span class="flow__name">General Information</span></li>
-                <li class="flow__step"><span class="flow__name">Video Input</span></li>
-                <li class="flow__step flow__step--key"><span class="flow__name">Stream Processors</span><span class="flow__sub">The canvas: the whole pipeline visible as connected nodes</span></li>
-                <li class="flow__step"><span class="flow__name">Custom Fields</span></li>
+            <div class="fj-board fj-board--after">
+              <p class="fj-title">After · guided setup around one canvas</p>
+              <ol class="fj-flow">
+                <li class="fj-node fj-node--pill">Start</li>
+                <li class="fj-node">General Information</li>
+                <li class="fj-node">Video Input</li>
+                <li class="fj-node fj-node--key fj-node--group">
+                  <span>Stream Processors</span>
+                  <span class="fj-mini" aria-label="A graph: video input, processors, events">
+                    <i>Video Input</i><b aria-hidden="true">→</b><i>Processors</i><b aria-hidden="true">→</b><i>Events</i>
+                  </span>
+                </li>
+                <li class="fj-node">Custom Fields</li>
               </ol>
+              <div class="fj-notes">
+                <p class="fj-note fj-note--green">The whole pipeline is visible as connected nodes.</p>
+                <p class="fj-note fj-note--blue">Settings open beside the selected node.</p>
+              </div>
             </div>
-            <figcaption class="diagram__cap">Illustrative summary of the previous form flow and the redesigned four-step setup, using step names from the product screens.</figcaption>
+            <figcaption id="fj-cap" class="diagram__cap">Illustrative flow in the style of a FigJam board, built from the step names in the product screens. Not a screenshot.</figcaption>
           </figure>
 
           <div class="pair">

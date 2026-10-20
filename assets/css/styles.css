@@ -1000,3 +1000,14 @@ h1, h2, h3 { text-wrap: balance; }
 /* Reference screenshots fill their frame edge to edge (no white letterbox). */
 .case .shot--ref img { object-fit: cover; }
 .case .shot--inline { aspect-ratio: 16 / 10; }
+
+/* Iteration cards: full width, text on top, a pair of screens below. */
+.iter-list { display: grid; gap: 24px; }
+.iter { gap: 24px; }
+.iter__head { display: flex; flex-direction: column; gap: 8px; }
+.iter__text { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 48px; }
+.iter__shots { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.iter__shot { display: flex; flex-direction: column; gap: 10px; margin: 0; }
+@media (max-width: 760px) {
+  .iter__text, .iter__shots { grid-template-columns: minmax(0, 1fr); }
+}

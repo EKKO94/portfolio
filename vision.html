@@ -366,35 +366,54 @@
 
           <div class="section__stack" style="gap:40px">
             <h3 class="sub-label">Developer feedback → design changes</h3>
-            <div class="pair" style="align-items:stretch">
-              <article class="card card--change">
-                <p class="card__num">ITERATION 1</p>
-                <h4 class="card__title">Give the canvas more room</h4>
-                <div class="reflect" style="gap:4px">
-                  <p class="sub-label sub-label--muted">Raised</p>
-                  <p>The developers found the embedded canvas too cramped.</p>
+            <div class="iter-list">
+              <article class="card card--change iter">
+                <div class="iter__head">
+                  <p class="card__num">ITERATION 1</p>
+                  <h4 class="card__title">Give the canvas more room</h4>
                 </div>
-                <div class="reflect" style="gap:4px">
-                  <p class="sub-label sub-label--accent">Changed</p>
-                  <p style="color:var(--ink)">I added a way to maximize the canvas to full screen.</p>
+                <div class="iter__text">
+                  <div class="reflect" style="gap:4px">
+                    <p class="sub-label sub-label--muted">Raised</p>
+                    <p>The developers found the embedded canvas too cramped.</p>
+                  </div>
+                  <div class="reflect" style="gap:4px">
+                    <p class="sub-label sub-label--accent">Changed</p>
+                    <p style="color:var(--ink)">I added a way to maximize the canvas to full screen.</p>
+                  </div>
                 </div>
-                <div class="shot shot--inline"><img src="assets/img/vision-inspector.webp" alt="The canvas inside the page with the inspector open and a new expand control at the top right of the canvas" width="1440" height="900" loading="lazy"></div>
-                <p class="footnote">Embedded, with the new expand control at the top right.</p>
-                <div class="shot shot--inline"><img src="assets/img/vision-canvas-maximized.webp" alt="The maximized canvas in a full-window dialog titled Stream Processors, with the tools palette, the graph, the Interests Zone editor and the inspector, and a Close control" width="1440" height="900" loading="lazy"></div>
-                <p class="footnote">Maximized: the whole window for the canvas, with a Close control.</p>
+                <div class="iter__shots">
+                  <figure class="iter__shot"><div class="shot shot--inline"><img src="assets/img/vision-network-camera.webp" alt="The embedded canvas in the Stream Processors step, with the new expand control at the top right of the canvas" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">Embedded, with the new expand control at the top right.</figcaption>
+                  </figure>
+                  <figure class="iter__shot"><div class="shot shot--inline"><img src="assets/img/vision-canvas-maximized.webp" alt="The maximized canvas in a full-window dialog titled Stream Processors, with the tools palette, the graph, the Interests Zone editor and the inspector, and a Close control" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">Maximized: the whole window for the canvas, with a Close control.</figcaption>
+                  </figure>
+                </div>
               </article>
-              <article class="card card--change">
-                <p class="card__num">ITERATION 2</p>
-                <h4 class="card__title">Keep related forms together</h4>
-                <div class="reflect" style="gap:4px">
-                  <p class="sub-label sub-label--muted">Raised</p>
-                  <p>The interface needed to display two related forms at once.</p>
+              <article class="card card--change iter">
+                <div class="iter__head">
+                  <p class="card__num">ITERATION 2</p>
+                  <h4 class="card__title">Keep related forms together</h4>
                 </div>
-                <div class="reflect" style="gap:4px">
-                  <p class="sub-label sub-label--accent">Changed</p>
-                  <p style="color:var(--ink)">I placed the forms side by side and added a close control to the second one. I checked feasibility with the developers before committing to the layout.</p>
+                <div class="iter__text">
+                  <div class="reflect" style="gap:4px">
+                    <p class="sub-label sub-label--muted">Raised</p>
+                    <p>The interface needed to display two related forms at once.</p>
+                  </div>
+                  <div class="reflect" style="gap:4px">
+                    <p class="sub-label sub-label--accent">Changed</p>
+                    <p style="color:var(--ink)">I placed the forms side by side and added a close control to the second one. I checked feasibility with the developers before committing to the layout.</p>
+                  </div>
                 </div>
-                <div class="shot shot--inline"><img src="assets/img/vision-interests-zone.webp" alt="Two related forms displayed side by side, the second with a close control" width="1440" height="900" loading="lazy"></div>
+                <div class="iter__shots">
+                  <figure class="iter__shot"><div class="shot shot--inline"><img src="assets/img/vision-inspector.webp" alt="One form open beside the canvas: the inspector with the Raw Streamer settings" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">One form at a time: the inspector.</figcaption>
+                  </figure>
+                  <figure class="iter__shot"><div class="shot shot--inline"><img src="assets/img/vision-interests-zone.webp" alt="Two related forms displayed side by side: the Interests Zone editor and the inspector, the first with a close control" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">Two related forms side by side, the Interests Zone one with a close control.</figcaption>
+                  </figure>
+                </div>
               </article>
             </div>
 

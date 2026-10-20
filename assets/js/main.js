@@ -64,7 +64,7 @@ window.__revealReady = true;
     last = shot;
     dlg.showModal();
   }
-  document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img").forEach(function (shot) {
+  document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img, .browser__body img").forEach(function (shot) {
     var pic = shot.tagName === "IMG" ? shot : shot.querySelector("img");
     shot.setAttribute("data-zoom", "");
     shot.setAttribute("role", "button");

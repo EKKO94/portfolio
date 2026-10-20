@@ -7,6 +7,10 @@ LinkedIn: https://www.linkedin.com/in/adrian-carballo-guilarte-aa6b32187/
 Location: Jacksonville, FL, United States
 Experience across: Sorba.ai, Interamplify, Guajiritos
 
+## About and resume
+
+- [About and resume](https://ekko94.github.io/portfolio/about.html): Experience at Sorba.ai, Interamplify, QA-BIT and Guajiritos, education and how Adrian works.
+
 ## Case studies
 
 - [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Replaced a long wizard of technical forms with a node canvas for configuring computer vision workflows in IoT Unified. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.

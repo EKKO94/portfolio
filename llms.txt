@@ -9,7 +9,7 @@ Experience across: Sorba.ai, Interamplify, Guajiritos
 
 ## About and resume
 
-- [About and resume](https://ekko94.github.io/portfolio/about.html): Experience at Sorba.ai, Interamplify, QA-BIT and Guajiritos, education and how Adrian works.
+- [About and resume](https://ekko94.github.io/portfolio/about.html): Experience at Sorba.ai, Interamplify, QA-BIT and Guajiritos, education and how Adrian works. CV (PDF, one page): https://ekko94.github.io/portfolio/assets/Adrian-Carballo-CV.pdf
 
 ## Case studies
 

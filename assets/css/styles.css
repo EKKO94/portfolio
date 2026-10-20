@@ -379,7 +379,7 @@ section[id] { scroll-margin-top: 24px; }
   letter-spacing: -0.024em;
 }
 .work__intro { max-width: 420px; font-size: 14px; line-height: 1.45; color: var(--muted); }
-.work__exp { margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 445px; }
+.work__exp { margin-top: 40px; display: flex; flex-direction: column; gap: 15px; max-width: 680px; }
 .work__exp-label {
   font-weight: 600;
   font-size: 11px;

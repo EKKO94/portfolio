@@ -1,4 +1,5 @@
 /* Reveal-on-scroll. Content stays visible without JS or with reduced motion. */
+window.__revealReady = true;
 (function () {
   var items = document.querySelectorAll("[data-reveal]");
   if (!items.length) return;
@@ -31,7 +32,7 @@
     nav.setAttribute("aria-label", "Sections");
     var links = secs.map(function (s) {
       var a = document.createElement("a");
-      a.href = "#" + (s.id || (s.id = "sec-" + s.dataset.nav.toLowerCase()));
+      a.href = "#" + (s.getAttribute("aria-labelledby") || s.id || (s.id = "sec-" + s.dataset.nav.toLowerCase()));
       a.innerHTML = "<span></span>";
       a.firstChild.textContent = s.dataset.nav;
       a.setAttribute("aria-label", s.dataset.nav);
@@ -45,7 +46,7 @@
         var i = secs.indexOf(e.target);
         links.forEach(function (l, j) { if (j === i) l.setAttribute("aria-current", "true"); else l.removeAttribute("aria-current"); });
       });
-    }, { rootMargin: "-40% 0px -55% 0px" });
+    }, { rootMargin: "-" + Math.round(window.innerHeight * 0.4) + "px 0px -" + Math.round(window.innerHeight * 0.55) + "px 0px" });
     secs.forEach(function (s) { io2.observe(s); });
   }
 
@@ -74,6 +75,7 @@
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(shot); }
     });
   });
-  dlg.addEventListener("click", function () { dlg.close(); });
+  dlg.querySelector(".lightbox__close").addEventListener("click", function () { dlg.close(); });
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   dlg.addEventListener("close", function () { if (last) last.focus(); });
 })();

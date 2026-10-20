@@ -1020,3 +1020,6 @@ h1, h2, h3 { text-wrap: balance; }
   .fj-sub { flex-direction: row; flex-wrap: wrap; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) { .fj-note { transform: none; } }
+/* Small UI exports (like a menu) stay at their natural size on the case tint instead of being stretched. */
+.case .shot--natural { display: grid; place-items: center; background: var(--case-bg); }
+.case .shot--natural img { width: auto; height: auto; max-width: 88%; max-height: 88%; object-fit: contain; border-radius: 10px; box-shadow: 0 8px 24px -8px rgba(4,4,3,0.25); }

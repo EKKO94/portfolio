@@ -331,30 +331,57 @@
         </div>
         <div class="section__stack" style="gap:24px">
           <h3 class="sub-label">Reviewer feedback → design changes</h3>
-          <div class="pair" style="align-items:stretch">
-            <article class="card card--change">
-              <p class="card__num">REVIEW 1</p>
-              <h4 class="card__title">Show where answers come from</h4>
-              <div class="reflect" style="gap:4px">
-                <p class="sub-label sub-label--muted">Raised</p>
-                <p>The reviewers asked where the information in an answer comes from.</p>
+          <div class="iter-list">
+            <article class="card card--change iter">
+              <div class="iter__head">
+                <p class="card__num">REVIEW 1</p>
+                <h4 class="card__title">Show where answers come from</h4>
               </div>
-              <div class="reflect" style="gap:4px">
-                <p class="sub-label sub-label--accent">Changed</p>
-                <p style="color:var(--ink)">Answers end with numbered sources and a Learn more row of linked sites with their icons.</p>
+              <div class="iter__text">
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--muted">Raised</p>
+                  <p>The reviewers asked where the information in an answer comes from.</p>
+                </div>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--accent">Changed</p>
+                  <p style="color:var(--ink)">Answers end with numbered sources and a Learn more row of linked sites with their icons.</p>
+                </div>
               </div>
-              <div class="shot shot--inline"><img src="assets/img/sorbot-chat-sources.webp" alt="The end of a Sorbot answer with numbered sources and linked sites" width="1440" height="900" loading="lazy"></div>
+              <div class="iter__shots">
+                  <figure class="iter__shot">
+                    <div class="shot shot--inline"><img src="assets/img/sorbot-chat-answer.webp" alt="Sorbot’s expanded Thoughts panel and the start of a numbered answer" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">The answer, after the Thoughts panel.</figcaption>
+                  </figure>
+                  <figure class="iter__shot">
+                    <div class="shot shot--inline"><img src="assets/img/sorbot-chat-sources.webp" alt="The end of a Sorbot answer with numbered sources and linked sites with icons" width="1440" height="900" loading="lazy"></div>
+                    <figcaption class="footnote">The answer ends with its sources.</figcaption>
+                  </figure>
+              </div>
             </article>
-            <article class="card card--change">
-              <p class="card__num">REVIEW 2</p>
-              <h4 class="card__title">Use icons, not names</h4>
-              <div class="reflect" style="gap:4px">
-                <p class="sub-label sub-label--muted">Raised</p>
-                <p>The reviewers asked for icons instead of text labels to choose a search type and for other controls.</p>
+            <article class="card card--change iter">
+              <div class="iter__head">
+                <p class="card__num">REVIEW 2</p>
+                <h4 class="card__title">Icons instead of names</h4>
               </div>
-              <div class="reflect" style="gap:4px">
-                <p class="sub-label sub-label--accent">Changed</p>
-                <p style="color:var(--ink)">The composer uses icons: a paperclip to attach files and a magnifier for search. Message actions are icons too: listen, copy, like, dislike and regenerate.</p>
+              <div class="iter__text">
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--muted">Raised</p>
+                  <p>The reviewers asked for icons instead of names to choose where Sorbot searches, and for other controls.</p>
+                </div>
+                <div class="reflect" style="gap:4px">
+                  <p class="sub-label sub-label--accent">Changed</p>
+                  <p style="color:var(--ink)">Each source first showed a short name next to its icon, which worked while there were few. As more were added, I kept only the icons, as ChatGPT and Claude do. The menu opens to each source’s name, a short description, its icon and a toggle.</p>
+                </div>
+              </div>
+              <div class="iter__shots">
+                  <figure class="iter__shot">
+                    <div class="shot shot--inline"><img src="assets/img/sorbot-composer-icons.webp" alt="The Sorbot composer: source choices are icons only (library, knowledge base, web) in a menu button, with the data tools beside them" width="960" height="600" loading="lazy"></div>
+                    <figcaption class="footnote">Source choices in the composer are icons only.</figcaption>
+                  </figure>
+                  <figure class="iter__shot">
+                    <div class="shot shot--inline shot--natural"><img src="assets/img/sorbot-source-options.webp" alt="The sources menu: Web, SORBA Knowledge Base and Enterprise Library, each with an icon, a short description and a toggle" width="408" height="222" loading="lazy"></div>
+                    <figcaption class="footnote">The menu shows names, descriptions, icons and toggles.</figcaption>
+                  </figure>
               </div>
             </article>
           </div>

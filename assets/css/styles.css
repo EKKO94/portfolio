@@ -1053,7 +1053,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 @media (max-width: 900px) {
   .about-hero { grid-template-columns: minmax(0, 1fr); }
-  .about-hero__photo { order: -1; max-width: 420px; aspect-ratio: 1 / 1; object-position: center 20%; }
+  .about-hero__photo { max-width: 360px; aspect-ratio: 1 / 1; object-position: center 20%; }
   .tl__item { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .tl__date { padding-top: 0; }
 }

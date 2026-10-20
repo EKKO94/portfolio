@@ -999,3 +999,4 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* Reference screenshots fill their frame edge to edge (no white letterbox). */
 .case .shot--ref img { object-fit: cover; }
+.case .shot--inline { aspect-ratio: 16 / 10; }

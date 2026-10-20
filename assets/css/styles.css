@@ -911,32 +911,6 @@ h1, h2, h3 { text-wrap: balance; }
 .case .progress a[aria-current="true"]::before { background: var(--accent); }
 .case .progress a span { right: 48px; }
 
-.case-map {
-  display: flex; flex-direction: column; gap: 28px;
-  padding: clamp(24px, 3vw, 40px); border-radius: 16px;
-  background: var(--case-bg); color: var(--ink);
-}
-.case-map__head { display: flex; flex-direction: column; gap: 10px; }
-.case-map .label, .case-map p, .case-map figcaption { color: var(--ink-2); }
-.case-map .statement { color: var(--ink); }
-.case-map__routes { gap: 32px; }
-.case-map__routes h3 { font-size: 22px; line-height: 1.25; letter-spacing: -0.02em; }
-.case-map__routes p { max-width: 46ch; font-size: 16px; }
-.case-map figcaption { max-width: 85ch; font-size: 14px; line-height: 1.5; }
-.case-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
-.case-flow li {
-  position: relative; display: flex; flex-direction: column; gap: 10px;
-  padding: 16px 0; border-top: 1px solid var(--ink-2); min-width: 0;
-}
-.case-flow li + li::before {
-  content: ""; position: absolute; top: -4px; left: -12px;
-  width: 7px; height: 7px; border-top: 1px solid var(--ink-2);
-  border-right: 1px solid var(--ink-2); transform: rotate(45deg);
-}
-.case-flow__step { font: 500 12px/1.5 var(--mono); color: var(--ink-2); }
-.case-flow strong { font-size: 20px; line-height: 1.25; letter-spacing: -0.02em; }
-.case-flow p { font-size: 16px; line-height: 1.5; }
-.case-flow .case-flow__focus { padding-inline: 16px; background: var(--bg); border-color: var(--accent); }
 
 .case-options { margin: 12px 0 0; }
 .case-options > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px 32px; padding-block: 24px; border-top: 1px solid var(--rule); }
@@ -957,10 +931,6 @@ h1, h2, h3 { text-wrap: balance; }
   .case .glance { gap: 20px; }
   .case .glance__item { padding-top: 16px; }
   .case .glance__text { font-size: 19px; font-weight: 600; }
-  .case-flow { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  .case-flow li { padding: 16px; border-top: 0; border-left: 1px solid var(--ink-2); }
-  .case-flow li + li::before { top: -12px; left: 13px; transform: rotate(135deg); }
-  .case-flow .case-flow__focus { border-color: var(--accent); }
   .case-options > div { grid-template-columns: minmax(0, 1fr); }
   .case-validation li { grid-template-columns: 28px minmax(0, 1fr); gap: 10px 16px; }
   .case-validation p { grid-column: 2; }

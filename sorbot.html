@@ -194,22 +194,37 @@
             <p>I gave broader questions a dedicated workspace and put focused help beside node configuration. That second entry point keeps the form nearby, but it also competes for space.</p>
           </div>
         </div>
-        <figure class="case-map" aria-labelledby="sorbot-map-caption">
-          <div class="case-map__head">
-            <p class="label">Illustrative map of the design intent</p>
-            <p class="statement">Two entry points. One intended flow.</p>
+        <figure class="fj" data-reveal aria-labelledby="sorbot-fj-cap">
+          <div class="fj-board">
+            <p class="fj-title">Dedicated workspace</p>
+            <ol class="fj-flow">
+              <li class="fj-node fj-node--pill">Start</li>
+              <li class="fj-node">Open Sorbot</li>
+              <li class="fj-node">Ask</li>
+              <li class="fj-node">Read</li>
+              <li class="fj-node fj-node--key">Verify</li>
+              <li class="fj-node">Decide what to change</li>
+            </ol>
+            <div class="fj-notes">
+              <p class="fj-note fj-note--yellow">Room for a broader conversation, starter actions and model selection.</p>
+            </div>
           </div>
-          <div class="pair case-map__routes">
-            <div class="reflect"><h3>Dedicated workspace</h3><p>Room for a broader conversation, starter actions and model selection.</p></div>
-            <div class="reflect"><h3>Embedded panel</h3><p>A question beside the configuration form, with less space for both.</p></div>
+          <div class="fj-board fj-board--after">
+            <p class="fj-title">Embedded panel</p>
+            <ol class="fj-flow">
+              <li class="fj-node fj-node--pill">Start</li>
+              <li class="fj-node">Open the panel in a node flow</li>
+              <li class="fj-node">Ask</li>
+              <li class="fj-node">Read</li>
+              <li class="fj-node fj-node--key">Verify</li>
+              <li class="fj-node">Change the form beside it</li>
+            </ol>
+            <div class="fj-notes">
+              <p class="fj-note fj-note--green">The question sits beside the configuration form.</p>
+              <p class="fj-note fj-note--pink">The panel takes space from the form, so fields can be hidden.</p>
+            </div>
           </div>
-          <ol class="case-flow" role="list">
-            <li><span class="case-flow__step">01</span><strong>Ask</strong><p>Start a conversation in either location.</p></li>
-            <li><span class="case-flow__step">02</span><strong>Read</strong><p>Review the assistant’s response.</p></li>
-            <li class="case-flow__focus"><span class="case-flow__step">03 · User action</span><strong>Verify</strong><p>Check the answer before relying on it.</p></li>
-            <li><span class="case-flow__step">04 · User action</span><strong>Configure</strong><p>Decide what to change in the form.</p></li>
-          </ol>
-          <figcaption id="sorbot-map-caption">Intended sequence, not observed behavior. Verification is an action expected of the user; the screens do not demonstrate how they check answers or what context the assistant receives.</figcaption>
+          <figcaption id="sorbot-fj-cap" class="diagram__cap">Intended sequence in the style of a FigJam board, not observed behavior. Verifying is an action expected of the user; the screens do not show how they check an answer.</figcaption>
         </figure>
         <figure class="fig-full">
           <img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy">

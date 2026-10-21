@@ -472,8 +472,10 @@ section[id] { scroll-margin-top: 24px; }
 .project__cta { margin-top: 0; }
 .project__cta--soon { color: var(--muted); font-weight: 500; }
 .project__link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-.project:has(.project__link:focus-visible) .cover { outline: 2px solid var(--accent); outline-offset: 4px; }
-.project__link:focus-visible { outline: none; }
+@supports selector(:has(a)) {
+  .project:has(.project__link:focus-visible) .cover { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .project__link:focus-visible { outline: none; }
+}
 
 /* Contact panel (home) */
 .contact-panel {
@@ -790,6 +792,8 @@ h1, h2, h3 { text-wrap: balance; }
     opacity: 0; pointer-events: none; transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
   }
   .progress a:hover span, .progress a:focus-visible span, .progress a[aria-current="true"] span { opacity: 1; transform: translate(0, -50%); }
+  .progress a:hover span, .progress a:focus-visible span { pointer-events: auto; }
+  .progress.is-dismissed a span { opacity: 0 !important; }
   .progress a[aria-current="true"] span { opacity: 0; }
   .progress a[aria-current="true"]:hover span, .progress a[aria-current="true"]:focus-visible span { opacity: 1; }
 }
@@ -844,7 +848,7 @@ h1, h2, h3 { text-wrap: balance; }
 .case .progress a { width: 44px; height: 44px; }
 .case .progress a::before { inset: 19px; background: var(--muted); }
 .case .progress a[aria-current="true"]::before { background: var(--accent); }
-.case .progress a span { right: 48px; }
+.case .progress a span { right: 44px; }
 
 
 .case-options { margin: 12px 0 0; }
@@ -1115,11 +1119,11 @@ h1, h2, h3 { text-wrap: balance; }
    lead 18 · body 17 · small 16 · caption 14 · label 13 (mono) · titles 22 / 30 / 42
    -------------------------------------------------------------------------- */
 :root {
-  --fs-lead: clamp(16px, 1.25vw, 18px);
-  --fs-body: clamp(16px, 1.18vw, 17px);
-  --fs-sm: 16px;
-  --fs-cap: 14px;
-  --fs-label: 14px;
+  --fs-lead: clamp(1rem, 1.25vw, 1.125rem);
+  --fs-body: clamp(1rem, 1.18vw, 1.0625rem);
+  --fs-sm: 1rem;
+  --fs-cap: 0.875rem;
+  --fs-label: 0.875rem;
 }
 /* Mono labels: some paragraph rules were out-specifying them (16, 17 and 20px). */
 .label, p.label, .sub-label, p.sub-label, .card p.sub-label, .card p.card__num, .card p.card__head, .ed__text p.label, .card__num, .card__head, .meta__label, .glance__label {
@@ -1156,6 +1160,8 @@ h1, h2, h3 { text-wrap: balance; }
   .hero-stage, .browser, .mock, .fj-board, .fj-node, .placeholder, .card, .next-case__card, .contact-panel, .hero-visual__tag-box { border: 1px solid CanvasText; }
   .fj-note { border: 1px solid CanvasText; }
   :focus-visible { outline: 2px solid Highlight; }
+  .progress a::before { border: 1px solid CanvasText; }
+  .progress a[aria-current="true"]::before { background: Highlight; border-color: Highlight; }
 }
 
 /* --------------------------------------------------------------------------

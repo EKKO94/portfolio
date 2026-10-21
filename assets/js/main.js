@@ -1,5 +1,4 @@
 /* Reveal-on-scroll. Content stays visible without JS or with reduced motion. */
-window.__revealReady = true;
 (function () {
   var items = document.querySelectorAll("[data-reveal]");
   if (!items.length) return;
@@ -80,3 +79,9 @@ window.__revealReady = true;
   dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   dlg.addEventListener("close", function () { if (last) last.focus(); });
 })();
+window.__revealReady = true;
+document.addEventListener("keydown", function (e) {
+  if (e.key !== "Escape") return;
+  var p = document.querySelector(".progress");
+  if (p) { p.classList.add("is-dismissed"); setTimeout(function () { p.classList.remove("is-dismissed"); }, 2000); }
+});

@@ -79,34 +79,3 @@ window.__revealReady = true;
   dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   dlg.addEventListener("close", function () { if (last) last.focus(); });
 })();
-
-/* Walkthrough videos: muted loop that plays while visible, with a pause control. */
-(function () {
-  var videos = document.querySelectorAll(".video__el");
-  if (!videos.length) return;
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  videos.forEach(function (v) {
-    var btn = v.parentNode.querySelector(".video__toggle");
-    var userPaused = reduce;
-    function setLabel() {
-      var playing = !v.paused;
-      btn.textContent = playing ? "Pause" : "Play";
-      btn.setAttribute("aria-pressed", playing ? "false" : "true");
-      btn.setAttribute("aria-label", (playing ? "Pause" : "Play") + " video");
-    }
-    function play() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
-    setLabel();
-    v.addEventListener("play", setLabel);
-    v.addEventListener("pause", setLabel);
-    btn.addEventListener("click", function () {
-      if (v.paused) { userPaused = false; play(); } else { userPaused = true; v.pause(); }
-    });
-    if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting && !userPaused) play(); else if (!e.isIntersecting) v.pause();
-        });
-      }, { threshold: 0.4 }).observe(v);
-    }
-  });
-})();

@@ -1084,8 +1084,7 @@ h1, h2, h3 { text-wrap: balance; }
 .contact-panel a:focus-visible, .contact-panel :focus-visible { outline-color: var(--ink); }
 
 /* --------------------------------------------------------------------------
-   Case study opening: text on the left, the main screen on the right (stacked on small screens)
-   and the walkthrough video with a pause control.
+   Case study opening: text on the left, the main screen on the right (stacked on small screens).
    -------------------------------------------------------------------------- */
 .case-opening {
   display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
@@ -1105,15 +1104,6 @@ h1, h2, h3 { text-wrap: balance; }
   .case-opening .case-hero__title { font-size: clamp(40px, 9vw, 72px); }
 }
 
-.video { display: grid; gap: 14px; margin: 0; }
-.video__frame { position: relative; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--white); }
-.video__el { display: block; width: 100%; height: auto; aspect-ratio: 1248 / 592; background: var(--white); }
-.video__toggle {
-  position: absolute; right: 12px; bottom: 12px; min-width: 64px; min-height: 44px; padding: 0 16px;
-  border: 1px solid var(--ink); border-radius: 999px; background: var(--white); color: var(--ink);
-  font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer;
-}
-.video__toggle:hover { background: var(--ink); color: var(--bg); }
 
 /* --------------------------------------------------------------------------
    Browser mockup stage for the case study opening: a macOS-style window with a second one behind.

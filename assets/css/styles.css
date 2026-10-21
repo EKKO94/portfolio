@@ -441,32 +441,42 @@ section[id] { scroll-margin-top: 24px; }
   position: absolute;
   left: calc(var(--x) * var(--u));
   top: calc(var(--y) * var(--u));
-  padding: calc(6 * var(--u));
-  border: calc(0.75 * var(--u)) solid #383d45;
-  border-radius: calc(10 * var(--u));
-  background: #21262e;
-  box-shadow: 0 calc(10 * var(--u)) calc(24 * var(--u)) calc(-2 * var(--u)) rgba(26, 36, 51, 0.2);
+  border-radius: calc(8 * var(--u));
+  background: #fff;
+  box-shadow: 0 0 0 calc(0.75 * var(--u)) rgba(4, 4, 3, 0.1), 0 calc(2 * var(--u)) calc(4 * var(--u)) rgba(4, 4, 3, 0.07), 0 calc(14 * var(--u)) calc(26 * var(--u)) calc(-8 * var(--u)) rgba(4, 4, 3, 0.4);
   overflow: hidden;
   transition: transform 0.6s var(--ease);
 }
-.mock--light { background: #f7fafc; border-color: #bfc7d1; }
+/* macOS-style title bar: traffic lights drawn in CSS, title centered. */
 .mock__chrome {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: calc(5 * var(--u));
   width: calc(var(--w) * var(--u));
   height: calc(22 * var(--u));
-  padding-inline: calc(7 * var(--u));
+  padding-inline: calc(8 * var(--u));
+  background: #f1f1f0;
+  border-bottom: calc(0.75 * var(--u)) solid rgba(4, 4, 3, 0.09);
   font-family: var(--mono);
   font-weight: 500;
   font-size: calc(9 * var(--u));
   line-height: 1;
   white-space: nowrap;
-  color: #c7ccd4;
+  color: #4a4a48;
   overflow: hidden;
 }
-.mock--light .mock__chrome { color: #545e6e; }
-.mock__chrome img { width: calc(4 * var(--u)); height: calc(4 * var(--u)); flex: none; }
+.mock__chrome::before {
+  content: "";
+  flex: none;
+  width: calc(30 * var(--u));
+  height: calc(8 * var(--u));
+  background:
+    radial-gradient(circle at calc(4 * var(--u)) 50%, #ff5f57 calc(3.5 * var(--u)), transparent calc(3.8 * var(--u))),
+    radial-gradient(circle at calc(15 * var(--u)) 50%, #febc2e calc(3.5 * var(--u)), transparent calc(3.8 * var(--u))),
+    radial-gradient(circle at calc(26 * var(--u)) 50%, #28c840 calc(3.5 * var(--u)), transparent calc(3.8 * var(--u)));
+}
+.mock__chrome img { display: none; }
+.mock__chrome span { position: absolute; left: 50%; transform: translateX(-50%); max-width: 55%; overflow: hidden; text-overflow: ellipsis; }
 .mock__body {
   position: relative;
   overflow: hidden;

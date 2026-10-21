@@ -834,13 +834,6 @@ h1, h2, h3 { text-wrap: balance; }
 .case .meta { margin: 0; }
 .case .glance { padding-bottom: 0; }
 .case .glance__item { gap: 10px; }
-.case-jump { display: flex; flex-wrap: wrap; gap: 4px 28px; margin-block: 20px 40px; }
-.case-jump a {
-  display: inline-flex; align-items: center; min-height: 44px;
-  font: 500 0.875rem/1.5 var(--mono); color: var(--accent);
-  text-decoration: underline; text-underline-offset: 5px;
-}
-.case-jump a:hover { color: var(--ink); }
 .case .case-hero-image { margin-bottom: 72px; }
 .case .case-hero-image .fig-caption { color: var(--ink-2); }
 /* Show the complete product UI, including controls at the edges, on phones. */
@@ -881,7 +874,6 @@ h1, h2, h3 { text-wrap: balance; }
   .case .meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .case .meta__value { overflow-wrap: anywhere; }
   .case .glance__text { font-size: 1.125rem; }
-  .case-jump { gap: 0 20px; margin-block: 16px 28px; }
 }
 
 
@@ -1025,6 +1017,8 @@ h1, h2, h3 { text-wrap: balance; }
   .about-hero__photo { animation: hero-fade 0.7s var(--ease) 0.08s both; }
 }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .case .card--loop:hover { transform: translateY(-4px); }
+  .case .card--loop:hover .card__icon { transform: rotate(-8deg) scale(1.06); background: var(--accent); }
   .btn:hover { transform: translateY(-2px); }
   .textlink:hover .arrow { transform: translateX(4px); }
   .textlink--up:hover .arrow { transform: translate(2px, -2px); }
@@ -1039,18 +1033,17 @@ h1, h2, h3 { text-wrap: balance; }
    -------------------------------------------------------------------------- */
 .case-opening {
   display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-  grid-template-areas: "hero image" "glance glance" "jump jump";
+  grid-template-areas: "hero image" "glance glance";
   column-gap: clamp(32px, 4vw, 64px); align-items: center;
 }
 .case-opening > .case-hero { grid-area: hero; }
 .case-opening > .glance { grid-area: glance; margin-top: clamp(40px, 5vw, 72px); }
-.case-opening > .case-jump { grid-area: jump; }
 .case-opening > .case-hero-image { grid-area: image; margin: 0; padding: clamp(14px, 2vw, 24px); border-radius: 20px; }
 .case-opening .case-hero__title { font-size: clamp(2.5rem, 4.6vw, 4.5rem); }
 .case-opening .case-hero-image .fig-caption { font-size: 0.875rem; }
 .case-opening .case-hero-image img { border-radius: 10px; }
 @media (max-width: 1100px) {
-  .case-opening { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "glance" "jump" "image"; }
+  .case-opening { grid-template-columns: minmax(0, 1fr); grid-template-areas: "hero" "image" "glance"; }
   .case-opening > .case-hero-image { margin-top: 8px; padding: clamp(14px, 3.5vw, 40px); }
   .case-opening .case-hero__title { font-size: clamp(2.5rem, 9vw, 4.5rem); }
 }
@@ -1113,7 +1106,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 /* Case opening on small screens: the product screen right after the title block. */
 @media (max-width: 1100px) {
-  .case-opening { grid-template-areas: "hero" "image" "glance" "jump"; }
+  .case-opening { grid-template-areas: "hero" "image" "glance"; }
 }
 .tl__note { padding-top: 6px; font-size: 0.9375rem; line-height: 1.5; color: var(--muted); }
 
@@ -1164,3 +1157,11 @@ h1, h2, h3 { text-wrap: balance; }
   .fj-note { border: 1px solid CanvasText; }
   :focus-visible { outline: 2px solid Highlight; }
 }
+
+/* --------------------------------------------------------------------------
+   Case study vertical rhythm: one space between sections on both pages.
+   -------------------------------------------------------------------------- */
+:root { --space-section: clamp(72px, 8vw, 112px); }
+.case .section, .case .ed { padding-block: calc(var(--space-section) / 2); }
+.case .section--tight { padding-block: calc(var(--space-section) / 2) 0; }
+.case .case-opening { margin-bottom: calc(var(--space-section) / 2); }

@@ -1174,3 +1174,10 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* About: interests */
 .interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }
+
+/* About: skills and tools */
+.skills, .tools { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 28px; }
+.skills li, .tools li { display: inline-flex; align-items: center; gap: 10px; padding: 9px 16px; border: 1px solid var(--rule); border-radius: 999px; font-size: 1rem; line-height: 1.3; color: var(--ink); }
+.tool__logo { width: 20px; height: 20px; flex: none; background-color: var(--muted); -webkit-mask: var(--logo) center / contain no-repeat; mask: var(--logo) center / contain no-repeat; transition: background-color 0.2s var(--ease); }
+@media (hover: hover) { .tools li:hover .tool__logo { background-color: var(--ink); } }
+@media (forced-colors: active) { .tool__logo { background-color: CanvasText; } }

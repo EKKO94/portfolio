@@ -54,7 +54,7 @@ window.__revealReady = true;
   if (typeof dlg.showModal !== "function") return;
   dlg.className = "lightbox";
   dlg.setAttribute("aria-label", "Image preview");
-  dlg.innerHTML = '<img alt=""><button class="lightbox__close" type="button">Close</button>';
+  dlg.innerHTML = '<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><button class="lightbox__close" type="button">Close</button>';
   document.body.appendChild(dlg);
   var big = dlg.querySelector("img"), last = null;
   function open(shot) {

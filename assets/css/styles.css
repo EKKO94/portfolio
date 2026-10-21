@@ -269,7 +269,7 @@ section[id] { scroll-margin-top: 24px; }
 .hero__statement {
   max-width: 17em;
   font-weight: 700;
-  font-size: clamp(30px, 3.5vw, 50px);
+  font-size: clamp(32px, 8vw, 50px);
   line-height: 1.18;
   letter-spacing: -0.028em;
   text-wrap: balance;
@@ -1142,4 +1142,9 @@ h1, h2, h3 { text-wrap: balance; }
 /* Titles */
 .cap__title, .cap__title--md, .card__title, .card--change .card__title { font-size: 22px; line-height: 1.25; }
 .tl__org { font-size: clamp(24px, 2.1vw, 30px); }
-.h2, .ed .h2--ed { font-size: clamp(30px, 2.9vw, 42px); line-height: 1.11; letter-spacing: -0.03em; }
+.h2, .ed .h2--ed { font-size: clamp(26px, 2.9vw, 42px); line-height: 1.11; letter-spacing: -0.03em; }
+
+/* Hierarchy: the page title (hero) is always larger than section headings; section headings share one size. */
+.work__title, .contact-panel__title, .case-contact__title, .quote__title { font-size: clamp(26px, 2.9vw, 42px); line-height: 1.12; letter-spacing: -0.03em; }
+.contact-panel__email, .case-contact__email { font-size: clamp(19px, 1.7vw, 24px); }
+.next-case__title { font-size: clamp(36px, 4vw, 56px); }

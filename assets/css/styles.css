@@ -1185,3 +1185,13 @@ h1, h2, h3 { text-wrap: balance; }
   .tools li:hover .tool__logo { background-color: var(--brand-color, var(--bg)); }
 }
 @media (forced-colors: active) { .tool__logo { background-color: CanvasText; } }
+
+/* About: colleague recommendations */
+.said { display: grid; gap: 20px; }
+.said__item { margin: 0; padding: 28px; border: 1px solid var(--rule); border-radius: 20px; background: var(--surface, transparent); }
+.said__item blockquote { margin: 0 0 20px; }
+.said__item blockquote p { font-size: clamp(1.125rem, 1.6vw, 1.3125rem); line-height: 1.5; color: var(--ink); }
+.said__item figcaption { display: flex; flex-direction: column; gap: 4px; font-size: 1rem; line-height: 1.4; color: var(--ink-2); }
+.said__item figcaption strong { color: var(--ink); }
+.said__item figcaption span { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); }
+.said__item figcaption .said__role { font-style: normal; }

@@ -1114,3 +1114,32 @@ h1, h2, h3 { text-wrap: balance; }
   .case-opening { grid-template-areas: "hero" "image" "glance" "jump"; }
 }
 .tl__note { padding-top: 6px; font-size: 15px; line-height: 1.5; color: var(--muted); }
+
+/* --------------------------------------------------------------------------
+   Type scale: one size per role on every page.
+   lead 18 · body 17 · small 16 · caption 14 · label 13 (mono) · titles 22 / 30 / 42
+   -------------------------------------------------------------------------- */
+:root {
+  --fs-lead: clamp(16px, 1.25vw, 18px);
+  --fs-body: clamp(16px, 1.18vw, 17px);
+  --fs-sm: 16px;
+  --fs-cap: 14px;
+  --fs-label: 13px;
+}
+/* Mono labels: some paragraph rules were out-specifying them (16, 17 and 20px). */
+.label, p.label, .sub-label, p.sub-label, .card p.sub-label, .card p.card__num, .card p.card__head, .ed__text p.label, .card__num, .card__head, .meta__label, .glance__label {
+  font-size: var(--fs-label); line-height: 1.4; letter-spacing: 0.5px;
+}
+/* Lead paragraphs (section intros) */
+.lead, .ed__text p, .quote__text, .next-case__tag { font-size: var(--fs-lead); line-height: 1.56; }
+/* Body copy in lists, cards and decisions */
+.ed__text p.small, .lead--ink, .card p, .card--loop p, .card--change p, .how p, .tl__list li, .tl__role,
+.contrib li, .case-options dd, .case-validation p { font-size: var(--fs-body); line-height: 1.55; }
+/* Small supporting copy */
+.cap__text, .project__desc, .meta__value, .work__intro, .placeholder p, .card .placeholder p { font-size: var(--fs-sm); line-height: 1.5; }
+/* Captions */
+.fig-caption, .tl__note { font-size: var(--fs-cap); line-height: 1.5; }
+/* Titles */
+.cap__title, .cap__title--md, .card__title, .card--change .card__title { font-size: 22px; line-height: 1.25; }
+.tl__org { font-size: clamp(24px, 2.1vw, 30px); }
+.h2, .ed .h2--ed { font-size: clamp(30px, 2.9vw, 42px); line-height: 1.11; letter-spacing: -0.03em; }

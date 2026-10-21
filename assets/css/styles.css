@@ -335,6 +335,7 @@ section[id] { scroll-margin-top: 24px; }
   letter-spacing: -0.02em;
   text-transform: uppercase;
   width: calc(132 * var(--u) + 21.12 * var(--u));
+  box-shadow: 0 0 0 1px rgba(4, 4, 3, 0.07), 0 calc(2 * var(--u)) calc(5 * var(--u)) rgba(4, 4, 3, 0.1), 0 calc(16 * var(--u)) calc(30 * var(--u)) calc(-10 * var(--u)) rgba(4, 4, 3, 0.4);
 }
 .hero-visual__tag-box p + p { margin-top: calc(10.56 * var(--u)); }
 .hero-visual__tag-line {

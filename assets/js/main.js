@@ -61,6 +61,7 @@ window.__revealReady = true;
     var img = shot.tagName === "IMG" ? shot : shot.querySelector("img");
     big.src = img.currentSrc || img.src;
     big.alt = img.alt;
+    big.classList.toggle("is-large", img.naturalWidth >= 1000);
     last = shot;
     dlg.showModal();
   }
@@ -78,34 +79,4 @@ window.__revealReady = true;
   dlg.querySelector(".lightbox__close").addEventListener("click", function () { dlg.close(); });
   dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
   dlg.addEventListener("close", function () { if (last) last.focus(); });
-})();
-
-/* Project covers: a pill that follows the mouse (mouse only, not for reduced motion). */
-(function () {
-  var fine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!fine || reduce) return;
-  document.querySelectorAll(".project").forEach(function (project) {
-    var cover = project.querySelector(".cover");
-    if (!cover) return;
-    var soon = !!project.querySelector(".project__cta--soon");
-    var pill = document.createElement("span");
-    pill.className = "cursor-pill" + (soon ? " cursor-pill--soon" : "");
-    pill.setAttribute("aria-hidden", "true");
-    pill.textContent = soon ? "Coming soon" : "View case study";
-    cover.appendChild(pill);
-    project.addEventListener("pointermove", function (e) {
-      if (e.pointerType !== "mouse") return;
-      var r = cover.getBoundingClientRect();
-      var inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
-      cover.setAttribute("data-cursor", inside ? "on" : "off");
-      if (inside) {
-        var x = Math.min(e.clientX - r.left + 14, r.width - pill.offsetWidth - 8);
-        var y = Math.min(e.clientY - r.top + 14, r.height - pill.offsetHeight - 8);
-        pill.style.setProperty("--px", x + "px");
-        pill.style.setProperty("--py", y + "px");
-      }
-    });
-    project.addEventListener("pointerleave", function () { cover.setAttribute("data-cursor", "off"); });
-  });
 })();

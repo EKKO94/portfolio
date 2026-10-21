@@ -13,7 +13,7 @@ Experience across: Sorba.ai, Interamplify, QA-BIT, Guajiritos
 
 ## Case studies
 
-- [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Replaced a long wizard of technical forms with a node canvas for configuring computer vision workflows in IoT Unified. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
+- [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Introduced a node canvas within a guided setup for configuring computer vision workflows in IoT Unified, replacing a long wizard of technical forms with a visible pipeline. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
 - [Sorbot: AI guidance, inside the workflow](https://ekko94.github.io/portfolio/sorbot.html): Designed a dedicated AI assistant and an embedded chat inside node configuration, with a visible model selector and a verify-responses reminder. About two months; effect on task success still to be evaluated with users.
 
 ## Other work (case studies not yet published)

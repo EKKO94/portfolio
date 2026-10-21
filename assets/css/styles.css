@@ -475,7 +475,6 @@ section[id] { scroll-margin-top: 24px; }
     radial-gradient(circle at calc(15 * var(--u)) 50%, #febc2e calc(3.5 * var(--u)), transparent calc(3.8 * var(--u))),
     radial-gradient(circle at calc(26 * var(--u)) 50%, #28c840 calc(3.5 * var(--u)), transparent calc(3.8 * var(--u)));
 }
-.mock__chrome img { display: none; }
 .mock__chrome span { position: absolute; left: 50%; transform: translateX(-50%); max-width: 55%; overflow: hidden; text-overflow: ellipsis; }
 .mock__body {
   position: relative;
@@ -1151,31 +1150,28 @@ h1, h2, h3 { text-wrap: balance; }
 @media (max-width: 600px) { .hero-visual { max-width: 300px; } }
 
 /* --------------------------------------------------------------------------
-   Project cover hover: case-related chips fly out from behind the windows and a
-   "View case study" pill follows the pointer. Mouse only; static for touch and reduced motion.
+   Final review fixes
    -------------------------------------------------------------------------- */
-.cover .chip, .cursor-pill { display: none; }
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .cover .chip {
-    display: inline-flex; position: absolute; z-index: 5; pointer-events: none;
-    padding: 7px 12px; border-radius: 10px; border: 1px solid rgba(4, 4, 3, 0.12);
-    background: var(--white); color: var(--ink);
-    font-family: var(--mono); font-weight: 600; font-size: 12px; letter-spacing: 0.4px; line-height: 1; text-transform: uppercase; white-space: nowrap;
-    box-shadow: 0 2px 4px rgba(4, 4, 3, 0.08), 0 14px 22px -10px rgba(4, 4, 3, 0.4);
-    opacity: 0; transform: translate(0, 14px) rotate(0deg) scale(0.85);
-    transition: opacity 0.35s var(--ease), transform 0.6s var(--ease);
-  }
-  .chip--1 { left: 3%; top: 9%; --r: -7deg; }
-  .chip--2 { right: 3%; top: 26%; --r: 6deg; transition-delay: 0.06s; }
-  .chip--3 { left: 7%; bottom: 9%; --r: 4deg; transition-delay: 0.12s; }
-  .project:hover .chip, .project:has(.project__link:focus-visible) .chip { opacity: 1; transform: translate(0, 0) rotate(var(--r)) scale(1); }
-
-  .cursor-pill {
-    display: inline-flex; position: absolute; left: 0; top: 0; z-index: 6; pointer-events: none;
-    padding: 8px 14px; border-radius: 999px; background: var(--accent); color: var(--white);
-    font-family: var(--mono); font-weight: 600; font-size: 12px; letter-spacing: 0.5px; line-height: 1; text-transform: uppercase; white-space: nowrap;
-    opacity: 0; transform: translate(var(--px, 50%), var(--py, 50%)); transition: opacity 0.2s var(--ease), transform 0.12s linear;
-  }
-  .cursor-pill--soon { background: var(--ink); }
-  .cover[data-cursor="on"] .cursor-pill { opacity: 1; }
+/* Home hero: equal columns between 961 and 1200px so the title never meets the portrait. */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .hero { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* Focus ring for the zoomable hero screenshot stays inside the clipped window. */
+.browser__body img[data-zoom]:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; }
+/* Iteration cards: keep the "Changed" label orange. */
+.card--change p.sub-label--accent { color: var(--accent); }
+/* Lightbox: small exports keep their natural size on phones; only large screenshots pan. */
+@media (max-width: 700px) {
+  .lightbox img { max-width: 100%; height: auto; max-height: 78dvh; }
+  .lightbox img.is-large { max-width: none; max-height: none; height: 78dvh; width: auto; }
+}
+/* Printing: name and contact line, no dialog. */
+.print-only { display: none; }
+@media print {
+  .lightbox[open] { display: none !important; }
+  .print-only { display: block; font-family: var(--mono); font-size: 11pt; color: #000; padding-bottom: 8pt; }
+}
+/* Case opening on small screens: the product screen right after the title block. */
+@media (max-width: 1100px) {
+  .case-opening { grid-template-areas: "hero" "image" "glance" "jump"; }
 }

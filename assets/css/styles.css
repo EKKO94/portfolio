@@ -1143,3 +1143,9 @@ h1, h2, h3 { text-wrap: balance; }
   .hero-stage { aspect-ratio: 4 / 3; }
 }
 @media (max-width: 560px) { .hero-stage__back .browser__title { display: none; } }
+
+.hero__meta { font-family: var(--mono); font-weight: 500; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink-2); margin-top: -30px; }
+@media (max-width: 960px) { .hero__meta { margin-top: -18px; } }
+.strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px; margin-bottom: 20px; }
+.strip__item { aspect-ratio: 4 / 5; justify-content: flex-end; }
+@media (max-width: 600px) { .hero-visual { max-width: 300px; } }

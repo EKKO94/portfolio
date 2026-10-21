@@ -1171,3 +1171,6 @@ h1, h2, h3 { text-wrap: balance; }
 .case .section, .case .ed { padding-block: calc(var(--space-section) / 2); }
 .case .section--tight { padding-block: calc(var(--space-section) / 2) 0; }
 .case .case-opening { margin-bottom: calc(var(--space-section) / 2); }
+
+/* About: interests */
+.interests { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 20px; }

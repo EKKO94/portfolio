@@ -1195,3 +1195,4 @@ h1, h2, h3 { text-wrap: balance; }
 .said__item figcaption strong { color: var(--ink); }
 .said__item figcaption span { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); }
 .said__item figcaption .said__role { font-style: normal; }
+.said__item blockquote p + p { margin-top: 1em; }

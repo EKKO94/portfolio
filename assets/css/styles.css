@@ -1196,3 +1196,5 @@ h1, h2, h3 { text-wrap: balance; }
 .said__item figcaption span { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); }
 .said__item figcaption .said__role { font-style: normal; }
 .said__item blockquote p + p { margin-top: 1em; }
+.said__item figcaption { display: grid; grid-template-columns: 56px 1fr; column-gap: 16px; align-items: center; }
+.said__item figcaption img { grid-row: 1 / span 3; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }

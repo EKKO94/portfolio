@@ -1200,17 +1200,15 @@ h1, h2, h3 { text-wrap: balance; }
 .said__item figcaption img { grid-row: 1 / span 3; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
 
 /* About: open to roles */
-.open { margin-top: 28px; padding: 20px 24px; border: 1px solid var(--rule); border-radius: 20px; max-width: 520px; }
-.open__status { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink); margin-bottom: 14px; }
-.open__dot { width: 10px; height: 10px; border-radius: 50%; background: #2f9e63; box-shadow: 0 0 0 0 rgba(47, 158, 99, 0.45); }
-.open__list { display: grid; gap: 10px; }
-.open__list > div { display: grid; grid-template-columns: 130px 1fr; gap: 12px; }
-.open__list dt { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); }
-.open__list dd { font-size: 1.0625rem; line-height: 1.45; color: var(--ink); }
+.open__dot { display: inline-block; width: 10px; height: 10px; margin-right: 10px; border-radius: 50%; background: #2f9e63; box-shadow: 0 0 0 0 rgba(47, 158, 99, 0.45); }
+.open__row { display: flex; flex-wrap: wrap; gap: 16px; }
+.open__row li { flex: 1 1 220px; display: flex; align-items: flex-start; gap: 14px; padding: 20px 22px; border: 1px solid var(--rule); border-radius: 20px; }
+.open__icon { flex: none; margin-top: 2px; color: var(--accent); }
+.open__k { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.open__v { font-size: 1.0625rem; line-height: 1.45; color: var(--ink); }
 @media (prefers-reduced-motion: no-preference) { .open__dot { animation: open-pulse 2.4s var(--ease) 2; } }
 @keyframes open-pulse { 0% { box-shadow: 0 0 0 0 rgba(47, 158, 99, 0.45); } 70%, 100% { box-shadow: 0 0 0 10px rgba(47, 158, 99, 0); } }
-@media (max-width: 520px) { .open__list > div { grid-template-columns: 1fr; gap: 2px; } }
-@media (forced-colors: active) { .open { border-color: CanvasText; } .open__dot { background: Highlight; } }
+@media (forced-colors: active) { .open__row li { border-color: CanvasText; } .open__dot { background: Highlight; } }
 
 /* Vision: early exploration sketches */
 .sketches { margin: 0; display: flex; flex-direction: column; gap: 14px; }

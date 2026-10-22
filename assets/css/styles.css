@@ -1208,3 +1208,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* Vision: smaller sketch row */
 .sketches__grid { max-width: 720px; gap: 12px; }
+
+/* Case pages: tall screenshots keep their natural height */
+.case .shot--auto { aspect-ratio: auto; }
+.case .shot--auto img { width: 100%; height: auto; object-fit: contain; }

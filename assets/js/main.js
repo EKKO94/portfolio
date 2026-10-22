@@ -51,32 +51,61 @@
 
   var dlg = document.createElement("dialog");
   if (typeof dlg.showModal !== "function") return;
-  dlg.className = "lightbox";
-  dlg.setAttribute("aria-label", "Image preview");
-  dlg.innerHTML = '<img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><button class="lightbox__close" type="button">Close</button>';
+  dlg.className = "viewer";
+  dlg.setAttribute("aria-label", "Image viewer");
+  var X = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+  var L = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
+  var R = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+  dlg.innerHTML = '<button class="viewer__btn viewer__close" type="button" aria-label="Close">' + X + '</button>' +
+    '<p class="viewer__count" aria-hidden="true"></p>' +
+    '<div class="viewer__stage"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>' +
+    '<div class="viewer__bar"><button class="viewer__btn viewer__prev" type="button" aria-label="Previous image">' + L + '</button>' +
+    '<button class="viewer__zoom" type="button">Click to zoom</button>' +
+    '<button class="viewer__btn viewer__next" type="button" aria-label="Next image">' + R + '</button></div>' +
+    '<p class="visually-hidden viewer__alt" aria-live="polite"></p>';
   document.body.appendChild(dlg);
-  var big = dlg.querySelector("img"), last = null;
-  function open(shot) {
-    var img = shot.tagName === "IMG" ? shot : shot.querySelector("img");
+  var big = dlg.querySelector("img"), capAlt = dlg.querySelector(".viewer__alt"), capCount = dlg.querySelector(".viewer__count"), zoomBtn = dlg.querySelector(".viewer__zoom");
+  var prev = dlg.querySelector(".viewer__prev"), next = dlg.querySelector(".viewer__next");
+  var items = [], index = 0, last = null;
+  function show(i) {
+    index = (i + items.length) % items.length;
+    var img = items[index].tagName === "IMG" ? items[index] : items[index].querySelector("img");
     big.src = img.currentSrc || img.src;
     big.alt = img.alt;
-    big.classList.toggle("is-large", img.naturalWidth >= 1000);
-    last = shot;
-    dlg.showModal();
+    capAlt.textContent = img.alt;
+    capCount.textContent = (index + 1) + " / " + items.length;
+    dlg.classList.remove("is-zoomed");
+    zoomBtn.textContent = "Click to zoom";
+    last = items[index];
   }
   document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img, .browser__body img").forEach(function (shot) {
+    if (shot.closest(".hero-fig, .hero-stage")) return;
     var pic = shot.tagName === "IMG" ? shot : shot.querySelector("img");
+    items.push(shot);
     shot.setAttribute("data-zoom", "");
     shot.setAttribute("role", "button");
     shot.setAttribute("tabindex", "0");
-    shot.setAttribute("aria-label", "Enlarge image: " + (pic.alt || ""));
-    shot.addEventListener("click", function () { open(shot); });
+    shot.setAttribute("aria-label", "View image: " + (pic.alt || ""));
+    var idx = items.length - 1;
+    shot.addEventListener("click", function () { show(idx); dlg.showModal(); });
     shot.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(shot); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(idx); dlg.showModal(); }
     });
   });
-  dlg.querySelector(".lightbox__close").addEventListener("click", function () { dlg.close(); });
-  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+  if (!items.length) return;
+  if (items.length < 2) { prev.hidden = true; next.hidden = true; capCount.hidden = true; }
+  function toggleZoom() { dlg.classList.toggle("is-zoomed"); zoomBtn.textContent = dlg.classList.contains("is-zoomed") ? "Click to fit" : "Click to zoom"; }
+  zoomBtn.addEventListener("click", toggleZoom);
+  dlg.querySelector(".viewer__close").addEventListener("click", function () { dlg.close(); });
+  prev.addEventListener("click", function () { show(index - 1); });
+  next.addEventListener("click", function () { show(index + 1); });
+  big.addEventListener("click", toggleZoom);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.classList.contains("viewer__stage")) dlg.close(); });
+  dlg.addEventListener("keydown", function (e) {
+    if (items.length < 2) return;
+    if (e.key === "ArrowLeft") { e.preventDefault(); show(index - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); show(index + 1); }
+  });
   dlg.addEventListener("close", function () { if (last) last.focus(); });
 })();
 window.__revealReady = true;

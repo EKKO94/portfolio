@@ -56,13 +56,15 @@
   var X = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
   var L = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>';
   var R = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
-  dlg.innerHTML = '<button class="viewer__btn viewer__close" type="button" aria-label="Close image viewer">' + X + '</button>' +
-    '<button class="viewer__btn viewer__nav viewer__prev" type="button" aria-label="Previous image">' + L + '</button>' +
+  dlg.innerHTML = '<button class="viewer__btn viewer__close" type="button" aria-label="Close">' + X + '</button>' +
+    '<p class="viewer__count" aria-hidden="true"></p>' +
     '<div class="viewer__stage"><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></div>' +
-    '<button class="viewer__btn viewer__nav viewer__next" type="button" aria-label="Next image">' + R + '</button>' +
-    '<p class="viewer__cap"><span class="viewer__alt"></span><span class="viewer__count"></span></p>';
+    '<div class="viewer__bar"><button class="viewer__btn viewer__prev" type="button" aria-label="Previous image">' + L + '</button>' +
+    '<button class="viewer__zoom" type="button">Click to zoom</button>' +
+    '<button class="viewer__btn viewer__next" type="button" aria-label="Next image">' + R + '</button></div>' +
+    '<p class="visually-hidden viewer__alt" aria-live="polite"></p>';
   document.body.appendChild(dlg);
-  var big = dlg.querySelector("img"), capAlt = dlg.querySelector(".viewer__alt"), capCount = dlg.querySelector(".viewer__count");
+  var big = dlg.querySelector("img"), capAlt = dlg.querySelector(".viewer__alt"), capCount = dlg.querySelector(".viewer__count"), zoomBtn = dlg.querySelector(".viewer__zoom");
   var prev = dlg.querySelector(".viewer__prev"), next = dlg.querySelector(".viewer__next");
   var items = [], index = 0, last = null;
   function show(i) {
@@ -73,6 +75,7 @@
     capAlt.textContent = img.alt;
     capCount.textContent = (index + 1) + " / " + items.length;
     dlg.classList.remove("is-zoomed");
+    zoomBtn.textContent = "Click to zoom";
     last = items[index];
   }
   document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img, .browser__body img").forEach(function (shot) {
@@ -91,10 +94,12 @@
   });
   if (!items.length) return;
   if (items.length < 2) { prev.hidden = true; next.hidden = true; capCount.hidden = true; }
+  function toggleZoom() { dlg.classList.toggle("is-zoomed"); zoomBtn.textContent = dlg.classList.contains("is-zoomed") ? "Click to fit" : "Click to zoom"; }
+  zoomBtn.addEventListener("click", toggleZoom);
   dlg.querySelector(".viewer__close").addEventListener("click", function () { dlg.close(); });
   prev.addEventListener("click", function () { show(index - 1); });
   next.addEventListener("click", function () { show(index + 1); });
-  big.addEventListener("click", function () { dlg.classList.toggle("is-zoomed"); });
+  big.addEventListener("click", toggleZoom);
   dlg.addEventListener("click", function (e) { if (e.target === dlg || e.target.classList.contains("viewer__stage")) dlg.close(); });
   dlg.addEventListener("keydown", function (e) {
     if (items.length < 2) return;

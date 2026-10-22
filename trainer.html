@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Trainer case study: from raw data to a trained model | Adrian Carballo</title>
-  <meta name="description" content="Case study: designing AI Trainer, the Sorba.ai workspace where people prepare datasets, run analyses and compare models, for numerical and image data.">
+  <title>AI Trainer case study: designing the dataset module | Adrian Carballo</title>
+  <meta name="description" content="A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer: new forms in the demo and a proposed redesign.">
   <meta name="theme-color" content="#f8f8f8">
   <link rel="canonical" href="https://ekko94.github.io/portfolio/trainer.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Adrian Carballo">
-  <meta property="og:title" content="From raw data to a trained model — AI Trainer case study">
-  <meta property="og:description" content="Designing the Sorba.ai workspace where people prepare datasets, run analyses and compare models, for numerical and image data.">
+  <meta property="og:title" content="Designing the dataset module — AI Trainer case study">
+  <meta property="og:description" content="A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer.">
   <meta property="og:url" content="https://ekko94.github.io/portfolio/trainer.html">
   <meta property="og:image" content="https://ekko94.github.io/portfolio/assets/og-trainer.jpg">
   <meta property="og:image:width" content="1200">
@@ -29,8 +29,8 @@
       {
         "@type": "Article",
         "@id": "https://ekko94.github.io/portfolio/trainer.html#article",
-        "headline": "From raw data to a trained model: AI Trainer case study",
-        "description": "Designing the Sorba.ai workspace where people prepare datasets, run analyses and compare models, for numerical and image data.",
+        "headline": "Designing the dataset module: AI Trainer case study",
+        "description": "A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer: new forms in the demo and a proposed redesign.",
         "image": "https://ekko94.github.io/portfolio/assets/og-trainer.jpg",
         "author": { "@id": "https://ekko94.github.io/portfolio/#person" },
         "mainEntityOfPage": "https://ekko94.github.io/portfolio/trainer.html",
@@ -40,7 +40,7 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Work", "item": "https://ekko94.github.io/portfolio/#work" },
-          { "@type": "ListItem", "position": 2, "name": "From raw data to a trained model: AI Trainer case study", "item": "https://ekko94.github.io/portfolio/trainer.html" }
+          { "@type": "ListItem", "position": 2, "name": "Designing the dataset module: AI Trainer case study", "item": "https://ekko94.github.io/portfolio/trainer.html" }
         ]
       },
       {
@@ -79,11 +79,11 @@
       <div class="case-opening">
         <section class="case-hero" aria-labelledby="case-title">
           <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; AI Trainer</p>
-          <h1 class="case-hero__title" id="case-title">From raw data<br>to a trained model.</h1>
-          <p class="case-hero__sub">I designed the workspace where people prepare datasets, run analyses and compare models, for numerical data and for image datasets.</p>
+          <h1 class="case-hero__title" id="case-title">Preparing data<br>for machine learning.</h1>
+          <p class="case-hero__sub">I designed how people create, version and inspect datasets in Sorba’s AI Trainer. The new forms are in the demo; the wider redesign is a proposal.</p>
           <dl class="meta">
             <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
-            <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Datasets · Analyses · Models</dd></div>
+            <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Datasets · forms and versions</dd></div>
             <div class="meta__item"><dt class="meta__label">Platform</dt><dd class="meta__value">Web · Desktop</dd></div>
           </dl>
         </section>
@@ -91,29 +91,29 @@
         <figure class="case-hero-image hero-fig">
           <div class="hero-stage">
             <div class="browser hero-stage__back" aria-hidden="true">
-              <div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__title">AI Trainer · model comparison</span></div>
+              <div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__title">AI Trainer · dataset explorer</span></div>
               <img src="assets/img/trainer-hero-back.webp" alt="" width="1440" height="900" loading="lazy">
             </div>
             <div class="browser hero-stage__front">
               <div class="browser__bar"><span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser__title">AI Trainer</span></div>
-              <div class="browser__body"><img src="assets/img/trainer-hero-front.webp" alt="AI Trainer version properties: a list of dataset versions 1.0.0, 1.0.1 and 1.0.2 beside the properties of the selected version, with Correlation marked as applied" width="1440" height="900" fetchpriority="high"></div>
+              <div class="browser__body"><img src="assets/img/trainer-version-props.webp" alt="AI Trainer version properties: a list of dataset versions 1.0.0, 1.0.1 and 1.0.2 beside the properties of the selected version, with Correlation marked as applied" width="1440" height="900" fetchpriority="high"></div>
             </div>
           </div>
-          <figcaption class="fig-caption">Dataset version properties, with model comparison behind. Sample data throughout.</figcaption>
+          <figcaption class="fig-caption">Proposed version properties, with the dataset explorer behind. The screens keep sample data, placeholder copy and unfinished states from the saved designs.</figcaption>
         </figure>
 
         <section class="glance" aria-label="At a glance">
           <div class="glance__item">
             <p class="glance__label">The need</p>
-            <p class="glance__text">One workspace to prepare data, train models and compare the results.</p>
+            <p class="glance__text">A clear way to bring raw data in, version it and trust it before training.</p>
           </div>
           <div class="glance__item">
             <p class="glance__label">My design</p>
-            <p class="glance__text">A guided flow from dataset to analysis, for numerical and image data.</p>
+            <p class="glance__text">New dataset forms, now in the demo, and a proposed redesign of the module.</p>
           </div>
           <div class="glance__item">
             <p class="glance__label">The outcome</p>
-            <p class="glance__text">Screens for the full flow, tested internally by developers and the e-commerce team. No usage data to share.</p>
+            <p class="glance__text">The forms are live in the Sorba demo; the rest is a proposal. Feedback came from developers and the e-commerce team. No usage data.</p>
           </div>
         </section>
       </div>
@@ -122,22 +122,25 @@
       <section class="ed" data-nav="Context" aria-labelledby="s-context">
         <p class="label">Context</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-context">A workspace for the whole ML loop.</h2>
+          <h2 class="h2 h2--ed" id="s-context">Preparing data for machine learning.</h2>
           <div class="ed__text">
-            <p>AI Trainer is the part of Sorba’s platform where people prepare and version their data, create projects to analyse it and build models. Its overview states the order itself: work with data, analyse, then start predicting.</p>
-            <p>The work moved fast. I researched, designed and iterated on variants to solve each problem as it came up, often alongside the developers building it.</p>
+            <p>AI Trainer is the part of Sorba’s platform where people prepare and version their data, create projects to analyse it and build models. Everything starts with a dataset, so this case follows that part of the product.</p>
+            <p>The work moved fast. I researched and designed variants to solve each problem as it came up, with feedback from developers and the e-commerce team.</p>
+            <dl class="case-options">
+              <div><dt>In the product <span>Live</span></dt><dd>The new dataset forms, available in the Sorba demo that people can download and try. The rest of the module still uses the earlier views.</dd></div>
+              <div><dt>Redesign <span>Proposal</span></dt><dd>A new overview, dataset list, version pages, explorer and warning dialogs. These are designs, not yet in the product.</dd></div>
+            </dl>
             <div class="contrib">
               <h3 class="label">My contribution</h3>
               <ul role="list">
-                <li>Redesigned the overview and the dataset module: creation, versions, status and warnings.</li>
-                <li>Designed the dataset explorer, the analysis wizard, model templates and model comparison.</li>
-                <li>Extended the flow to image datasets: labeling, insights, preprocessing and augmentation.</li>
-                <li>Built the reusable pieces the screens share: cards, status chips, tables and dialogs.</li>
+                <li>Designed the new dataset forms: CSV and XLSX import, aggregation, per-field settings and a hot-data source.</li>
+                <li>Proposed a redesign of the dataset list, versions, explorer and warnings.</li>
+                <li>Proposed a new overview for the AI Trainer home.</li>
               </ul>
             </div>
-            <p class="small">I had no direct access to customers. Feedback came from the developers who tested the builds and from the e-commerce team who tested them too. I did not document each iteration while it happened, so this case is rebuilt from my Figma files.</p>
+            <p class="small">I had no direct access to customers. Feedback came only from developers testing the work and from the e-commerce team. I did not document the iterations, and older Figma work was not consistently preserved. This case is reconstructed from the surviving files. Labels such as “OLD” and “v1” come from Figma; I do not have a dated record of their sequence or approval.</p>
             <aside class="placeholder" data-placeholder="trainer-timeline">
-              <strong>Placeholder · timeline and team</strong><p>How long the work lasted, how many developers worked with you, and whether the product shipped. One or two sentences.</p>
+              <strong>Placeholder · timeline and team</strong><p>How long the work lasted and how many developers worked with you. One or two sentences.</p>
             </aside>
           </div>
         </div>
@@ -147,26 +150,26 @@
 
       <!-- 02 Overview -->
       <section class="ed" data-nav="Overview" aria-labelledby="s-overview">
-        <p class="label">Overview</p>
+        <p class="label">Overview · proposal</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-overview">From a sparse dashboard to one you can read.</h2>
+          <h2 class="h2 h2--ed" id="s-overview">A home that shows the state of your data.</h2>
           <div class="ed__text">
-            <p>The first overview mixed duplicated navigation with a few cards. I rebuilt it as a set of summary and status cards, so a person can see the state of their data, models and predictions at a glance.</p>
+            <p>The current overview repeats navigation beside three summary cards. My proposal replaces it with summary cards, status charts, templates, favorites and an activity table.</p>
           </div>
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-overview-old.webp" alt="The first overview: a quick-navigation list beside three cards, a recent-activity list of identical rows, an empty favorites card and one pie chart" width="1440" height="932" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-overview-old.webp" alt="Current overview: Quick Navigation, three summary cards, repeated activity rows, empty Favorites and one dataset-status pie chart" width="1440" height="932" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">Before</p>
-              <p class="cap__text">A quick-navigation list that repeated the side rail, two cards both titled “Datasets”, a Predictions card with a “New Dataset” button, and a feed of identical rows.</p>
+              <p class="cap__title">Current view</p>
+              <p class="cap__text">A quick-navigation list beside the side rail, two cards titled “Datasets”, a Predictions card with a “New Dataset” button and repeated activity rows.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-overview-new.webp" alt="The redesigned overview: Datasets, Projects and Predictions summary cards, four status and type charts, latest templates, favorites and a recent-activity table" width="1440" height="1078" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-overview-new.webp" alt="Proposed overview with dataset, project and prediction summaries, three status charts, a model-type chart, templates, favorites and activity" width="1440" height="1078" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">After</p>
-              <p class="cap__text">Summary cards with icon tiles and solid primary buttons, correct labels, four status and type charts with counts, latest templates, favorites and an activity table.</p>
+              <p class="cap__title">Proposal</p>
+              <p class="cap__text">Dataset, project and prediction summary cards; three status charts and a model-type chart; latest templates, favorites and an activity table.</p>
             </figcaption>
           </figure>
         </div>
@@ -174,82 +177,137 @@
 
       <hr class="rule">
 
-      <!-- 03 Product map -->
+      <!-- 03 Flow -->
       <section class="ed" data-nav="Flow" aria-labelledby="s-flow">
-        <p class="label">The product flow</p>
+        <p class="label">The dataset flow</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-flow">Data, then analysis, then models.</h2>
+          <h2 class="h2 h2--ed" id="s-flow">From a file to a version you can trust.</h2>
           <div class="ed__text">
-            <p>The screens follow that order. The map shows what I designed along the way. Predictions are referenced in the overview but are not part of this case.</p>
+            <p>This map groups the dataset designs by task. It is a retrospective outline, and it shows which parts are live and which are proposals.</p>
           </div>
         </div>
         <figure class="fj" data-reveal aria-labelledby="trainer-fj-cap">
           <div class="fj-board">
-            <p class="fj-title">AI Trainer, end to end</p>
+            <p class="fj-title">Dataset module · reconstructed task map</p>
             <ol class="fj-flow" role="list">
-              <li class="fj-node fj-node--pill">Overview</li>
-              <li class="fj-node">Dataset: CSV, hot data or images</li>
-              <li class="fj-node">Versions and explorer</li>
-              <li class="fj-node fj-node--key">New analysis</li>
-              <li class="fj-node">Models</li>
-              <li class="fj-node">Templates and comparison</li>
+              <li class="fj-node fj-node--pill">Dataset list</li>
+              <li class="fj-node fj-node--key">New dataset: CSV, XLSX or hot data</li>
+              <li class="fj-node">Versions</li>
+              <li class="fj-node">Version properties</li>
+              <li class="fj-node">Explorer</li>
             </ol>
             <div class="fj-notes">
-              <p class="fj-note fj-note--yellow">Image datasets add labeling and preprocessing before the analysis.</p>
-              <p class="fj-note fj-note--green">Each step shows its status, so problems surface early.</p>
+              <p class="fj-note fj-note--green">The new dataset forms are live in the Sorba demo.</p>
+              <p class="fj-note fj-note--yellow">The list, versions, properties, explorer and warnings are a proposal.</p>
             </div>
           </div>
-          <figcaption id="trainer-fj-cap" class="diagram__cap">A summary in the style of a FigJam board, drawn from the screens in my files, not a record of the original planning.</figcaption>
+          <figcaption id="trainer-fj-cap" class="diagram__cap">Retrospective task map reconstructed from saved screens; not an original planning artifact.</figcaption>
         </figure>
       </section>
 
       <hr class="rule">
 
-      <!-- 04 Datasets -->
-      <section class="ed" data-nav="Datasets" aria-labelledby="s-datasets">
-        <p class="label">Datasets</p>
+      <!-- 04 Forms -->
+      <section class="ed" data-nav="Forms" aria-labelledby="s-forms">
+        <p class="label">Dataset forms · live</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-datasets">More control, still one form.</h2>
+          <h2 class="h2 h2--ed" id="s-forms">Forms that handle real files.</h2>
           <div class="ed__text">
-            <p>The first dataset form accepted a single .zip and little else. Real files needed more: formats, time fields, gaps in the data and rules about what to keep. I grew the form in groups, so the extra controls appear where they are needed.</p>
+            <p>An earlier saved form shows a CSV field labeled “Only .zip files are allowed”. The new form accepts CSV or XLSX by drag and drop, then asks for the format, the date field, date format, time zone and how to aggregate by time interval.</p>
+            <p class="small">The new forms are in the Sorba demo, so anyone who downloads it can try them.</p>
           </div>
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-csv-old.webp" alt="The first new-version form: general information, a CSV field reading “Only .zip files are allowed”, a disabled date field and an empty Advanced Rules area" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-csv-old.webp" alt="Earlier saved form with a CSV field labeled “Only .zip files are allowed”, a greyed-out Date Field and an Advanced Rules area showing “No rules applied”" width="1100" height="810" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">Before</p>
-              <p class="cap__text">A .zip-only file field, a date column and an empty rules area.</p>
+              <p class="cap__title">Earlier form</p>
+              <p class="cap__text">A file field labeled .zip only, a date column and an empty rules area.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-csv-new.webp" alt="The newer dataset form: drag-and-drop CSV or XLSX, CSV format, date field, date format, time zone and aggregate settings" width="1219" height="1100" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-csv-new.webp" alt="New dataset form with CSV/XLSX upload, CSV format, date field, date format, time zone and aggregation controls" width="1100" height="1000" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">After</p>
+              <p class="cap__title">New form · in the demo</p>
               <p class="cap__text">Drag and drop for CSV or XLSX, then format, date field, date format, time zone and aggregation by time interval.</p>
             </figcaption>
           </figure>
         </div>
         <div class="split">
           <div class="ed__text" style="gap:24px">
-            <h3 class="decision__title">Decide what happens to every field.</h3>
-            <p>Each field gets an operation for missing values (replace with the previous value, the mean or a value, or discard) and optional low and high limits. Synthetic tags and advanced rules sit in their own tables, with import and export so a setup can be reused.</p>
-            <p class="small">The three extra analyses, such as correlation or data drift, are cards that stay inactive until you choose them.</p>
+            <h3 class="decision__title">Settings for every field.</h3>
+            <p>The field table offers replace and discard operations, plus LL and HL limits. Field preferences have Save and Import controls; synthetic tags and advanced rules have separate tables with Export and Import controls.</p>
+            <p class="small">Four extra-processing options are shown: Correlation, Data Quality, Tag Ranking and Data Drift. One saved state shows Correlation selected.</p>
           </div>
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-features-new.webp" alt="The features area of the dataset form: a field selection table with an operation per field, a synthetic tags table and an advanced rules table, each with import and export buttons" width="1219" height="1060" loading="lazy"></div>
-            <figcaption class="footnote">Fields, synthetic tags and rules, each with its own table and import/export.</figcaption>
+            <div class="shot shot--auto"><img src="assets/img/trainer-features-new.webp" alt="Field-selection table with operations and LL/HL limits, Save Preferences and Import Preferences controls, plus synthetic-tag and advanced-rule tables with Export and Import controls" width="1100" height="1220" loading="lazy"></div>
+            <figcaption class="footnote">Field preferences can be saved and imported; synthetic tags and rules have Export and Import controls.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="ed" aria-labelledby="s-hot">
+        <p class="label">Hot data source · live</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-hot">Two ways to pick live data.</h2>
+          <div class="ed__text">
+            <p>The hot-data source can be set up with a query in an editor, or by choosing measurements from a list. A view toggle switches between the two, so people who write queries and people who prefer a table use the same form.</p>
+          </div>
+        </div>
+        <div class="pair">
+          <figure class="figure" data-reveal>
+            <div class="shot shot--auto"><img src="assets/img/trainer-hot-query.webp" alt="Hot data source with a query editor and run controls" width="1130" height="800" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Query view</p>
+              <p class="cap__text">A Python editor with search, help and run controls.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--auto"><img src="assets/img/trainer-hot-table.webp" alt="Hot data source with a Measurements List table and checkboxes" width="1130" height="800" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Table view</p>
+              <p class="cap__text">A measurements list with search and checkboxes.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <hr class="rule">
+
+      <!-- 05 Proposal -->
+      <section class="ed" data-nav="Proposal" aria-labelledby="s-proposal">
+        <p class="label">Dataset module · proposal</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-proposal">A clearer list of what you have.</h2>
+          <div class="ed__text">
+            <p>The current list holds a card per dataset. In the proposal, each card also shows a status icon, how many versions it has, a star and a selection box, so people see the state of their data before opening it.</p>
+          </div>
+        </div>
+        <div class="pair">
+          <figure class="figure" data-reveal>
+            <div class="shot shot--auto"><img src="assets/img/trainer-list-old.webp" alt="Current dataset list with one dataset card and an empty detail area reading “Select a Dataset to see the awesome”" width="740" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Current view</p>
+              <p class="cap__text">A dataset card with a name, date and a “Versions” label.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--auto"><img src="assets/img/trainer-list-new.webp" alt="Proposed dataset list with two dataset cards showing a status check, a version count badge, a star and a selection box" width="740" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Proposal</p>
+              <p class="cap__text">Cards with a status icon, a version count, a star and a selection box.</p>
+            </figcaption>
           </figure>
         </div>
       </section>
 
       <section class="ed" aria-labelledby="s-versions">
-        <p class="label">Decision 02 — Show the health of a dataset</p>
+        <p class="label">Dataset health · proposal</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-versions">Status you can read before you open it.</h2>
           <div class="ed__text">
             <p>A dataset holds versions, and a version can fail on its own. The card shows a count of versions, and its colour and tooltip say what the count means: all good, one invalid version but still usable, or every version with issues.</p>
-            <p>Each version also lists which extra processing was applied and which was not, so people do not have to guess what went into a model.</p>
+            <p>Version properties show which extra processing is marked APPLIED or NOT APPLIED.</p>
           </div>
         </div>
         <div class="pair">
@@ -261,7 +319,7 @@
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--wide"><img src="assets/img/trainer-hero-front.webp" alt="Version properties with a list of versions and the selected version’s details; Correlation is marked APPLIED and Tag Ranking NOT APPLIED" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--wide"><img src="assets/img/trainer-version-props.webp" alt="Version properties with a list of versions and the selected version’s details; Correlation is marked APPLIED and Tag Ranking NOT APPLIED" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Version properties</p>
               <p class="cap__text">Source, time range and the processing applied, with APPLIED and NOT APPLIED chips.</p>
@@ -270,215 +328,60 @@
         </div>
       </section>
 
-      <hr class="rule">
-
-      <!-- 05 Image datasets -->
-      <section class="ed" data-nav="Images" aria-labelledby="s-images">
-        <p class="label">Image datasets</p>
+      <section class="ed" aria-labelledby="s-explore">
+        <p class="label">Explorer and warnings · proposal</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-images">Labeling images, three ways.</h2>
+          <h2 class="h2 h2--ed" id="s-explore">Look before you train, think before you delete.</h2>
           <div class="ed__text">
-            <p>Choosing “Image” as the application type opens a different dataset flow: upload a ZIP of pictures, define the classes you want to find and label the images.</p>
-            <p>Labeling is the slow part, so the flow offers three routes: let the system label from the class names and prompts, draw boxes by hand, or let a model propose labels that a person accepts.</p>
+            <p>The proposed explorer opens a version in a summary with tabs for trend, scatter plot, box plot, histogram, correlation, data quality and data drift. Deleting a version asks for confirmation and says that it can affect models or processes that use it.</p>
+            <p class="small">The charts in these designs use sample data.</p>
           </div>
         </div>
         <figure class="fig-full">
-          <img src="assets/img/trainer-img-types.webp" alt="The image dataset form with the Files toolbar: Auto Labeling, Manual Labeling, Export Images and Maximize" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">The file list gives labeling its own toolbar: Auto Labeling, Manual Labeling, Export Images.</figcaption>
+          <img src="assets/img/trainer-explorer.webp" alt="Dataset Explorer for MOTOR2 in the overview data view, with tabs for summary, trend, scatter plot, box plot, histogram, parallel coordinates, correlation, data quality and data drift, and a summary of charts" width="1440" height="900" loading="lazy">
+          <figcaption class="fig-caption">Dataset Explorer, overview data view, with sample data.</figcaption>
         </figure>
-        <div class="pair">
-          <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-img-auto.webp" alt="Annotation classes Fish, Person and Car with a colour, name and prompt each, above a table of images whose annotations were filled in automatically" width="1100" height="1030" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">Classes, then auto-labeling</p>
-              <p class="cap__text">Each class has a colour, a name and a prompt. After auto-labeling, the tags appear in the file table.</p>
-            </figcaption>
-          </figure>
-          <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-img-preview.webp" alt="An annotation preview: a clownfish with a yellow box labelled FISH, matching the Fish class colour" width="786" height="786" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">Check a label</p>
-              <p class="cap__text">The preview draws the box in the colour of its class, so a wrong tag is easy to spot.</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="reflect">
-          <h3 class="decision__title">What the flow does to keep people oriented</h3>
-          <dl class="case-options">
-            <div><dt>Buttons wait for data <span>Design shown</span></dt><dd>Annotations, labeling and Save stay disabled until a file exists, so the order of the steps is visible.</dd></div>
-            <div><dt>Progress and skeleton rows <span>Design shown</span></dt><dd>While the ZIP extracts, the file chip shows a percentage and the table shows placeholder rows.</dd></div>
-            <div><dt>Plainer words <span>Design shown</span></dt><dd>I renamed “Annotations” to “Annotation - Classes”, “Add Annotation” to “Add Class” and “Maximum FPS extracted” to “Select frames”.</dd></div>
-          </dl>
-          <p class="footnote">Rationale read from the screens; I do not have notes of the sessions where these were decided.</p>
-        </div>
-        <aside class="placeholder" data-placeholder="trainer-manual-labeling">
-          <strong>Placeholder · manual labeling workspace</strong><p>The manual labeling screen: classes on the left, the picture in the centre, a tool palette on the right and a filmstrip below. My file uses a stock photo of people there, so I left it out. Provide a version with your own or a neutral image (for example the fish) and I will add it.</p>
-        </aside>
-      </section>
-
-      <section class="ed" data-nav="Explore" aria-labelledby="s-explore">
-        <p class="label">Decision 03 — See the data before training</p>
-        <div class="split">
-          <h2 class="h2 h2--ed" id="s-explore">A dataset explorer, in four views.</h2>
-          <div class="ed__text">
-            <p>Before anyone trains a model, they can look at what they have: the image list, how large and how wide the images are, where the labeled objects fall, and how many objects each image holds.</p>
-            <p class="small">The charts in my file use placeholder data and no axes or legends yet. Adding scales and legends is the next step for this screen.</p>
-          </div>
-        </div>
         <figure class="fig-full">
-          <img src="assets/img/trainer-img-insights.webp" alt="Dataset Explorer, Dimension Insights tab: size distribution bars, aspect ratio bars and a scatter plot with too tall, square and too wide zones" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">Dimension Insights: size and aspect ratio, with zones that show images that are too tall or too wide.</figcaption>
+          <img src="assets/img/trainer-warning-delete.webp" alt="A Delete Version dialog: “This action cannot be undone and may affect models or processes using this version”, with Cancel and a red Delete Version button" width="1440" height="900" loading="lazy">
+          <figcaption class="fig-caption">Deleting a version: the dialog says what could be affected.</figcaption>
         </figure>
       </section>
 
       <hr class="rule">
 
-      <!-- 06 Training setup -->
-      <section class="ed" data-nav="Training" aria-labelledby="s-training">
-        <p class="label">New analysis</p>
-        <div class="split">
-          <h2 class="h2 h2--ed" id="s-training">Preparing data for a model, step by step.</h2>
-          <div class="ed__text">
-            <p>A three-step wizard takes the dataset to a model: features, algorithm settings, then which dataset versions to use. For images, the first step maps dataset classes to model classes and lists the preprocessing and augmentation to apply, in order.</p>
-          </div>
-        </div>
-        <div class="pair">
-          <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-pipeline.webp" alt="The analysis wizard, step Features selection: a class mapping table, a pre-processing table with Greyscale, Auto-Adjust Contrast and Resize, and a data augmentation table with Hue, Rotation and Crop, each with reorder arrows" width="1120" height="1204" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">Order matters</p>
-              <p class="cap__text">Preprocessing and augmentation are ordered lists, with arrows to move a step up or down.</p>
-            </figcaption>
-          </figure>
-          <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-img-preproc.webp" alt="The Preprocessing Options dialog: a list of operations with a preview of the same fish photo for each, and a slider for how many output images are converted to grayscale" width="1440" height="900" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">Preview each operation</p>
-              <p class="cap__text">Every option shows the same photo after the change, so people choose by looking, not by name.</p>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <hr class="rule">
-
-      <!-- 07 Models -->
-      <section class="ed" data-nav="Models" aria-labelledby="s-models">
-        <p class="label">Analyses and models</p>
-        <div class="split">
-          <h2 class="h2 h2--ed" id="s-models">Managing and comparing what you built.</h2>
-          <div class="ed__text">
-            <p>Once models exist, people need to find them, act on several at once and compare them. Three screens changed the most.</p>
-          </div>
-        </div>
-
-        <div class="section__stack" style="gap:56px">
-          <div class="pair">
-            <figure class="figure" data-reveal>
-              <div class="shot shot--wide"><img src="assets/img/trainer-analyses-old.webp" alt="The first Analyses table with one row and a button to create a new model" width="1440" height="900" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Analyses · before</p>
-                <p class="cap__text">One row at a time, with actions per row only.</p>
-              </figcaption>
-            </figure>
-            <figure class="figure" data-reveal style="--d:80ms">
-              <div class="shot shot--wide"><img src="assets/img/trainer-analyses-new.webp" alt="The newer Analyses table with a checkbox per row and Columns, Filters, Export, Import and Delete buttons" width="1440" height="900" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Analyses · after</p>
-                <p class="cap__text">A checkbox per row and bulk Export, Import and Delete beside Columns and Filters.</p>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="pair">
-            <figure class="figure" data-reveal>
-              <div class="shot shot--auto"><img src="assets/img/trainer-mt-old.webp" alt="Model Template Properties, first version: a flat strip of attributes above the description and the model properties" width="1440" height="1309" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Model template · v1</p>
-                <p class="cap__text">Attributes in one flat strip: task, data type, Sorba trained, size, fine tunable.</p>
-              </figcaption>
-            </figure>
-            <figure class="figure" data-reveal style="--d:80ms">
-              <div class="shot shot--auto"><img src="assets/img/trainer-mt-new.webp" alt="Model Template Properties, latest version: attributes grouped into two cards with chips and yes/no marks, including an Environment field" width="1440" height="1379" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Model template · v7</p>
-                <p class="cap__text">Attributes grouped into two cards, with chips for values and a new Environment field.</p>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="pair">
-            <figure class="figure" data-reveal>
-              <div class="shot shot--auto"><img src="assets/img/trainer-compare-old.webp" alt="Model Comparison, first version: two summary cards and two tall stacked dashboards" width="1440" height="1269" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Comparison · v1</p>
-                <p class="cap__text">Two full dashboards stacked, with small charts to compare by scrolling.</p>
-              </figcaption>
-            </figure>
-            <figure class="figure" data-reveal style="--d:80ms">
-              <div class="shot shot--auto"><img src="assets/img/trainer-compare-new.webp" alt="Model Comparison, second version: two model cards with algorithm, training time and accuracy, and two trend charts side by side with a metric selector" width="1440" height="941" loading="lazy"></div>
-              <figcaption class="cap">
-                <p class="cap__title">Comparison · v2</p>
-                <p class="cap__text">Models side by side, one metric at a time, with algorithm and accuracy in each card.</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <hr class="rule">
-
-      <!-- 08 System -->
-      <section class="ed" data-nav="System" aria-labelledby="s-system">
-        <p class="label">Reusable pieces</p>
-        <div class="split">
-          <div class="ed__text" style="gap:24px">
-            <h2 class="h2 h2--ed" id="s-system">One small kit carried the product.</h2>
-            <p>Dataset and version cards with their states, a card menu, status chips, summary and chart cards, tables with pagination, form and confirmation dialogs and a sticky footer for actions. Reusing them kept new screens consistent while the pace stayed high.</p>
-            <p class="small">The component sheet from my Dataset file.</p>
-          </div>
-          <div class="model">
-            <img src="assets/img/trainer-components.webp" alt="A component sheet: dataset and version cards in default, hover and selected states, a card menu with New Project, Download, Export and Properties, and the side navigation in two states" width="1220" height="1470" loading="lazy">
-            <p>Cards, menu and navigation states from the component sheet.</p>
-          </div>
-        </div>
-      </section>
-
-      <hr class="rule">
-
-      <!-- 09 Process -->
+      <!-- 06 Process -->
       <section class="ed" data-nav="Process" aria-labelledby="s-process">
         <p class="label">How I worked</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-process">Fast, with developers close.</h2>
+          <h2 class="h2 h2--ed" id="s-process">Working quickly with internal feedback.</h2>
           <div class="ed__text">
-            <p>I researched, designed the variants and refined them while the product was being built. The developers tested the work as they implemented it, and the e-commerce team tested it too. Their feedback shaped later versions, which is why several screens in this case exist as v1, v2 and v7.</p>
-            <p class="small">Some things I cannot show: I did not keep notes of each round, and I never had end users to test with. Everything above is read from the files, and I say so where it is an inference.</p>
+            <p>I researched and designed variants under a fast pace. Feedback came from developers testing the work and from the e-commerce team. The surviving files show variants, but I cannot connect individual changes to specific feedback.</p>
+            <p class="small">This account combines my recollection with the surviving Figma screens. The files do not preserve a complete iteration history or a record of customer testing.</p>
           </div>
         </div>
       </section>
 
       <hr class="rule">
 
-      <!-- 10 Outcome -->
+      <!-- 07 Outcome -->
       <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
         <p class="label">Design outcome &amp; reflection</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-outcome">A full flow, designed. Next: test with users.</h2>
+          <h2 class="h2 h2--ed" id="s-outcome">Forms in the demo. The rest is a proposal.</h2>
           <div class="ed__text">
-            <p>The result is a connected set of screens: overview, datasets with versions and an explorer, image labeling, an analysis wizard, model templates and comparison.</p>
-            <p>I do not have usage data for it. The outcomes I would measure next are time to a first trained model, errors while importing data and how often people use bulk actions.</p>
+            <p>The new dataset forms are part of the Sorba demo. The redesigned overview, list, versions, explorer and warnings remain proposals, and the product still shows the earlier views there.</p>
+            <p>I do not have usage data. Next, I would observe someone importing a file and creating a first dataset version, recording completion, import errors and the points where they need help.</p>
             <aside class="placeholder" data-placeholder="trainer-status">
-              <strong>Placeholder · where it stands</strong><p>Whether AI Trainer is in use at Sorba.ai, and anything the team told you about how it was received. Add it only if you can stand behind it.</p>
+              <strong>Placeholder · where it stands</strong><p>Whether the proposal is planned for a release, and anything the team told you about the new forms. Add it only if you can stand behind it.</p>
             </aside>
           </div>
         </div>
         <div class="reflect">
           <h3 class="decision__title">What I would do differently</h3>
           <ol class="case-validation" role="list">
-            <li><h4>Write it down as I go</h4><p>Keep a short decision log per screen: the problem, the variants, what changed after testing. That is the part this case has to infer.</p></li>
-            <li><h4>Test with the people who train models</h4><p>Watch a data scientist go from a raw file to a first model, and note where they stop or guess.</p></li>
-            <li><h4>One vocabulary</h4><p>The flow calls the same thing a tag, an annotation and a class. I would pick one word and use it everywhere.</p></li>
+            <li><h4>Write it down as I go</h4><p>Keep a short decision log per screen: the problem, the variants and what changed after feedback. That is the part this case cannot show.</p></li>
+            <li><h4>Test with the people who prepare data</h4><p>Watch someone import a file and create a dataset version; note where they stop or guess.</p></li>
+            <li><h4>Ship the proposal in steps</h4><p>The forms already reached the demo. The list and version status are the next smallest pieces to put in front of users.</p></li>
           </ol>
         </div>
       </section>

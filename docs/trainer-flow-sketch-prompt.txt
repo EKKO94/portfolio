@@ -1,0 +1,17 @@
+Use case: infographic-diagram
+Asset type: retrospective conceptual wireframe study for a Product Designer portfolio, a raster illustration, not product documentation or a historical artifact.
+Primary request: Create one elegant wide horizontal hand-drawn low-fidelity dataset workflow study on warm ivory paper. The page must read as a scan of a designer's notebook with subtle human irregularity, graphite ink and very small restrained burnt-orange accents. Clearly label this as a retrospective reconstruction.
+Composition: flat top-down scan filling the image, landscape roughly 2:1, generous paper margins, no perspective. At top left a legible hand-lettered headline and directly beneath it a smaller clear subline. Across the middle place exactly five small hand-drawn conceptual wireframe panels connected left to right by pencil arrows. Keep all five fully visible. Each panel has a simple browser-like outline with a few abstract lines, boxes or symbols only; no realistic app screens, no invented detailed UI, no actual screenshot. One concise numbered label above each panel. Add a small handwritten note underneath the second panel with a short pencil branch line from that panel to the note; this note is not a sixth workflow step.
+Visual content of panels: 1 abstract source tiles; 2 abstract configuration lines and field blocks; 3 simple list of settings; 4 a small stack of version cards; 5 an abstract table and tiny plot. These are generic visual metaphors only. No detailed toolbars, specific input values, progress states, or claims about actual product controls.
+Style: thoughtful designer pencil sketch, graphite varying line weight, a few soft construction lines, minimal faint paper grain. Small burnt-orange underlines or step markers only. Premium restrained editorial composition, legible annotations, modest asymmetry, warm natural paper. No photography props.
+Text (verbatim, exactly this spelling, all English):
+Headline: "Dataset flow study"
+Subline: "Retrospective reconstruction"
+Five labels left to right:
+"1 Choose a source"
+"2 Configure data"
+"3 Review settings"
+"4 Save a version"
+"5 Explore data"
+Note beneath panel 2 only: "Rules & fields"
+Constraints: Render the exact text clearly and legibly, with no additional words anywhere. Do not include signatures, dates, names, logos, branding, watermarks, hands, pencils, desk objects, photos, real screenshots, Figma canvas or assets. Do not claim or imply this is an original historical sketch. Opaque ivory paper background.

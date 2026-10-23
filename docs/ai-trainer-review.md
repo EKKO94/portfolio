@@ -24,7 +24,7 @@ python3 -m http.server 4318 --bind 127.0.0.1
 | Nuevo caso `trainer.html`, escrito en inglés para mantener el idioma del portafolio | Convertir la tarjeta “coming soon” en una lectura que permita evaluar alcance, criterio y decisiones concretas. |
 | Foco en overview y datasets | Respetar el alcance indicado: preparación de datos y versiones; no atribuir trabajo sobre todo el entrenamiento ML. |
 | Rol, colaboración, alcance y evidencia visibles al inicio | Ayudar al recruiter a entender qué hizo Adrián sin conocer Sorba o su arquitectura interna. |
-| Comparación del overview viejo y nuevo con capturas completas | Demostrar cambios verificables: navegación secundaria retirada, etiquetas de Projects corregidas y acciones de Predictions adecuadas. |
+| Comparación del overview viejo y nuevo con encuadres iguales y originales completos al ampliar | Demostrar cambios verificables: navegación secundaria retirada, etiquetas de Projects corregidas y acciones de Predictions adecuadas. |
 | Configuración, operaciones de campos, reglas, versiones, Explorer, error de versión y salida sin guardar | Mostrar razonamiento sobre la tarea y sus estados problemáticos, con evidencia real en lugar de una galería sin explicación. |
 | Captions orientados a la decisión y textos alternativos factuales | Explicar qué se puede evaluar en cada captura y evitar prometer contenido que la imagen no muestra. |
 | Límites de validación y plan de evaluación explícitos | Reflejar que no hubo acceso a usuarios finales ni otros stakeholders; los developers fueron interlocutores técnicos. No inventar resultados ni equiparar esa revisión con validación de usabilidad. |
@@ -116,3 +116,11 @@ El archivo `docs/ai-trainer-assets.json` registra cada Figma file key, node ID, 
 ## Mantenimiento opcional
 
 PRODUCT.md conserva un esquema antiguo de Impeccable. Una futura migración con `init` puede actualizarlo; se preservó el contexto confirmado y no se amplió este trabajo para cambiarlo.
+
+## Ajuste solicitado el 23 de octubre de 2026
+
+- Las dos miniaturas del overview comparten la proporción 1440×1232 y el mismo tamaño. La captura nueva se recorta desde arriba, sin deformarse; al pulsar se sigue abriendo el original completo 1440×1428.
+- Se retiró «About the evidence» junto con sus tres enlaces a Figma. El lector puede evaluar las capturas y decisiones dentro del propio caso, sin acceder a archivos de diseño.
+- El recorte se limita a las miniaturas del overview; los demás pares conservan sus proporciones. Vision y main permanecen fuera de estos cambios.
+
+Verificado en Chromium: ambas miniaturas miden 646×552.69 px en escritorio y 348×297.73 px en móvil; el visor conserva el original nuevo de 1440×1428 px. El caso no contiene enlaces a Figma. Revisión independiente y `git diff --check` sin incidencias.

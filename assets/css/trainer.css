@@ -16,7 +16,7 @@
 .trainer-image:focus-visible { outline-offset: 4px; }
 .trainer-figure figcaption { max-width: 78ch; font-size: 0.875rem; line-height: 1.55; color: var(--muted); }
 .trainer-figure figcaption strong { color: var(--ink-2); font-weight: 600; }
-.trainer-figure figcaption a, .trainer-sources a { text-decoration: underline; text-underline-offset: 4px; }
+.trainer-figure figcaption a { text-decoration: underline; text-underline-offset: 4px; }
 .trainer-figure--sketch .trainer-image { background: var(--surface); }
 .trainer-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 40px; margin: 48px 0 32px; }
 .trainer-summary > div { padding-top: 20px; border-top: 1px solid var(--rule); }
@@ -35,6 +35,8 @@
 .trainer-prose > h3 { margin-top: 32px; color: var(--ink); }
 .trainer-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
 .trainer-pair .trainer-image img { height: auto; object-fit: contain; }
+/* Match overview previews; the viewer still opens each complete original. */
+.trainer-pair--overview .trainer-image img { aspect-ratio: 1440 / 1232; object-fit: cover; object-position: top; }
 .trainer-decisions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin: 32px 0 0; }
 .trainer-decisions > div { border-top: 1px solid var(--rule); padding-top: 20px; }
 .trainer-decisions dt { font-size: 1.125rem; font-weight: 600; line-height: 1.35; margin-bottom: 10px; }
@@ -45,11 +47,6 @@
 .trainer-note { max-width: 85ch; margin-top: 20px; font-size: 0.9375rem; line-height: 1.6; color: var(--muted); }
 .trainer-tests { list-style: disc; padding-left: 1.25em; }
 .trainer-tests li + li { margin-top: 12px; }
-.trainer-sources { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
-.trainer-sources h2 { font-size: 1.125rem; font-weight: 600; }
-.trainer-sources p { max-width: 85ch; margin-top: 12px; color: var(--muted); font-size: 0.9375rem; line-height: 1.6; }
-.trainer-sources > div { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 12px; }
-.trainer-sources a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.9375rem; }
 .trainer-next { display: flex; flex-wrap: wrap; gap: 16px 40px; padding-top: 48px; }
 .trainer-next a { min-height: 44px; display: inline-flex; align-items: center; }
 

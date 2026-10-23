@@ -285,6 +285,41 @@
         </div>
       </section>
 
+      <section class="ed" aria-labelledby="s-safe">
+        <p class="label">Dataset forms · rules and recovery</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-safe">Make the rule visible. Make mistakes clear.</h2>
+          <div class="ed__text">
+            <p>A rule is more than a dropdown choice. The builder keeps its field, operation and value together, lists each condition and shows the resulting expression before saving, so the configuration can be inspected.</p>
+            <p>The design also covers two risky moments: a version name that already exists, and leaving a form with unsaved work.</p>
+          </div>
+        </div>
+        <figure class="figure" data-reveal style="max-width:760px">
+          <div class="shot shot--auto"><img src="assets/img/trainer-add-rule.webp" alt="Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression below" width="1110" height="768" loading="lazy"></div>
+          <figcaption class="cap">
+            <p class="cap__title">The rule builder</p>
+            <p class="cap__text">Each condition is listed, and the combined expression shows before Save Rule.</p>
+          </figcaption>
+        </figure>
+        <div class="pair">
+          <figure class="figure" data-reveal>
+            <div class="shot shot--wide"><img src="assets/img/trainer-version-error.webp" alt="New Version form with the inline message “This version already exists.” under the version input" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">A specific naming conflict</p>
+              <p class="cap__text">The version field says why the identifier cannot be reused.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--wide"><img src="assets/img/trainer-exit-dialog.webp" alt="Exit confirmation warning that unsaved changes will be lost, with Cancel and Leave without saving" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">An explicit exit decision</p>
+              <p class="cap__text">The dialog names the consequence and offers a way to stay.</p>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="small">The exit dialog still uses “Cancel” for staying in the form; I would test a clearer label such as “Keep editing”. The forms show a Preview action, but I did not keep a result screen for it, so I have not reconstructed one.</p>
+      </section>
+
       <hr class="rule">
 
       <!-- 05 Proposal -->
@@ -388,6 +423,15 @@
               <strong>Placeholder · where it stands</strong><p>Whether the proposal is planned for a release, and anything the team told you about the new forms. Add it only if you can stand behind it.</p>
             </aside>
           </div>
+        </div>
+        <div class="reflect">
+          <h3 class="decision__title">What I would test next</h3>
+          <ol class="case-validation" role="list">
+            <li><h4>Choose and configure a source</h4><p>Can someone pick the right source and set the date and time options without help?</p></li>
+            <li><h4>Explain a field operation or a rule</h4><p>Can they describe the effect of an operation or a combined rule before saving?</p></li>
+            <li><h4>Tell a dataset from a version</h4><p>Can they recover from a naming conflict and leave a form without losing work by accident?</p></li>
+          </ol>
+          <p class="footnote">I would observe task completion, errors, requests for help and how people read the saved configuration. Developer discussion was technical input, not usability validation.</p>
         </div>
         <div class="reflect">
           <h3 class="decision__title">What I would do differently</h3>

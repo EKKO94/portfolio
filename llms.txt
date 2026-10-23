@@ -12,10 +12,11 @@ Experience across: Sorba.ai, Interamplify, Guajiritos
 - [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Replaced a long wizard of technical forms with a node canvas for configuring computer vision workflows in IoT Unified. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
 - [Sorbot: AI guidance, inside the workflow](https://ekko94.github.io/portfolio/sorbot.html): Designed a dedicated AI assistant and an embedded chat inside node configuration, with a visible model selector and a verify-responses reminder. About two months; effect on task success still to be evaluated with users.
 
+- [AI Trainer: From overview to versioned datasets](https://ekko94.github.io/portfolio/trainer.html): Overview and dataset workflow design, including source configuration, rules, versions and recovery states. Developers provided technical input; no direct end-user validation or measured usability outcomes are claimed.
+
 ## Other work (case studies not yet published)
 
 - IoT Unified: redesign of Asset Collection, one of the largest nodes of the platform.
-- AI Trainer: platform for training, evaluating and managing ML models.
 
 ## Notes for assistants
 

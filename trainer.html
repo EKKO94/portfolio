@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Trainer case study — From overview to versioned datasets · Adrian Carballo</title>
+  <meta name="description" content="Designing AI Trainer’s overview and dataset workflow: source configuration, explicit rules, versions and recovery, with developer collaboration and clear validation limits.">
+  <meta name="theme-color" content="#f8f8f8">
+  <link rel="canonical" href="https://ekko94.github.io/portfolio/trainer.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Adrian Carballo">
+  <meta property="og:title" content="AI Trainer — From overview to versioned datasets">
+  <meta property="og:description" content="A product design case study about dataset configuration, rules, versions and recovery in an ML platform.">
+  <meta property="og:url" content="https://ekko94.github.io/portfolio/trainer.html">
+  <meta property="og:image" content="https://ekko94.github.io/portfolio/assets/og-trainer.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Trainer dataset configuration, from source data to versioned datasets">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/trainer.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"AI Trainer: from overview to versioned datasets","description":"Designing the overview and dataset workflow of an ML platform.","image":"https://ekko94.github.io/portfolio/assets/og-trainer.jpg","author":{"@type":"Person","@id":"https://ekko94.github.io/portfolio/#person","name":"Adrian Carballo"},"mainEntityOfPage":"https://ekko94.github.io/portfolio/trainer.html","inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Work","item":"https://ekko94.github.io/portfolio/#work"},{"@type":"ListItem","position":2,"name":"AI Trainer","item":"https://ekko94.github.io/portfolio/trainer.html"}]}]}
+  </script>
+</head>
+<body class="case case--trainer">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page case">
+  <header>
+    <nav class="nav nav--case" aria-label="Primary">
+      <a class="nav__brand" href="./">Adrian Carballo</a>
+      <div class="nav__links"><a href="./#work" data-current>Work</a><a href="about.html">About</a><a href="./#contact">Contact</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="trainer-intro" aria-labelledby="case-title">
+      <h1 id="case-title">From overview<br>to versioned datasets.</h1>
+      <p class="trainer-intro__context">AI Trainer · Sorba.ai · Product design</p>
+      <p class="trainer-intro__lead">Before a model can be trained, its data has to be prepared. I worked on AI Trainer’s overview and dataset flow: choosing a source, configuring its fields and rules, and managing the versions used for analysis.</p>
+
+    </section>
+    <figure class="trainer-figure ">
+  <a class="trainer-image" href="assets/img/trainer/dataset-create-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-create-1440.webp" srcset="assets/img/trainer/dataset-create-768.webp 768w, assets/img/trainer/dataset-create-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 90vw, 1320px" alt="AI Trainer New Dataset form with CSV upload, source settings, and separate Preview and Save Dataset actions." width="1440" height="900" fetchpriority="high" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption>The dataset setup brings source choices and configuration into one workspace. The Preview action is visible before saving.</figcaption>
+</figure>
+      <dl class="trainer-meta">
+        <div><dt>My role</dt><dd>Product Designer</dd></div>
+        <div><dt>Scope</dt><dd>Overview &amp; dataset workflow</dd></div>
+        <div><dt>Collaboration</dt><dd>Developers</dd></div>
+        <div><dt>Evidence</dt><dd>Interface designs in Figma</dd></div>
+      </dl>
+    <dl class="trainer-summary">
+      <div><dt>The design problem</dt><dd>Make the route from the dashboard to a configured, versioned dataset understandable.</dd></div>
+      <div><dt>My response</dt><dd>Clearer entry points, grouped configuration, explicit rules and recovery states.</dd></div>
+      <div><dt>What I can show</dt><dd>Product screens and design decisions. End-user validation remains open.</dd></div>
+    </dl>
+    <nav class="trainer-contents" aria-label="In this case study">
+      <a href="#context">Context</a><a href="#overview">Overview</a><a href="#dataset-flow">Dataset flow</a><a href="#versions">Versions &amp; recovery</a><a href="#reflection">Reflection</a>
+    </nav>
+    <section class="trainer-section trainer-split" id="context" aria-labelledby="context-title">
+      <div><h2 id="context-title">Designing without direct access to users.</h2></div>
+      <div class="trainer-prose">
+        <p>I did not have direct access to end users or other stakeholders. I worked with developers to discuss implementation and technical constraints, using the available product designs to reason through the task.</p>
+        <p>That collaboration helped me understand the system. It could not tell me whether people would understand the interface or complete the task successfully. I treated those as questions to test, rather than findings.</p>
+        <p>My contribution here covers the overview and dataset workflow. Model training and evaluation sit outside this case study.</p>
+      </div>
+    </section>
+    <section class="trainer-section" id="overview" aria-labelledby="overview-title">
+      <div class="trainer-section__head"><h2 id="overview-title">Give each dashboard action a clear purpose.</h2><p>The earlier overview repeated navigation and used dataset labels for other objects. I reorganized the dashboard around datasets, projects and predictions, with actions that match each one.</p></div>
+      <div class="trainer-pair trainer-pair--overview"><figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/overview-old-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/overview-old-1440.webp" srcset="assets/img/trainer/overview-old-768.webp 768w, assets/img/trainer/overview-old-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="Earlier ML overview with Quick Navigation beside the dashboard and repeated Datasets labels." width="1440" height="1232" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>Earlier overview.</strong> A second navigation column competes with the dashboard. Projects and Predictions repeat dataset labels.</figcaption>
+</figure> <figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/overview-new-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/overview-new-1440.webp" srcset="assets/img/trainer/overview-new-768.webp 768w, assets/img/trainer/overview-new-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="Revised AI Trainer overview with Datasets, Projects and Predictions cards, followed by status, templates and recent activity." width="1440" height="1428" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>Revised overview.</strong> The dashboard uses the available width; each main card names its own object and action.</figcaption>
+</figure></div>
+      <dl class="trainer-decisions">
+        <div><dt>Use the width for the work</dt><dd>The revised layout removes the second “Quick Navigation” column while retaining the main product rail.</dd></div>
+        <div><dt>Match labels to objects</dt><dd>The Projects card is named correctly; Predictions has “New Prediction” and “All Predictions” actions.</dd></div>
+        <div><dt>Separate entry points from status</dt><dd>Primary object cards sit above status summaries, templates, favorites and recent activity, separating entry points from monitoring.</dd></div>
+      </dl>
+    </section>
+    <section class="trainer-section" id="dataset-flow" aria-labelledby="flow-title">
+      <div class="trainer-section__head"><h2 id="flow-title">A path through a dense configuration task.</h2><p>Dataset setup combines source choices, parsing, field operations and rules. I organized the case around that task sequence so the relationship between the screens is visible.</p></div>
+      <figure class="trainer-figure trainer-figure--sketch">
+  <a class="trainer-image" href="assets/img/trainer/trainer-flow-sketch-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/trainer-flow-sketch-1440.webp" srcset="assets/img/trainer/trainer-flow-sketch-768.webp 768w, assets/img/trainer/trainer-flow-sketch-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 90vw, 1320px" alt="Conceptual dataset flow: choose a source, configure data, review settings, save a version, then explore data. Rules and fields belong to configuration." width="1440" height="720" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption>Retrospective, AI-assisted reconstruction made for this case study. It summarizes the task sequence; the product groups configuration within a form.</figcaption>
+</figure>
+      <ol class="trainer-flow" aria-label="Conceptual dataset task sequence">
+        <li>Choose a source</li><li>Configure data</li><li>Review settings</li><li>Save a version</li><li>Explore data</li>
+      </ol>
+      <p class="trainer-note">The task map connects configuration and management views. The screenshots use different sample datasets to show each designed state.</p>
+      <div class="trainer-section__head trainer-section__head--decision"><h3>Keep the source and its settings together.</h3><p>The CSV setup at the top of this case shows the source type, upload area and a persistent action bar. The full form continues into parsing, aggregation and field-level processing. Grouping gives the form structure, but its length remains a trade-off.</p></div>
+      <figure class="trainer-figure trainer-figure--natural">
+  <a class="trainer-image" href="assets/img/trainer/dataset-features-1032.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-features-1032.webp" srcset="assets/img/trainer/dataset-features-768.webp 768w, assets/img/trainer/dataset-features-1032.webp 1032w" sizes="(max-width: 1146px) 90vw, 1032px" alt="Features table with dataset fields and operations including replace with previous, replace with mean, replace with value, and discard." width="1032" height="574" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption>Field-level operations stay visible beside their fields. <a href="assets/img/trainer/dataset-full-1440.webp">Open the complete configuration form</a>.</figcaption>
+</figure>
+      <p class="trainer-note">Preview is available before saving in the design. A resulting preview screen is not included in the available artifacts, so I have not reconstructed one.</p>
+      <div class="trainer-section__head trainer-section__head--decision"><h3>Make the resulting rule visible.</h3><p>A rule is more than a dropdown choice. The builder keeps its field, operation and value together, lists the conditions, and shows the resulting expression before saving. That gives the configuration an inspectable representation.</p></div>
+      <figure class="trainer-figure ">
+  <a class="trainer-image" href="assets/img/trainer/dataset-rules-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-rules-1440.webp" srcset="assets/img/trainer/dataset-rules-768.webp 768w, assets/img/trainer/dataset-rules-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 90vw, 1320px" alt="Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression." width="1440" height="900" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption>The rule builder shows both the individual conditions and the combined expression before Save Rule.</figcaption>
+</figure>
+    </section>
+    <section class="trainer-section" id="versions" aria-labelledby="versions-title">
+      <div class="trainer-section__head"><h2 id="versions-title">Keep the dataset in context as versions change.</h2><p>The dataset list stays beside the selected dataset’s versions. Version, source and creation date help distinguish entries, while “New Version” and “Explore Dataset” make the next actions explicit.</p></div>
+      <div class="trainer-pair"><figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/dataset-versions-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-versions-1440.webp" srcset="assets/img/trainer/dataset-versions-768.webp 768w, assets/img/trainer/dataset-versions-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="Available Versions for MOTOR2, showing version, source, creation date and actions, with New Version and Explore Dataset controls." width="1440" height="900" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>Dataset and version are different objects.</strong> The selected dataset stays in view while its versions appear beside it.</figcaption>
+</figure> <figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/dataset-explorer-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-explorer-1440.webp" srcset="assets/img/trainer/dataset-explorer-768.webp 768w, assets/img/trainer/dataset-explorer-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="Dataset Explorer for MOTOR2, with Summary, Trend and other analysis views beside the dataset list." width="1440" height="900" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>Continue into the data.</strong> The explorer keeps the dataset list available alongside charts and analysis tabs.</figcaption>
+</figure></div>
+      <div class="trainer-section__head trainer-section__head--decision"><h3>Explain conflicts. Make leaving deliberate.</h3><p>The design includes an inline message for an existing version identifier and a confirmation before discarding unfinished work. These states address different risks: an invalid identifier and an unintended loss of configuration.</p></div>
+      <div class="trainer-pair"><figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/dataset-version-error-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-version-error-1440.webp" srcset="assets/img/trainer/dataset-version-error-768.webp 768w, assets/img/trainer/dataset-version-error-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="New Version form with the inline message This version already exists below the version input." width="1440" height="900" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>A specific naming conflict.</strong> The version field explains why the entered identifier cannot be reused.</figcaption>
+</figure> <figure class="trainer-figure trainer-figure--paired">
+  <a class="trainer-image" href="assets/img/trainer/dataset-exit-1440.webp" data-trainer-image>
+    <img src="assets/img/trainer/dataset-exit-1440.webp" srcset="assets/img/trainer/dataset-exit-768.webp 768w, assets/img/trainer/dataset-exit-1440.webp 1440w" sizes="(max-width: 700px) calc(100vw - 40px), (max-width: 1440px) 44vw, 648px" alt="Exit Dataset Creation confirmation warning that unsaved changes will be lost, with Cancel and Leave without saving." width="1440" height="900" loading="lazy" decoding="async">
+    <span class="trainer-image__action">View full image <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M14 4h6v6M20 4l-8 8M10 4H4v16h16v-6"/></svg></span>
+  </a>
+  <figcaption><strong>An explicit exit decision.</strong> The dialog names the consequence and offers a way to stay.</figcaption>
+</figure></div>
+      <p class="trainer-note">The exit dialog still uses “Cancel” for staying in the form. I would test a more explicit label, such as “Keep editing,” alongside the warning and focus behavior.</p>
+    </section>
+    <section class="trainer-section trainer-split" id="reflection" aria-labelledby="reflection-title">
+      <div><h2 id="reflection-title">What the work establishes.<br>What it still needs to prove.</h2></div>
+      <div class="trainer-prose">
+        <p>The designs show a revised overview and a dataset workflow with source configuration, field operations, rules, versions, exploration and recovery states. They demonstrate how I structure a technical product and make its decisions visible.</p>
+        <p>They do not establish a reduction in errors, faster completion, higher adoption or successful usability with end users. Developer discussion was technical input, not a substitute for that evidence.</p>
+        <h3>What I would test next</h3>
+        <ul class="trainer-tests">
+          <li>Can someone choose and configure the correct source without help, including the date and time settings?</li>
+          <li>Can they explain the effect of a field operation or combined rule before saving?</li>
+          <li>Can they distinguish a dataset from a version, recover from a naming conflict, and leave without losing work unintentionally?</li>
+        </ul>
+        <p>I would observe task completion, errors, requests for help and interpretation of the saved configuration. I would also review contrast, form length and disclosure of advanced settings before claiming the flow is easier to use.</p>
+      </div>
+    </section>
+    <aside class="trainer-sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">About the evidence</h2>
+      <p>Product screens were exported from the original Figma files. Names, counts and charts are example interface content, not outcome metrics. The overview has an earlier design for comparison; an earlier dataset interface was not available.</p>
+      <div><a href="https://www.figma.com/design/CQAujJvYkDjr1kQmNFnLUS/2.1--Overview?node-id=6301-18535">Overview design</a><a href="https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/2.2--Dataset?node-id=0-1">Dataset design</a><a href="https://www.figma.com/design/e34I89B0a36BxJKBRhWQEe/ML-TRAINER?node-id=102802-37834">Earlier overview</a></div>
+    </aside>
+    <nav class="trainer-next" aria-label="More work"><a class="textlink textlink--accent" href="./#work">Back to selected work <span aria-hidden="true">↗</span></a><a class="textlink" href="sorbot.html">Read the Sorbot case study <span aria-hidden="true">→</span></a></nav>
+    <section class="case-contact" aria-labelledby="contact-title"><h2 class="case-contact__title" id="contact-title">Let’s talk about<br>your next product.</h2><a class="btn btn--primary btn--sm" href="mailto:wacarballo94@gmail.com">Email me <span aria-hidden="true">↗</span></a><a class="case-contact__email" href="mailto:wacarballo94@gmail.com">wacarballo94@gmail.com</a></section>
+  </main>
+  <footer class="footer"><p>© 2026 Adrian Carballo</p><div class="footer__links"><a href="https://www.linkedin.com/in/adrian-carballo-guilarte-aa6b32187/" target="_blank" rel="noopener me">LinkedIn <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a></div></footer>
+</div>
+<script src="assets/js/trainer-viewer.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+{
+  "exported_on": "2026-10-22",
+  "source": "Figma native PNG screenshots; WebP conversion with bundled Sharp, quality90, no upscaling, no pixel reconstruction or changes to UI content.",
+  "assets": [
+    {
+      "name": "overview-old",
+      "fileKey": "e34I89B0a36BxJKBRhWQEe",
+      "nodeId": "102802:37834",
+      "url": "https://www.figma.com/design/e34I89B0a36BxJKBRhWQEe/?node-id=102802-37834",
+      "nativeWidth": 1440,
+      "nativeHeight": 1232,
+      "note": "Earlier ML overview; only historical comparison used.",
+      "outputs": [
+        "overview-old-1440.webp",
+        "overview-old-768.webp"
+      ]
+    },
+    {
+      "name": "overview-new",
+      "fileKey": "CQAujJvYkDjr1kQmNFnLUS",
+      "nodeId": "6301:18535",
+      "url": "https://www.figma.com/design/CQAujJvYkDjr1kQmNFnLUS/?node-id=6301-18535",
+      "nativeWidth": 1440,
+      "nativeHeight": 1428,
+      "note": "Owner-selected revised overview.",
+      "outputs": [
+        "overview-new-1440.webp",
+        "overview-new-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-create",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6333:5803",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6333-5803",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "CSV source configuration; Preview action, not preview result.",
+      "outputs": [
+        "dataset-create-1440.webp",
+        "dataset-create-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-full",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6331:2727",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6331-2727",
+      "nativeWidth": 1440,
+      "nativeHeight": 2653,
+      "note": "Complete long configuration form, linked as a source.",
+      "outputs": [
+        "dataset-full-1440.webp"
+      ]
+    },
+    {
+      "name": "dataset-features",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6331:4446",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6331-4446",
+      "nativeWidth": 1032,
+      "nativeHeight": 574,
+      "note": "Native isolated export of Features table within full form.",
+      "outputs": [
+        "dataset-features-1032.webp",
+        "dataset-features-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-rules",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6343:10407",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6343-10407",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "Rule builder and resulting expression.",
+      "outputs": [
+        "dataset-rules-1440.webp",
+        "dataset-rules-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-versions",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6328:3137",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6328-3137",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "Available Versions; selected MOTOR2, Hot Data example.",
+      "outputs": [
+        "dataset-versions-1440.webp",
+        "dataset-versions-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-explorer",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6345:19149",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6345-19149",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "Explorer Overview Data; selected MOTOR2.",
+      "outputs": [
+        "dataset-explorer-1440.webp",
+        "dataset-explorer-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-version-error",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6343:42881",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6343-42881",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "Duplicate version identifier inline error.",
+      "outputs": [
+        "dataset-version-error-1440.webp",
+        "dataset-version-error-768.webp"
+      ]
+    },
+    {
+      "name": "dataset-exit",
+      "fileKey": "5WMZRkqlsCHXUKQB5zDNLF",
+      "nodeId": "6345:26362",
+      "url": "https://www.figma.com/design/5WMZRkqlsCHXUKQB5zDNLF/?node-id=6345-26362",
+      "nativeWidth": 1440,
+      "nativeHeight": 900,
+      "note": "Unsaved-changes confirmation.",
+      "outputs": [
+        "dataset-exit-1440.webp",
+        "dataset-exit-768.webp"
+      ]
+    }
+  ],
+  "sketch": {
+    "name": "trainer-flow-sketch",
+    "tool": "Built-in imagegen",
+    "nativeWidth": 1774,
+    "nativeHeight": 887,
+    "type": "AI-assisted retrospective conceptual reconstruction, created for this case study. Not a historical artifact.",
+    "prompt": "docs/trainer-flow-sketch-prompt.txt"
+  },
+  "interpretation_limits": [
+    "Only overview has old/new evidence. Dataset screens are designed states, not a before/after.",
+    "Do not treat different MOTOR4/MOTOR2 sample names as one recorded clickthrough.",
+    "Button Preview is documented; its resulting screen is not available.",
+    "The New page of ML-TRAINER contains image/video work; no reliable chronology establishes a newer numeric-dataset variant. The selected numeric states are the consistently grouped Dataset, Versions and Explore sections of the supplied Dataset file.",
+    "Interface counts and charts are sample design content, not impact metrics."
+  ]
+}

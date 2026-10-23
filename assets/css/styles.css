@@ -1212,3 +1212,5 @@ h1, h2, h3 { text-wrap: balance; }
 /* Case pages: tall screenshots keep their natural height */
 .case .shot--auto { aspect-ratio: auto; }
 .case .shot--auto img { width: 100%; height: auto; object-fit: contain; }
+
+.viewer__stage:focus-visible { outline: 2px solid var(--white); outline-offset: -6px; }

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Trainer case study: designing the dataset module | Adrian Carballo</title>
-  <meta name="description" content="A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer: new forms in the demo and a proposed redesign.">
+  <meta name="description" content="Adrian Carballo’s AI Trainer case study: new dataset forms live in the Sorba demo, proposed management views, and the limits of internal feedback.">
   <meta name="theme-color" content="#f8f8f8">
   <link rel="canonical" href="https://ekko94.github.io/portfolio/trainer.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -12,12 +12,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Adrian Carballo">
   <meta property="og:title" content="Designing the dataset module — AI Trainer case study">
-  <meta property="og:description" content="A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer.">
+  <meta property="og:description" content="Adrian Carballo’s AI Trainer case study: new dataset forms live in the Sorba demo, proposed management views, and the limits of internal feedback.">
   <meta property="og:url" content="https://ekko94.github.io/portfolio/trainer.html">
   <meta property="og:image" content="https://ekko94.github.io/portfolio/assets/og-trainer.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="AI Trainer version properties screen with dataset versions">
+  <meta property="og:image:alt" content="Proposed AI Trainer version-properties screen with dataset versions and processing status.">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,7 +30,7 @@
         "@type": "Article",
         "@id": "https://ekko94.github.io/portfolio/trainer.html#article",
         "headline": "Designing the dataset module: AI Trainer case study",
-        "description": "A reconstructed design case study of the dataset module in Sorba.ai’s AI Trainer: new forms in the demo and a proposed redesign.",
+        "description": "Adrian Carballo’s AI Trainer case study: new dataset forms live in the Sorba demo, proposed management views, and the limits of internal feedback.",
         "image": "https://ekko94.github.io/portfolio/assets/og-trainer.jpg",
         "author": { "@id": "https://ekko94.github.io/portfolio/#person" },
         "mainEntityOfPage": "https://ekko94.github.io/portfolio/trainer.html",
@@ -80,7 +80,7 @@
         <section class="case-hero" aria-labelledby="case-title">
           <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; AI Trainer</p>
           <h1 class="case-hero__title" id="case-title">Preparing data<br>for machine learning.</h1>
-          <p class="case-hero__sub">I designed how people create, version and inspect datasets in Sorba’s AI Trainer. The new forms are in the demo; the wider redesign is a proposal.</p>
+          <p class="case-hero__sub">I designed dataset forms and a new visual style for Sorba’s AI Trainer, alongside proposals for managing and inspecting datasets. The new dataset forms are live in the Sorba demo.</p>
           <dl class="meta">
             <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Sole Product Designer</dd></div>
             <div class="meta__item"><dt class="meta__label">Scope</dt><dd class="meta__value">Datasets · forms · visual style</dd></div>
@@ -97,7 +97,7 @@
             </div>
             <div class="browser hero-stage__front">
               <div class="browser__bar"><span class="browser__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="browser__title">AI Trainer</span></div>
-              <div class="browser__body"><img src="assets/img/trainer-version-props.webp" alt="AI Trainer version properties: a list of dataset versions 1.0.0, 1.0.1 and 1.0.2 beside the properties of the selected version, with Correlation marked as applied" width="1440" height="900" fetchpriority="high"></div>
+              <div class="browser__body"><img src="assets/img/trainer-version-props.webp" alt="Proposed version properties: a list of dataset versions 1.0.0, 1.0.1 and 1.0.2 beside the properties of the selected version, with Correlation marked as applied" width="1440" height="900" fetchpriority="high"></div>
             </div>
           </div>
           <figcaption class="fig-caption">Proposed version properties, with the dataset explorer behind. The screens keep sample data, placeholder copy and unfinished states from the saved designs.</figcaption>
@@ -106,7 +106,7 @@
         <section class="glance" aria-label="At a glance">
           <div class="glance__item">
             <p class="glance__label">The need</p>
-            <p class="glance__text">A clear way to bring raw data in, version it and trust it before training.</p>
+            <p class="glance__text">Dataset setup combines source selection, date settings, field operations and version management.</p>
           </div>
           <div class="glance__item">
             <p class="glance__label">My design</p>
@@ -114,7 +114,7 @@
           </div>
           <div class="glance__item">
             <p class="glance__label">The outcome</p>
-            <p class="glance__text">The forms are live in the Sorba demo; the rest is a proposal. Feedback came from developers and the e-commerce team. No usage data.</p>
+            <p class="glance__text">New dataset forms are live in the demo. The redesigned overview, list, versions, explorer and warnings remain proposals.</p>
           </div>
         </section>
       </div>
@@ -123,13 +123,12 @@
       <section class="ed" data-nav="Context" aria-labelledby="s-context">
         <p class="label">Context</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-context">Preparing data for machine learning.</h2>
+          <h2 class="h2 h2--ed" id="s-context">Making a technical setup easier to follow.</h2>
           <div class="ed__text">
             <p>AI Trainer, formerly ML Trainer, is the part of Sorba’s platform where people prepare and version their data, create projects to analyse it and build models. Everything starts with a dataset, so this case follows that part of the product.</p>
-            <p>The project took about four months and I was its only product designer. Much of the product is under NDA and I did not keep the early files, so this case shows a selection, rebuilt from the surviving Figma screens.</p>
-            <p>The work moved fast. I researched and designed variants to solve each problem as it came up, with feedback from developers and the e-commerce team.</p>
-            <dl class="case-options">
-              <div><dt>In the product <span>Live</span></dt><dd>The new dataset forms, available in the Sorba demo that people can download and try. The rest of the module still uses the earlier views.</dd></div>
+            <p>The project took about four months, and I was its only product designer. Parts of the product are under NDA, and many early files were not saved. This case presents a selection of surviving Figma screens with a retrospective account of the work.</p>
+                        <dl class="case-options">
+              <div><dt>In the product <span>Live</span></dt><dd>The new dataset forms are live in the Sorba demo, available after signing up and downloading it. The redesigned overview, dataset list, versions, explorer and warning dialogs remain proposals.</dd></div>
               <div><dt>Redesign <span>Proposal</span></dt><dd>A new overview, dataset list, version pages, explorer and warning dialogs. These are designs, not yet in the product.</dd></div>
             </dl>
             <div class="contrib">
@@ -140,7 +139,7 @@
                 <li>Proposed a redesign of the dataset list, versions, explorer and warnings, and a new overview.</li>
               </ul>
             </div>
-            <p class="small">I had no direct access to customers. Feedback came only from developers testing the work and from the e-commerce team. I did not document the iterations. Labels such as “OLD” and “v1” come from Figma; I do not have a dated record of their sequence or approval.</p>
+            <p class="small">I had no direct access to customers. Feedback came only from developers testing the work and from the e-commerce team. The surviving files do not provide a complete iteration history. Labels such as “OLD” and “v1” do not establish the sequence or approval status of each design.</p>
           </div>
         </div>
       </section>
@@ -153,7 +152,7 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-overview">A home that shows the state of your data.</h2>
           <div class="ed__text">
-            <p>The current overview repeats navigation beside three summary cards. My proposal replaces it with summary cards, status charts, templates, favorites and an activity table.</p>
+            <p>The earlier overview duplicates navigation and labels the Projects card “Datasets”; its Predictions card also uses dataset actions. My proposal removes the extra navigation column, gives each object its own labels and actions, and places status summaries below.</p>
           </div>
         </div>
         <div class="pair">
@@ -168,7 +167,7 @@
             <div class="shot shot--auto"><img src="assets/img/trainer-overview-new.webp" alt="Proposed overview with dataset, project and prediction summaries, three status charts, a model-type chart, templates, favorites and activity" width="2400" height="1805" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Proposal</p>
-              <p class="cap__text">Dataset, project and prediction summary cards; three status charts and a model-type chart; latest templates, favorites and an activity table.</p>
+              <p class="cap__text">Object-specific actions above status charts, templates, favorites and activity. Chart counts and percentages are inconsistent placeholders in the saved design, not product metrics.</p>
             </figcaption>
           </figure>
         </div>
@@ -182,7 +181,7 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-style">One look for every element.</h2>
           <div class="ed__text">
-            <p>Alongside the flows, I defined a new visual style for AI Trainer: stronger contrast, more generous spacing and a more deliberate use of colour, applied to every element so the product looks more professional.</p>
+            <p>Alongside the flows, I defined a new visual style for AI Trainer, with stronger contrast, more generous spacing and consistent colour roles across interface elements.</p>
             <p class="small">You can see it in the proposed overview above: solid primary buttons, icon tiles on the summary cards, donut charts with counts in their legends, and a table for activity. The earlier views use outlined buttons and simpler cards.</p>
           </div>
         </div>
@@ -194,27 +193,27 @@
       <section class="ed" data-nav="Flow" aria-labelledby="s-flow">
         <p class="label">The dataset flow</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-flow">From a file to a version you can trust.</h2>
+          <h2 class="h2 h2--ed" id="s-flow">From a data source to a dataset version.</h2>
           <div class="ed__text">
-            <p>This map groups the dataset designs by task. It is a retrospective outline, and it shows which parts are live and which are proposals.</p>
+            <p>This retrospective map connects the tasks represented in the saved designs. It is not a verified navigation sequence; configuration includes source settings, field operations and rules.</p>
           </div>
         </div>
         <figure class="fj" data-reveal aria-labelledby="trainer-fj-cap">
           <div class="fj-board">
             <p class="fj-title">Dataset module · reconstructed task map</p>
             <ol class="fj-flow" role="list">
-              <li class="fj-node fj-node--pill">Dataset list</li>
-              <li class="fj-node fj-node--key">New dataset: CSV, XLSX or hot data</li>
-              <li class="fj-node">Versions</li>
-              <li class="fj-node">Version properties</li>
-              <li class="fj-node">Explorer</li>
+              <li class="fj-node fj-node--pill">Dataset list · proposal</li>
+              <li class="fj-node fj-node--key">New dataset forms · live in demo</li>
+              <li class="fj-node">Versions · proposal</li>
+              <li class="fj-node">Version properties · proposal</li>
+              <li class="fj-node">Explorer · proposal</li>
             </ol>
             <div class="fj-notes">
               <p class="fj-note fj-note--green">The new dataset forms are live in the Sorba demo.</p>
-              <p class="fj-note fj-note--yellow">The list, versions, properties, explorer and warnings are a proposal.</p>
+              <p class="fj-note fj-note--yellow">Redesigned management views and warning dialogs are proposals. The rule builder and inline version-conflict state have unconfirmed release status.</p>
             </div>
           </div>
-          <figcaption id="trainer-fj-cap" class="diagram__cap">Retrospective task map reconstructed from saved screens; not an original planning artifact.</figcaption>
+          <figcaption id="trainer-fj-cap" class="diagram__cap">Retrospective task map reconstructed from saved screens, not an original planning artifact. Screens use different sample datasets and do not document one continuous session.</figcaption>
         </figure>
       </section>
 
@@ -227,7 +226,7 @@
           <h2 class="h2 h2--ed" id="s-forms">Forms that handle real files.</h2>
           <div class="ed__text">
             <p>An earlier saved form shows a CSV field labeled “Only .zip files are allowed”. The new form accepts CSV or XLSX by drag and drop, then asks for the format, the date field, date format, time zone and how to aggregate by time interval.</p>
-            <p class="small">The new forms are in the Sorba demo, so anyone who downloads it can try them.</p>
+            <p class="small">The new dataset forms are live in the Sorba demo, which people can sign up for and download to try.</p>
           </div>
         </div>
         <div class="pair">
@@ -249,8 +248,8 @@
         <div class="split">
           <div class="ed__text" style="gap:24px">
             <h3 class="decision__title">Settings for every field.</h3>
-            <p>The field table offers replace and discard operations, plus LL and HL limits. Field preferences have Save and Import controls; synthetic tags and advanced rules have separate tables with Export and Import controls.</p>
-            <p class="small">Four extra-processing options are shown: Correlation, Data Quality, Tag Ranking and Data Drift. One saved state shows Correlation selected.</p>
+            <p>I kept each field’s operation beside its name, with options to replace or discard values and controls labeled LL and HL. Source settings, field operations and rules sit within one configuration form. Keeping them together makes the configuration visible, but the form remains long; I would test where people need more guidance or progressive disclosure.</p>
+            <p class="small">Field preferences can be saved and imported; synthetic tags and advanced rules have separate tables with Export and Import controls.</p>
           </div>
           <figure class="figure" data-reveal>
             <div class="shot shot--auto"><img src="assets/img/trainer-features-new.webp" alt="Field-selection table with operations and LL/HL limits, Save Preferences and Import Preferences controls, plus synthetic-tag and advanced-rule tables with Export and Import controls" width="1120" height="1220" loading="lazy"></div>
@@ -285,39 +284,39 @@
         </div>
       </section>
 
-      <section class="ed" aria-labelledby="s-safe">
-        <p class="label">Dataset forms · rules and recovery</p>
+      <section class="ed" data-nav="Recovery" aria-labelledby="s-safe">
+        <p class="label">Rules and recovery · saved designs</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-safe">Make the rule visible. Make mistakes clear.</h2>
           <div class="ed__text">
             <p>A rule is more than a dropdown choice. The builder keeps its field, operation and value together, lists each condition and shows the resulting expression before saving, so the configuration can be inspected.</p>
-            <p>The design also covers two risky moments: a version name that already exists, and leaving a form with unsaved work.</p>
+            <p>The saved designs also cover an existing version identifier and leaving a form with unsaved work. The exit confirmation is a proposal; the release status of the rule builder and inline version-conflict state is not confirmed.</p>
           </div>
         </div>
         <figure class="figure" data-reveal style="max-width:760px">
-          <div class="shot shot--auto"><img src="assets/img/trainer-add-rule.webp" alt="Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression below" width="1110" height="768" loading="lazy"></div>
+          <div class="shot shot--auto"><img src="assets/img/trainer-add-rule.webp" alt="Saved rule-builder design; release status unconfirmed. Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression below" width="1110" height="768" loading="lazy"></div>
           <figcaption class="cap">
-            <p class="cap__title">The rule builder</p>
-            <p class="cap__text">Each condition is listed, and the combined expression shows before Save Rule.</p>
+            <p class="cap__title">Rule builder · release status unconfirmed</p>
+            <p class="cap__text">The saved design lists individual conditions and a combined expression before Save Rule. The example values are illustrative, not validated business logic.</p>
           </figcaption>
         </figure>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--wide"><img src="assets/img/trainer-version-error.webp" alt="New Version form with the inline message “This version already exists.” under the version input" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--wide"><img src="assets/img/trainer-version-error.webp" alt="Saved version-conflict design; release status unconfirmed. New Version form with the inline message “This version already exists.” under the version input" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">A specific naming conflict</p>
+              <p class="cap__title">Version conflict · release status unconfirmed</p>
               <p class="cap__text">The version field says why the identifier cannot be reused.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--wide"><img src="assets/img/trainer-exit-dialog.webp" alt="Exit confirmation warning that unsaved changes will be lost, with Cancel and Leave without saving" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--wide"><img src="assets/img/trainer-exit-dialog.webp" alt="Proposed exit confirmation warning that unsaved changes will be lost, with Cancel and Leave without saving" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">An explicit exit decision</p>
+              <p class="cap__title">Exit confirmation · proposal</p>
               <p class="cap__text">The dialog names the consequence and offers a way to stay.</p>
             </figcaption>
           </figure>
         </div>
-        <p class="small">The exit dialog still uses “Cancel” for staying in the form; I would test a clearer label such as “Keep editing”. The forms show a Preview action, but I did not keep a result screen for it, so I have not reconstructed one.</p>
+        <p class="small">The proposed exit dialog uses “Cancel” for staying in the form; I would test a clearer label such as “Keep editing”. The saved forms show a Preview action, but no preview-result screen is included in this case.</p>
       </section>
 
       <hr class="rule">
@@ -328,22 +327,22 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-proposal">A clearer list of what you have.</h2>
           <div class="ed__text">
-            <p>The current list holds a card per dataset. In the proposal, each card also shows a status icon, how many versions it has, a star and a selection box, so people see the state of their data before opening it.</p>
+            <p>The earlier dataset cards already show a status icon and a favorite star. My proposal adds a numeric version count and a selection checkbox, while retaining the name and date.</p>
           </div>
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-list-old.webp" alt="Current dataset list with one dataset card and an empty detail area reading “Select a Dataset to see the awesome”" width="740" height="900" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-list-old.webp" alt="Earlier dataset list showing a VIDEO2 card with a status check, favorite star, date and Versions label beside an empty detail area" width="740" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Current view</p>
-              <p class="cap__text">A dataset card with a name, date and a “Versions” label.</p>
+              <p class="cap__text">A dataset card with a name, date, status check, favorite star and Versions label.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
             <div class="shot shot--auto"><img src="assets/img/trainer-list-new.webp" alt="Proposed dataset list with two dataset cards showing a status check, a version count badge, a star and a selection box" width="740" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Proposal</p>
-              <p class="cap__text">Cards with a status icon, a version count, a star and a selection box.</p>
+              <p class="cap__text">The proposal adds a numeric version count and selection checkbox to the dataset cards.</p>
             </figcaption>
           </figure>
         </div>
@@ -360,14 +359,14 @@
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-version-status.webp" alt="Three dataset cards named MOTOR2: a healthy one, one with an amber count and the tooltip “1 version is invalid, but dataset is usable”, and one with a red count and the tooltip “All versions have issues”" width="520" height="400" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-version-status.webp" alt="Proposed dataset-health states: three dataset cards named MOTOR2: a healthy one, one with an amber count and the tooltip “1 version is invalid, but dataset is usable”, and one with a red count and the tooltip “All versions have issues”" width="520" height="400" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Three health states</p>
               <p class="cap__text">The dataset card carries its state in an icon, the count colour and a tooltip.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--wide"><img src="assets/img/trainer-version-props.webp" alt="Version properties with a list of versions and the selected version’s details; Correlation is marked APPLIED and Tag Ranking NOT APPLIED" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--wide"><img src="assets/img/trainer-version-props.webp" alt="Proposed version properties with a list of versions and the selected version’s details; Correlation is marked APPLIED and Tag Ranking NOT APPLIED" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Version properties</p>
               <p class="cap__text">Source, time range and the processing applied, with APPLIED and NOT APPLIED chips.</p>
@@ -381,17 +380,17 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-explore">Look before you train, think before you delete.</h2>
           <div class="ed__text">
-            <p>The proposed explorer opens a version in a summary with tabs for trend, scatter plot, box plot, histogram, correlation, data quality and data drift. Deleting a version asks for confirmation and says that it can affect models or processes that use it.</p>
+            <p>The proposed explorer keeps the selected dataset beside summary charts and analysis tabs. The proposed delete-version dialog warns that deletion cannot be undone and may affect models or processes using that version.</p>
             <p class="small">The charts in these designs use sample data.</p>
           </div>
         </div>
         <figure class="fig-full">
-          <img src="assets/img/trainer-explorer.webp" alt="Dataset Explorer for MOTOR2 in the overview data view, with tabs for summary, trend, scatter plot, box plot, histogram, parallel coordinates, correlation, data quality and data drift, and a summary of charts" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">Dataset Explorer, overview data view, with sample data.</figcaption>
+          <img src="assets/img/trainer-explorer.webp" alt="Proposed Dataset Explorer for MOTOR2 in the overview data view, with tabs for summary, trend, scatter plot, box plot, histogram, parallel coordinates, correlation, data quality and data drift, and a summary of charts" width="1440" height="900" loading="lazy">
+          <figcaption class="fig-caption">Proposal: Dataset Explorer with the dataset list beside analysis views. Charts use sample data.</figcaption>
         </figure>
         <figure class="fig-full">
-          <img src="assets/img/trainer-warning-delete.webp" alt="A Delete Version dialog: “This action cannot be undone and may affect models or processes using this version”, with Cancel and a red Delete Version button" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">Deleting a version: the dialog says what could be affected.</figcaption>
+          <img src="assets/img/trainer-warning-delete.webp" alt="Proposed Delete Version dialog: “This action cannot be undone and may affect models or processes using this version”, with Cancel and a red Delete Version button" width="1440" height="900" loading="lazy">
+          <figcaption class="fig-caption">Proposal: the delete-version dialog warns about irreversible deletion and possible effects on dependent models or processes.</figcaption>
         </figure>
       </section>
 
@@ -403,8 +402,8 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-process">Working quickly with internal feedback.</h2>
           <div class="ed__text">
-            <p>Over about four months, as the only product designer, I researched and designed variants under a fast pace. Feedback came from developers testing the work and from the e-commerce team. The surviving files show variants, but I cannot connect individual changes to specific feedback.</p>
-            <p class="small">This account combines my recollection with the surviving Figma screens. The files do not preserve a complete iteration history or a record of customer testing.</p>
+            <p>I designed new and revised forms, flows and a visual style, with feedback from developers testing the work and from the e-commerce team. The surviving screens show variants, but they do not provide a complete record linking feedback to individual changes. I had no direct access to customers.</p>
+            <p class="small">This account combines my recollection with the surviving Figma screens.</p>
           </div>
         </div>
       </section>
@@ -415,13 +414,10 @@
       <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
         <p class="label">Design outcome &amp; reflection</p>
         <div class="split">
-          <h2 class="h2 h2--ed" id="s-outcome">Forms in the demo. The rest is a proposal.</h2>
+          <h2 class="h2 h2--ed" id="s-outcome">Dataset forms in the demo. Module redesign proposed.</h2>
           <div class="ed__text">
             <p>The new dataset forms are part of the Sorba demo. The redesigned overview, list, versions, explorer and warnings remain proposals, and the product still shows the earlier views there.</p>
             <p>I do not have usage data. Next, I would observe someone importing a file and creating a first dataset version, recording completion, import errors and the points where they need help.</p>
-            <aside class="placeholder" data-placeholder="trainer-status">
-              <strong>Placeholder · where it stands</strong><p>Whether the proposal is planned for a release, and anything the team told you about the new forms. Add it only if you can stand behind it.</p>
-            </aside>
           </div>
         </div>
         <div class="reflect">
@@ -429,16 +425,16 @@
           <ol class="case-validation" role="list">
             <li><h4>Choose and configure a source</h4><p>Can someone pick the right source and set the date and time options without help?</p></li>
             <li><h4>Explain a field operation or a rule</h4><p>Can they describe the effect of an operation or a combined rule before saving?</p></li>
-            <li><h4>Tell a dataset from a version</h4><p>Can they recover from a naming conflict and leave a form without losing work by accident?</p></li>
+            <li><h4>Distinguish datasets, versions and recovery states</h4><p>Can someone identify the selected dataset and version, recover from a naming conflict, and leave a form without losing work by accident?</p></li>
           </ol>
-          <p class="footnote">I would observe task completion, errors, requests for help and how people read the saved configuration. Developer discussion was technical input, not usability validation.</p>
+          <p class="footnote">I would observe task completion, errors, requests for help and how people read the saved configuration. Before implementation, I would also review contrast, form length, disclosure of advanced settings and whether status remains understandable without colour or hover. Developer discussion was technical input, not usability validation.</p>
         </div>
         <div class="reflect">
           <h3 class="decision__title">What I would do differently</h3>
           <ol class="case-validation" role="list">
             <li><h4>Write it down as I go</h4><p>Keep a short decision log per screen: the problem, the variants and what changed after feedback. That is the part this case cannot show.</p></li>
             <li><h4>Test with the people who prepare data</h4><p>Watch someone import a file and create a dataset version; note where they stop or guess.</p></li>
-            <li><h4>Ship the proposal in steps</h4><p>The forms already reached the demo. The list and version status are the next smallest pieces to put in front of users.</p></li>
+            <li><h4>Review the proposal in stages</h4><p>Review the proposed list and version-status views with the team, then test them before deciding what to build next.</p></li>
           </ol>
         </div>
       </section>

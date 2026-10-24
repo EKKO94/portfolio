@@ -139,7 +139,7 @@
                 <li>Proposed a redesign of the dataset list, versions, explorer and warnings, and a new overview.</li>
               </ul>
             </div>
-            <p class="small">I had no direct access to customers. Feedback came only from developers testing the work and from the e-commerce team. The surviving files do not provide a complete iteration history. Labels such as “OLD” and “v1” do not establish the sequence or approval status of each design.</p>
+            <p class="small">Working with developers helped me understand the system and its technical limits. It could not tell me whether people would understand the interface, so I treat that as a question to test, not a finding. I had no direct access to customers. Feedback came only from developers testing the work and from the e-commerce team. The surviving files do not provide a complete iteration history. Labels such as “OLD” and “v1” do not establish the sequence or approval status of each design.</p>
           </div>
         </div>
       </section>
@@ -170,6 +170,15 @@
               <p class="cap__text">Object-specific actions above status charts, templates, favorites and activity. Chart counts and percentages are inconsistent placeholders in the saved design, not product metrics.</p>
             </figcaption>
           </figure>
+        </div>
+        <div class="reflect">
+          <h3 class="decision__title">Three decisions in the proposal</h3>
+          <dl class="case-options">
+            <div><dt>Use the width for the work <span>Proposal</span></dt><dd>The second “Quick Navigation” column is removed; the main product rail stays.</dd></div>
+            <div><dt>Match labels to objects <span>Proposal</span></dt><dd>The Projects card is named Projects, and Predictions has “New Prediction” and “All Predictions” actions.</dd></div>
+            <div><dt>Separate entry points from status <span>Proposal</span></dt><dd>Dataset, project and prediction cards sit above status summaries, templates, favorites and recent activity.</dd></div>
+          </dl>
+          <p class="footnote">The proposed overview has more content and is taller. I am not claiming it reduces scrolling or time to task.</p>
         </div>
       </section>
 
@@ -249,7 +258,7 @@
           <div class="ed__text" style="gap:24px">
             <h3 class="decision__title">Settings for every field.</h3>
             <p>I kept each field’s operation beside its name, with options to replace or discard values and controls labeled LL and HL. Source settings, field operations and rules sit within one configuration form. Keeping them together makes the configuration visible, but the form remains long; I would test where people need more guidance or progressive disclosure.</p>
-            <p class="small">Field preferences can be saved and imported; synthetic tags and advanced rules have separate tables with Export and Import controls.</p>
+            <p class="small">Field preferences can be saved and imported; synthetic tags and advanced rules have separate tables with Export and Import controls. <a class="textlink textlink--accent" href="assets/img/trainer-form-full.webp" target="_blank" rel="noopener">Open the complete form <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (image, opens in a new tab)</span></a></p>
           </div>
           <figure class="figure" data-reveal>
             <div class="shot shot--auto"><img src="assets/img/trainer-features-new.webp" alt="Field-selection table with operations and LL/HL limits, Save Preferences and Import Preferences controls, plus synthetic-tag and advanced-rule tables with Export and Import controls" width="1120" height="1220" loading="lazy"></div>
@@ -348,6 +357,20 @@
         </div>
       </section>
 
+      <section class="ed" aria-labelledby="s-listversions">
+        <p class="label">Versions · proposal</p>
+        <div class="split">
+          <h2 class="h2 h2--ed" id="s-listversions">The dataset stays in view as versions change.</h2>
+          <div class="ed__text">
+            <p>A dataset and its versions are different objects. In the proposal, the selected dataset stays in the list while its versions appear beside it. Version, source and creation date help tell entries apart, and “New Version” and “Explore” make the next actions explicit.</p>
+          </div>
+        </div>
+        <figure class="figure" data-reveal>
+          <div class="shot shot--auto"><img src="assets/img/trainer-versions.webp" alt="Proposed Available Versions view for MOTOR2: the dataset list on the left and a versions table with status, version, source, creation date and actions, with Explore, Delete and New Version buttons" width="1440" height="570" loading="lazy"></div>
+          <figcaption class="footnote">Proposal: Available Versions for a selected dataset. The screen shows sample data.</figcaption>
+        </figure>
+      </section>
+
       <section class="ed" aria-labelledby="s-versions">
         <p class="label">Dataset health · proposal</p>
         <div class="split">
@@ -417,7 +440,7 @@
           <h2 class="h2 h2--ed" id="s-outcome">Dataset forms in the demo. Module redesign proposed.</h2>
           <div class="ed__text">
             <p>The new dataset forms are part of the Sorba demo. The redesigned overview, list, versions, explorer and warnings remain proposals, and the product still shows the earlier views there.</p>
-            <p>I do not have usage data. Next, I would observe someone importing a file and creating a first dataset version, recording completion, import errors and the points where they need help.</p>
+            <p>The designs show how I structure a technical product and make its decisions visible: new forms, rules, versions, status and recovery states. They do not establish fewer errors, faster completion, higher adoption or successful usability with end users, and I do not have usage data.</p>
           </div>
         </div>
         <div class="reflect">

@@ -5,29 +5,20 @@
    Every animation is wrapped for prefers-reduced-motion.
    ========================================================================== */
 
-@font-face {
-  font-family: "Fraunces";
-  src: url("../fonts/fraunces-variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Fraunces";
-  src: url("../fonts/fraunces-italic-variable.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
+@font-face { font-family: "IBM Plex Serif"; src: url("../fonts/ibm-plex-serif-400-normal.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Serif"; src: url("../fonts/ibm-plex-serif-500-normal.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Serif"; src: url("../fonts/ibm-plex-serif-600-normal.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "IBM Plex Serif"; src: url("../fonts/ibm-plex-serif-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 
 :root {
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --bg: #f7f3ec;
-  --surface: #efe9de;
-  --line: #ddd5c6;
-  --ink-2: #322f29;
-  --muted: #5d594f;
-  --night: #111216;
+  --serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --bg: #f4f5f6;
+  --surface: #e9ebee;
+  --line: #d9dce0;
+  --ink-2: #2b2d31;
+  --muted: #565a61;
+  --accent: #c23a1c;
+  --night: #101216;
   --night-2: #1b1d23;
   --night-ink: #f3efe6;
   --night-ink-2: #d6d1c5;
@@ -50,15 +41,15 @@ body { background: var(--bg); }
 .decision__title {
   font-family: var(--serif);
   font-weight: 500;
-  letter-spacing: -0.022em;
-  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
 }
 .hero__statement { font-size: clamp(2.25rem, 5.6vw, 4.25rem); line-height: 1.06; letter-spacing: -0.028em; }
 .case-opening .case-hero__title,
 .about-hero .case-hero__title { font-size: clamp(2.5rem, 5vw, 4.75rem); line-height: 1.04; letter-spacing: -0.03em; }
 .work__title { text-transform: none; font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -0.02em; }
 .h2, .h2--ed { line-height: 1.1; }
-em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spacing: -0.01em; }
+em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-bottom: 0.02em;
+  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 96%; background-size: 100% 0.07em; }
 .night em.it { color: #ff7a59; }
 
 /* ---- Case hero facts as chips ------------------------------------------ */
@@ -80,7 +71,7 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 }
 .case .shot::before {
   content: ""; position: absolute; inset: 0 0 auto 0; height: 30px;
-  background: linear-gradient(#f3eee5, #ece6db); border-bottom: 1px solid var(--line); z-index: 1;
+  background: linear-gradient(#f1f2f4, #e8eaed); border-bottom: 1px solid var(--line); z-index: 1;
 }
 .case .shot::after {
   content: ""; position: absolute; left: 13px; top: 10px; width: 10px; height: 10px; border-radius: 50%; z-index: 2;
@@ -93,8 +84,8 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 .night {
   --ink: var(--night-ink); --ink-2: var(--night-ink-2); --muted: var(--night-muted);
   --line: var(--night-line); --rule: var(--night-line); --accent: #ff7a59;
-  background: var(--night); color: var(--night-ink);
-  box-shadow: 0 0 0 100vmax var(--night); clip-path: inset(0 -100vmax);
+  background-color: #101216; color: var(--night-ink);
+  box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax);
 }
 .night .label, .night .sub-label { color: var(--night-muted); }
 .night .h2, .night .h2--ed, .night .decision__title, .night .card__title { color: var(--night-ink); }
@@ -113,7 +104,7 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 
 /* Dark contact block closes every page */
 .case-contact { --ink: var(--night-ink); --ink-2: var(--night-ink-2); --muted: var(--night-muted); --accent: #ff7a59;
-  background: var(--night); color: var(--night-ink); box-shadow: 0 0 0 100vmax var(--night); clip-path: inset(0 -100vmax); }
+  background-color: #101216; color: var(--night-ink); box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax); }
 .case-contact__title { color: var(--night-ink); }
 .case-contact__email { color: var(--night-ink-2); }
 .case-contact .btn--primary { background: #ff6a45; color: #111216; }
@@ -123,7 +114,7 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 .bigstats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 32px; }
 .bigstat { padding: 24px 0 0; border-top: 1px solid var(--night-line); }
 .bigstat__n { font-family: var(--serif); font-weight: 400; font-size: clamp(3rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.03em; color: var(--night-ink); font-variant-numeric: tabular-nums; }
-.bigstat__n em { font-style: italic; color: #ff7a59; }
+
 .bigstat__t { margin-top: 10px; font-size: 1rem; line-height: 1.4; color: var(--night-ink-2); }
 
 /* ---- Scroll progress ---------------------------------------------------- */
@@ -140,7 +131,7 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 /* ---- Scroll-through browser frame for long screens ---------------------- */
 .scrollframe { margin: 0; }
 .scrollframe__win { position: relative; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: var(--shadow-frame); overflow: hidden; }
-.scrollframe__bar { position: relative; z-index: 2; height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 13px; background: linear-gradient(#f3eee5, #ece6db); border-bottom: 1px solid var(--line); }
+.scrollframe__bar { position: relative; z-index: 2; height: 34px; display: flex; align-items: center; gap: 8px; padding: 0 13px; background: linear-gradient(#f1f2f4, #e8eaed); border-bottom: 1px solid var(--line); }
 .scrollframe__bar i { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
 .scrollframe__bar i:nth-child(2) { background: #febc2e; }
 .scrollframe__bar i:nth-child(3) { background: #28c840; }
@@ -186,7 +177,7 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 @media (prefers-reduced-motion: reduce) { .chips li, .bigstat { opacity: 1; transform: none; } }
 
 /* Portrait fade follows the paper colour */
-.hero-visual__fade { background: linear-gradient(180deg, rgba(247,243,236,0) 0%, rgba(247,243,236,0.8) 50%, #f7f3ec 62%, #f7f3ec 100%); }
+.hero-visual__fade { background: linear-gradient(180deg, rgba(244,245,246,0) 0%, rgba(244,245,246,0.8) 50%, #f4f5f6 62%, #f4f5f6 100%); }
 .hero__statement { font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.08; }
 .scrollframe { max-width: 1100px; margin-inline: auto; }
 .scrollframe figcaption { margin-top: 14px; }
@@ -196,14 +187,19 @@ em.it { font-style: italic; font-weight: 400; color: var(--accent); letter-spaci
 .bigstats { grid-template-columns: repeat(auto-fit, minmax(180px, 280px)); gap: 32px; }
 @media (hover: none) { .lens { display: none; } }
 
-/* Ticker: slow marquee of where I have worked */
-.ticker { overflow: hidden; padding: 22px 0; margin-block: clamp(24px, 4vw, 56px); background: var(--night); box-shadow: 0 0 0 100vmax var(--night); clip-path: inset(0 -100vmax); color: var(--night-ink); }
-.ticker__track { display: flex; width: max-content; }
-.ticker__track span { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.375rem, 2.6vw, 2.25rem); line-height: 1.1; white-space: nowrap; padding-right: clamp(32px, 4vw, 56px); }
-.ticker__track span::after { content: "✦"; margin-left: clamp(32px, 4vw, 56px); font-style: normal; font-size: 0.6em; color: #ff7a59; vertical-align: 0.15em; }
+/* Proof strip: where I have worked, with real dates (static) */
+.proofstrip { padding: clamp(36px, 5vw, 64px) 0; margin-block: clamp(24px, 4vw, 56px); background-color: #101216; box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax); color: var(--night-ink); }
+.proofstrip__label { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--night-muted); margin-bottom: 28px; }
+.proofstrip__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; border-top: 1px solid var(--night-line); }
+.proofstrip__item { padding: 22px 24px 8px 0; border-bottom: 1px solid var(--night-line); }
+.proofstrip__name { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.25rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--night-ink); transition: color 0.2s var(--ease); }
+.proofstrip__meta { margin-top: 10px; font-size: 1rem; line-height: 1.45; color: var(--night-ink-2); }
+.proofstrip__dates { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.4px; color: var(--night-muted); padding-bottom: 14px; }
+@media (hover: hover) { .proofstrip__item:hover .proofstrip__name { color: #ff7a59; } }
+@media (forced-colors: active), print { .proofstrip { box-shadow: none; clip-path: none; background: transparent; color: CanvasText; } }
+
+/* Accent word: the underline draws itself once */
 @media (prefers-reduced-motion: no-preference) {
-  .ticker__track { animation: ticker 36s linear infinite; }
-  .ticker:hover .ticker__track { animation-play-state: paused; }
-  @keyframes ticker { to { transform: translateX(-50%); } }
+  em.it { background-size: 0% 0.07em; animation: it-draw 0.9s var(--ease) 0.5s forwards; }
+  @keyframes it-draw { to { background-size: 100% 0.07em; } }
 }
-@media (prefers-reduced-motion: reduce) { .ticker__track { width: auto; flex-wrap: wrap; justify-content: center; row-gap: 8px; } .ticker__track span:nth-child(n+8) { display: none; } }

@@ -256,29 +256,32 @@
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-csv-old.webp" alt="Earlier saved form with a CSV field labeled “Only .zip files are allowed”, a greyed-out Date Field and an Advanced Rules area showing “No rules applied”" width="1270" height="810" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-csv-old.webp" alt="Earlier saved form with a CSV field labeled “Only .zip files are allowed”, a greyed-out Date Field and an Advanced Rules area showing “No rules applied”" width="1100" height="720" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Earlier form</p>
               <p class="cap__text">A file field labeled .zip only, a date column and an empty rules area.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-live-form.webp" alt="Dataset form in the product with CSV/XLSX upload, CSV format, date field, date format, time zone and aggregation controls" width="1100" height="1160" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-form-live.webp" alt="Dataset form in the product with CSV/XLSX upload, CSV format, date field, date format, time zone and aggregation controls" width="1100" height="720" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Form in the product</p>
-              <p class="cap__text">Drag and drop for CSV or XLSX, then format, date field, date format, time zone and aggregation by time interval.</p>
+              <p class="cap__text">Drag and drop for CSV or XLSX, then format, date field, date format, time zone and aggregation.</p>
             </figcaption>
           </figure>
         </div>
-        <div class="split">
-          <div class="ed__text" style="gap:24px">
+        <div class="pair pair--text">
+          <div class="pair__text" data-reveal>
             <h3 class="decision__title">Settings for every field.</h3>
             <p>I kept each field’s operation beside its name, with options to replace or discard values and controls labeled LL and HL. Source settings, field operations and rules sit within one configuration form. Keeping them together makes the configuration visible, but the form remains long; I would test where people need more guidance or progressive disclosure.</p>
             <p class="small">Field preferences can be saved and imported; synthetic tags and advanced rules have separate tables with Export and Import controls. <a class="textlink textlink--accent" href="assets/img/trainer-form-full.webp" target="_blank" rel="noopener">Open the complete redesigned form <span class="arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (image, opens in a new tab)</span></a></p>
           </div>
-          <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-live-features.webp" alt="Field table in the product with an operation per field and LL/HL limits, plus synthetic-tag and advanced-rule tables and extra-processing options" width="1100" height="1320" loading="lazy"></div>
-            <figcaption class="footnote">Field selection, synthetic tags, advanced rules and extra processing, in the product.</figcaption>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--auto"><img src="assets/img/trainer-live-features-wide.webp" alt="Field table in the product with a description, an operation and LL/HL limits per field, followed by the start of the Extra Features table" width="1100" height="800" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Field table in the product</p>
+              <p class="cap__text">An operation and limits beside each field, with synthetic tags below.</p>
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -288,29 +291,22 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-hot">Pick live data from a list or a query.</h2>
           <div class="ed__text">
-            <p>For live data, the form offers “Discovery Measurements”, a list of measurements to tick, or a “Manual Query”. The redesign turns that choice into a view toggle between query and table.</p>
+            <p>For live data, the form offers “Discovery Measurements”, a list of measurements to tick, or a “Manual Query”. The redesign turns that choice into a view toggle between a query editor and a table.</p>
           </div>
         </div>
-        <figure class="figure" data-reveal style="max-width:760px">
-          <div class="shot shot--auto"><img src="assets/img/trainer-live-hot.webp" alt="Hot data source in the product: Discovery Measurements and Manual Query options, and a Measurements List with checkboxes and descriptions" width="1160" height="1190" loading="lazy"></div>
-          <figcaption class="cap">
-            <p class="cap__title">In the product</p>
-            <p class="cap__text">Two options and a measurements list with search and checkboxes.</p>
-          </figcaption>
-        </figure>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-hot-query.webp" alt="Proposed hot data source with a query editor and run controls" width="1130" height="725" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-live-hot.webp" alt="Hot data source in the product: Discovery Measurements and Manual Query options, and a Measurements List with checkboxes and descriptions" width="1100" height="800" loading="lazy"></div>
             <figcaption class="cap">
-              <p class="cap__title">Redesign · query view</p>
-              <p class="cap__text">A Python editor with search, help and run controls.</p>
+              <p class="cap__title">In the product</p>
+              <p class="cap__text">Two options and a measurements list with search and checkboxes.</p>
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-hot-table.webp" alt="Proposed hot data source with a Measurements List table and checkboxes" width="1130" height="725" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-hot-table.webp" alt="Proposed hot data source with a view toggle and a Measurements List table with checkboxes" width="1100" height="800" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Redesign · table view</p>
-              <p class="cap__text">A measurements list with search and checkboxes.</p>
+              <p class="cap__text">A toggle switches between this table and a query editor.</p>
             </figcaption>
           </figure>
         </div>
@@ -328,30 +324,36 @@
             <p>A rule is more than a dropdown choice. The builder keeps its field, operation and value together, lists each condition and shows the resulting expression before saving, so the configuration can be inspected.</p>
           </div>
         </div>
-        <figure class="figure" data-reveal style="max-width:760px">
-          <div class="shot shot--auto"><img src="assets/img/trainer-add-rule.webp" alt="Proposed rule-builder design: Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression below" width="1110" height="768" loading="lazy"></div>
-          <figcaption class="cap">
-            <p class="cap__title">Rule builder</p>
-            <p class="cap__text">The design lists individual conditions and a combined expression before Save Rule. The example values are illustrative, not validated business logic.</p>
-          </figcaption>
-        </figure>
         <div class="pair">
           <figure class="figure" data-reveal>
+            <div class="shot shot--wide"><img src="assets/img/trainer-add-rule-full.webp" alt="Proposed rule-builder design: Add Rule dialog with Field, Operation and Value or Field controls, two rules joined by AND, and the resulting expression below" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Rule builder</p>
+              <p class="cap__text">Each condition is listed, and the combined expression shows before Save Rule. The example values are illustrative, not validated business logic.</p>
+            </figcaption>
+          </figure>
+          <figure class="figure" data-reveal style="--d:80ms">
             <div class="shot shot--wide"><img src="assets/img/trainer-version-error.webp" alt="Proposed version-conflict design: New Version form with the inline message “This version already exists.” under the version input" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Version conflict</p>
               <p class="cap__text">The version field says why the identifier cannot be reused.</p>
             </figcaption>
           </figure>
-          <figure class="figure" data-reveal style="--d:80ms">
+        </div>
+        <div class="pair pair--text">
+          <figure class="figure" data-reveal>
             <div class="shot shot--wide"><img src="assets/img/trainer-exit-dialog.webp" alt="Proposed exit confirmation warning that unsaved changes will be lost, with Cancel and Leave without saving" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Exit confirmation</p>
               <p class="cap__text">The dialog names the consequence and offers a way to stay.</p>
             </figcaption>
           </figure>
+          <div class="pair__text" data-reveal style="--d:80ms">
+            <h3 class="decision__title">What I would still test.</h3>
+            <p>The proposed exit dialog uses “Cancel” for staying in the form; I would test a clearer label such as “Keep editing”.</p>
+            <p class="small">The saved forms show a Preview action, but no preview-result screen is included in this case.</p>
+          </div>
         </div>
-        <p class="small">The proposed exit dialog uses “Cancel” for staying in the form; I would test a clearer label such as “Keep editing”. The saved forms show a Preview action, but no preview-result screen is included in this case.</p>
       </section>
 
       <hr class="rule">
@@ -408,7 +410,7 @@
         </div>
         <div class="pair">
           <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-version-status.webp" alt="Proposed dataset-health states: three dataset cards named MOTOR2: a healthy one, one with an amber count and the tooltip “1 version is invalid, but dataset is usable”, and one with a red count and the tooltip “All versions have issues”" width="520" height="400" loading="lazy"></div>
+            <div class="shot shot--wide"><img src="assets/img/trainer-version-status.webp" alt="Proposed dataset-health states: three dataset cards named MOTOR2: a healthy one, one with an amber count and the tooltip “1 version is invalid, but dataset is usable”, and one with a red count and the tooltip “All versions have issues”" width="1440" height="900" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Three health states</p>
               <p class="cap__text">The dataset card carries its state in an icon, the count colour and a tooltip.</p>
@@ -429,7 +431,7 @@
         <div class="split">
           <h2 class="h2 h2--ed" id="s-explore">Look before you train, think before you delete.</h2>
           <div class="ed__text">
-            <p>The proposed explorer keeps the selected dataset beside summary charts and analysis tabs. The proposed delete-version dialog warns that deletion cannot be undone and may affect models or processes using that version.</p>
+            <p>The explorer in the product opens a dataset’s data in a summary of charts. The proposal keeps the selected dataset beside the analysis tabs, so people can switch datasets without leaving the view.</p>
             <p class="small">The charts in these designs use sample data.</p>
           </div>
         </div>
@@ -442,17 +444,26 @@
             </figcaption>
           </figure>
           <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--wide"><img src="assets/img/trainer-explorer.webp" alt="Proposed Dataset Explorer for MOTOR2 in the overview data view, with the dataset list beside tabs for summary, trend, scatter plot, box plot, histogram, correlation, data quality and data drift" width="1440" height="900" loading="lazy"></div>
+            <div class="shot shot--auto"><img src="assets/img/trainer-explorer.webp" alt="Proposed Dataset Explorer for MOTOR2 in the overview data view, with the dataset list beside tabs for summary, trend, scatter plot, box plot, histogram, correlation, data quality and data drift" width="1440" height="660" loading="lazy"></div>
             <figcaption class="cap">
               <p class="cap__title">Redesign proposal</p>
               <p class="cap__text">The dataset list stays beside the analysis views. Charts use sample data.</p>
             </figcaption>
           </figure>
         </div>
-        <figure class="fig-full">
-          <img src="assets/img/trainer-warning-delete.webp" alt="Proposed Delete Version dialog: “This action cannot be undone and may affect models or processes using this version”, with Cancel and a red Delete Version button" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">Proposal: the delete-version dialog warns about irreversible deletion and possible effects on dependent models or processes.</figcaption>
-        </figure>
+        <div class="pair pair--text">
+          <div class="pair__text" data-reveal>
+            <h3 class="decision__title">Think before you delete.</h3>
+            <p>The proposed delete-version dialog warns that deletion cannot be undone and may affect models or processes using that version.</p>
+          </div>
+          <figure class="figure" data-reveal style="--d:80ms">
+            <div class="shot shot--wide"><img src="assets/img/trainer-warning-delete.webp" alt="Proposed Delete Version dialog: “This action cannot be undone and may affect models or processes using this version”, with Cancel and a red Delete Version button" width="1440" height="900" loading="lazy"></div>
+            <figcaption class="cap">
+              <p class="cap__title">Delete version</p>
+              <p class="cap__text">The dialog warns about irreversible deletion and possible effects on dependent models or processes.</p>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <hr class="rule">

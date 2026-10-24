@@ -68,6 +68,13 @@
   var prev = dlg.querySelector(".viewer__prev"), next = dlg.querySelector(".viewer__next");
   var stage = dlg.querySelector(".viewer__stage");
   var items = [], index = 0, last = null;
+  var root = document.documentElement;
+  function openViewer() {
+    var sbw = window.innerWidth - root.clientWidth;
+    root.style.setProperty("--sbw", sbw + "px");
+    root.classList.add("viewer-open");
+    dlg.showModal();
+  }
   function show(i) {
     index = (i + items.length) % items.length;
     var img = items[index].tagName === "IMG" ? items[index] : items[index].querySelector("img");
@@ -88,9 +95,9 @@
     shot.setAttribute("tabindex", "0");
     shot.setAttribute("aria-label", "View image: " + (pic.alt || ""));
     var idx = items.length - 1;
-    shot.addEventListener("click", function () { last = shot; show(idx); dlg.showModal(); });
+    shot.addEventListener("click", function () { last = shot; show(idx); openViewer(); });
     shot.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); last = shot; show(idx); dlg.showModal(); }
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); last = shot; show(idx); openViewer(); }
     });
   });
   if (!items.length) return;
@@ -112,7 +119,7 @@
     if (e.key === "ArrowLeft") { e.preventDefault(); show(index - 1); }
     if (e.key === "ArrowRight") { e.preventDefault(); show(index + 1); }
   });
-  dlg.addEventListener("close", function () { if (last) last.focus(); });
+  dlg.addEventListener("close", function () { root.classList.remove("viewer-open"); if (last) last.focus(); });
 })();
 window.__revealReady = true;
 document.addEventListener("keydown", function (e) {

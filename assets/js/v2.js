@@ -77,7 +77,7 @@
   if (fine) {
     document.querySelectorAll(".case .shot img").forEach(function (img) {
       var shot = img.closest(".shot");
-      if (!shot || shot.closest(".hero-fig, .hero-stage, .scrollframe")) return;
+      if (!shot || shot.closest(".hero-fig, .hero-stage, .scrollframe, .annotated")) return;
       var lens = document.createElement("span");
       lens.className = "lens"; lens.setAttribute("aria-hidden", "true");
       shot.appendChild(lens);
@@ -102,6 +102,17 @@
       shot.addEventListener("pointerleave", function () { lens.style.opacity = 0; });
     });
   }
+
+
+  /* Annotated screens: pin <-> note highlight */
+  document.querySelectorAll(".annotated").forEach(function (f) {
+    f.querySelectorAll(".pin").forEach(function (p, i) { p.style.setProperty("--n", i); });
+    function set(n, on) { f.querySelectorAll('[data-n="' + n + '"]').forEach(function (e) { e.classList.toggle("is-active", on); }); }
+    f.querySelectorAll("[data-n]").forEach(function (e) {
+      e.addEventListener("pointerenter", function () { set(e.getAttribute("data-n"), true); });
+      e.addEventListener("pointerleave", function () { set(e.getAttribute("data-n"), false); });
+    });
+  });
 
   /* Count-up for real figures, once, when visible */
   var counters = document.querySelectorAll("[data-count]");

@@ -231,9 +231,10 @@
           </div>
           <figcaption id="sorbot-fj-cap" class="diagram__cap">Intended sequence in the style of a FigJam board, not observed behavior. Verifying is an action expected of the user; the screens do not show how they check an answer.</figcaption>
         </figure>
-        <figure class="fig-full">
-          <img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy">
-          <figcaption class="fig-caption">Embedded chat shown in the Groups configuration flow. The form and conversation are visible together.</figcaption>
+        <figure class="annotated" data-reveal>
+          <div class="shot shot--auto"><div class="pins"><img src="assets/img/sorbot-embedded.webp" alt="Embedded chatbot panel open beside the Groups configuration form, with a short conversation and quick replies" width="1440" height="900" loading="lazy"><span class="pin" style="--x:46%;--y:26%" data-n="1" aria-hidden="true">1</span><span class="pin" style="--x:70.6%;--y:50%" data-n="2" aria-hidden="true">2</span><span class="pin" style="--x:93%;--y:14%" data-n="3" aria-hidden="true">3</span><span class="pin" style="--x:84.6%;--y:88%" data-n="4" aria-hidden="true">4</span></div></div>
+          <ol class="annotated__list" role="list" aria-label="Annotations for the screen"><li data-n="1"><p class="annotated__t">The form stays in view</p><p class="annotated__d">The Groups configuration form remains visible while the assistant is open.</p></li><li data-n="2"><p class="annotated__t">It costs space</p><p class="annotated__d">The panel covers part of the form: the Alias field and the Search box are partly hidden.</p></li><li data-n="3"><p class="annotated__t">A panel you can close</p><p class="annotated__d">The assistant opens inside the flow with a header and a close control, so it does not replace the task.</p></li><li data-n="4"><p class="annotated__t">Quick replies</p><p class="annotated__d">Suggested replies give people a starting point before they type their own question.</p></li></ol>
+          <figcaption class="footnote annotated__cap">Embedded chat in the Groups configuration flow, annotated. Hover a number to match it with its note.</figcaption>
         </figure>
         <div class="reflect">
           <h3 class="decision__title">The trade-off: conversation space or task context</h3>

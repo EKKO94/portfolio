@@ -122,6 +122,57 @@
     counters.forEach(function (c) { io.observe(c); });
   }
 
+
+  /* Rolling accent phrase: letters roll up and are replaced, on a slow loop.
+     Only one phrase exists in the DOM at a time; the reserved width comes from a CSS pseudo-element. */
+  document.querySelectorAll("[data-roll]").forEach(function (el) {
+    var phrases = el.getAttribute("data-roll").split("|");
+    if (phrases.length < 2) return;
+    var first = el.textContent;
+    el.textContent = "";
+    var sr = document.createElement("span");
+    sr.className = "visually-hidden"; sr.textContent = first;
+    var stack = document.createElement("span");
+    stack.className = "roll__stack"; stack.setAttribute("aria-hidden", "true");
+    // widest phrase decides the reserved width
+    var cv = document.createElement("canvas").getContext("2d"), cs = getComputedStyle(el);
+    cv.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+    var widest = phrases.reduce(function (a, p) { return cv.measureText(p).width > cv.measureText(a).width ? p : a; }, phrases[0]);
+    stack.setAttribute("data-sizer", widest);
+    function build(p, on) {
+      var s = document.createElement("span");
+      s.className = "roll__p" + (on ? " is-on" : "");
+      p.split("").forEach(function (ch, k) {
+        var l = document.createElement("span");
+        l.className = "roll__c"; l.style.setProperty("--k", k);
+        l.textContent = ch === " " ? "\u00a0" : ch;
+        s.appendChild(l);
+      });
+      return s;
+    }
+    var cur = 0, node = build(phrases[0], true);
+    stack.appendChild(node);
+    el.appendChild(sr); el.appendChild(stack);
+    if (reduce) return;
+    var timer = null, visible = true;
+    function next() {
+      if (!visible || document.hidden) return;
+      var out = node; cur = (cur + 1) % phrases.length;
+      node = build(phrases[cur], false); stack.appendChild(node);
+      void node.offsetWidth;
+      out.classList.remove("is-on"); out.classList.add("is-out");
+      node.classList.add("is-on");
+      setTimeout(function () { if (out.parentNode) out.parentNode.removeChild(out); }, 1100);
+    }
+    function start() { if (!timer) timer = setInterval(next, 3600); }
+    function stop() { clearInterval(timer); timer = null; }
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.2 }).observe(el);
+    }
+    el.addEventListener("pointerenter", stop); el.addEventListener("pointerleave", start);
+    setTimeout(start, 2600);
+  });
+
   /* Before / after slider */
   document.querySelectorAll(".compare").forEach(function (c) {
     var range = c.querySelector(".compare__range");

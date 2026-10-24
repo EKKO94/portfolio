@@ -209,3 +209,15 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-
 .case-hero .meta__item, .about-hero .meta__item { display: flex; flex-direction: column; gap: 6px; padding: 0; border: 0; border-radius: 0; background: transparent; }
 .case-hero .meta__label, .about-hero .meta__label { font-size: 0.75rem; color: var(--muted); }
 .case-hero .meta__value, .about-hero .meta__value { font-size: 1rem; line-height: 1.35; color: var(--ink); font-weight: 500; }
+
+/* Portrait: fade the photo itself (mask) instead of painting a colour block over it. */
+.hero-visual__fade { display: none; }
+.hero-visual__portrait {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 81%, rgba(0, 0, 0, 0.6) 90%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0%, #000 81%, rgba(0, 0, 0, 0.6) 90%, transparent 100%);
+}
+@media (forced-colors: active) { .hero-visual__portrait { -webkit-mask-image: none; mask-image: none; } }
+@media (max-width: 600px) {
+  .hero-visual { margin-bottom: 64px; }
+  .hero-visual__tag { bottom: -64px; }
+}

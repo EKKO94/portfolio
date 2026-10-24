@@ -1218,3 +1218,14 @@ h1, h2, h3 { text-wrap: balance; }
 /* Image viewer: the page behind does not scroll while it is open. */
 html.viewer-open { overflow: hidden; padding-right: var(--sbw, 0); }
 .viewer, .viewer__stage { overscroll-behavior: contain; }
+
+/* Tonal bands: full-bleed fields that group exhibit sections (screens, diagrams) and set them off from reading sections.
+   The tint comes from the case colour at low strength; text stays on the quiet neutral/ink scale. */
+:root { --band-bg: #ececec; --band-bg: color-mix(in srgb, var(--surface) 70%, var(--bg)); }
+.case { --band-bg: #e6ece9; --band-bg: color-mix(in srgb, var(--case-bg, var(--surface)) 42%, var(--bg)); }
+.band { --accent: #b23318; box-shadow: 0 0 0 100vmax var(--band-bg); clip-path: inset(0 -100vmax); background: var(--band-bg); }
+hr.rule:has(+ .band), .band + hr.rule { display: none; }
+@media (forced-colors: active) { .band { box-shadow: none; clip-path: none; background: transparent; } }
+@media print { .band { box-shadow: none; clip-path: none; background: transparent; } }
+
+.about-page .case { --band-bg: #f5ede8; --band-bg: color-mix(in srgb, var(--case-bg) 30%, var(--bg)); }

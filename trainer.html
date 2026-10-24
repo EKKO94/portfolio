@@ -159,10 +159,11 @@
         <figure class="compare" data-reveal aria-label="Overview in the product versus the redesign proposal">
           <img class="compare__img" src="assets/img/trainer-overview-old.webp" alt="Overview in the product: Quick Navigation, three summary cards, repeated activity rows, empty Favorites and one dataset-status pie chart" width="2400" height="1805" loading="lazy">
           <div class="compare__after"><img src="assets/img/trainer-overview-new.webp" alt="Proposed overview with dataset, project and prediction summaries, three status charts, a model-type chart, templates, favorites and activity" width="2400" height="1805" loading="lazy"></div>
-          <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the overview in the product with the redesign proposal">
+          <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Compare the overview in the product with the redesign proposal" aria-valuetext="50% in the product; 50% redesign proposal" disabled>
           <span class="compare__handle" aria-hidden="true"></span>
           <span class="compare__tag compare__tag--l">In the product</span><span class="compare__tag compare__tag--r">Redesign proposal</span>
         </figure>
+        <p class="footnote"><a class="textlink" href="assets/img/trainer-overview-old.webp">Open the full overview in the product</a> · <a class="textlink" href="assets/img/trainer-overview-new.webp">Open the full redesign proposal</a></p>
         <div class="pair">
           <div class="pair__text"><p class="cap__title">In the product</p><p class="cap__text">A quick-navigation list beside the side rail, two cards titled “Datasets”, a Predictions card with a “New Dataset” button and repeated activity rows.</p></div>
           <div class="pair__text"><p class="cap__title">Redesign proposal</p><p class="cap__text">Object-specific actions above status charts, templates, favorites and activity. Chart counts and percentages are inconsistent placeholders in the saved design, not product metrics.</p></div>
@@ -269,13 +270,13 @@
         <figure class="scrollframe" data-reveal>
           <div class="scrollframe__win">
             <div class="scrollframe__bar" aria-hidden="true"><i></i><i></i><i></i><span>New dataset · the complete form</span></div>
-            <div class="scrollframe__vp">
+            <div class="scrollframe__vp" tabindex="0" role="region" aria-label="Complete dataset form">
               <img src="assets/img/trainer-live-form-full.webp" alt="The complete dataset form in the product, from general information through source settings, aggregation, field selection, synthetic tags and advanced rules" width="1100" height="2732" loading="lazy">
               <div class="scrollframe__meter" aria-hidden="true"><i></i></div>
               <span class="scrollframe__hint" aria-hidden="true">Scroll to walk the form</span>
             </div>
           </div>
-          <figcaption class="footnote">The complete form in the product. It moves as you scroll the page; click it to open it larger.</figcaption>
+          <figcaption class="footnote">The complete dataset form in the Sorba demo. Scroll to inspect it, or <a class="textlink" href="assets/img/trainer-live-form-full.webp">open the full-size form</a>.</figcaption>
         </figure>
         <div class="pair pair--text">
           <div class="pair__text" data-reveal>

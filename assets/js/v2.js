@@ -26,10 +26,16 @@
     var vp = f.querySelector(".scrollframe__vp"), img = vp && vp.querySelector("img");
     if (!vp || !img) return;
     var meter = f.querySelector(".scrollframe__meter i");
+    if (!reduce) f.classList.add("scrollframe--animated");
+    // Keyboard readers keep control of the native scroll position.
+    vp.addEventListener("focusin", function () {
+      f.classList.remove("scrollframe--animated");
+      img.style.transform = "";
+    });
     frames.push({ f: f, vp: vp, img: img, meter: meter });
   });
   function updateFrame(o) {
-    if (reduce) return;
+    if (!o.f.classList.contains("scrollframe--animated") || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     var r = o.vp.getBoundingClientRect(), vh = window.innerHeight;
     var travel = o.img.offsetHeight - o.vp.clientHeight;
     if (travel <= 0) return;
@@ -81,8 +87,10 @@
       var lens = document.createElement("span");
       lens.className = "lens"; lens.setAttribute("aria-hidden", "true");
       shot.appendChild(lens);
-      var Z = 2.4, S = 168;
+      var Z = 2.4, S = 168, off = false;
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") { off = true; lens.style.opacity = 0; } });
       shot.addEventListener("pointermove", function (e) {
+        if (off) return;
         var r = img.getBoundingClientRect(), sr = shot.getBoundingClientRect();
         var nw = img.naturalWidth || r.width;
         if (nw < 900 || document.querySelector(".viewer[open]")) { lens.style.opacity = 0; return; }
@@ -99,7 +107,7 @@
         lens.style.backgroundSize = (dw * Z) + "px " + (dh * Z) + "px";
         lens.style.backgroundPosition = (-(x * Z - S / 2)) + "px " + (-(y * Z - S / 2)) + "px";
       });
-      shot.addEventListener("pointerleave", function () { lens.style.opacity = 0; });
+      shot.addEventListener("pointerleave", function () { lens.style.opacity = 0; off = false; });
     });
   }
 
@@ -175,12 +183,32 @@
       node.classList.add("is-on");
       setTimeout(function () { if (out.parentNode) out.parentNode.removeChild(out); }, 1100);
     }
-    function start() { if (!timer) timer = setInterval(next, 3600); }
+    var paused = false;
+    function start() { if (!timer && !paused) timer = setInterval(next, 3600); }
     function stop() { clearInterval(timer); timer = null; }
+    // WCAG 2.2.2: a visible control to pause the rotating words.
+    var cta = document.querySelector(".hero__cta");
+    if (cta) {
+      var pb = document.createElement("button");
+      pb.type = "button"; pb.className = "roll__pause";
+      pb.setAttribute("aria-pressed", "false"); pb.setAttribute("aria-label", "Pause rotating words");
+      pb.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+      pb.addEventListener("click", function () {
+        paused = !paused;
+        pb.setAttribute("aria-pressed", paused ? "true" : "false");
+        pb.setAttribute("aria-label", paused ? "Resume rotating words" : "Pause rotating words");
+        pb.innerHTML = paused
+          ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>'
+          : '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+        if (paused) stop(); else start();
+      });
+      cta.appendChild(pb);
+    }
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }, { threshold: 0.2 }).observe(el);
     }
     el.addEventListener("pointerenter", stop); el.addEventListener("pointerleave", start);
+    el.addEventListener("focusin", stop); el.addEventListener("focusout", start);
     setTimeout(start, 2600);
   });
 
@@ -188,7 +216,11 @@
   document.querySelectorAll(".compare").forEach(function (c) {
     var range = c.querySelector(".compare__range");
     if (!range) return;
-    function set() { c.style.setProperty("--pos", range.value + "%"); }
+    function set() {
+      c.style.setProperty("--pos", range.value + "%");
+      range.setAttribute("aria-valuetext", range.value + "% in the product; " + (100 - Number(range.value)) + "% redesign proposal");
+    }
     range.addEventListener("input", set); set();
+    range.disabled = false;
   });
 })();

@@ -48,8 +48,7 @@ body { background: var(--bg); }
 .about-hero .case-hero__title { font-size: clamp(2.5rem, 5vw, 4.75rem); line-height: 1.04; letter-spacing: -0.03em; }
 .work__title { text-transform: none; font-size: clamp(2rem, 3.4vw, 3rem); letter-spacing: -0.02em; }
 .h2, .h2--ed { line-height: 1.1; }
-em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-bottom: 0.02em;
-  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 96%; background-size: 100% 0.07em; }
+em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .night em.it { color: #ff7a59; }
 
 /* ---- Product screens live in a browser frame ---------------------------- */
@@ -189,11 +188,6 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-
 @media (hover: hover) { .proofstrip__item:hover .proofstrip__name { color: #ff7a59; } }
 @media (forced-colors: active), print { .proofstrip { box-shadow: none; clip-path: none; background: transparent; color: CanvasText; } }
 
-/* Accent word: the underline draws itself once */
-@media (prefers-reduced-motion: no-preference) {
-  em.it { background-size: 0% 0.07em; animation: it-draw 0.9s var(--ease) 0.5s forwards; }
-  @keyframes it-draw { to { background-size: 100% 0.07em; } }
-}
 
 /* Framed screens take the image's own proportions: no white letterbox inside the window. */
 .case .shot--wide, .case .shot--decision, .case .shot--inline { aspect-ratio: auto; }
@@ -223,11 +217,10 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-
 }
 
 /* ---- Rolling accent phrase (hero) --------------------------------------- */
-.roll { background-image: none !important; animation: none !important; }
+.roll { animation: none !important; }
 .roll__stack { position: relative; display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.14em; margin-bottom: -0.14em; max-width: 100%; }
 .roll__stack::before { content: attr(data-sizer); display: block; visibility: hidden; white-space: nowrap; }
-.roll__p { position: absolute; left: 0; top: 0; white-space: nowrap; color: var(--accent);
-  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 93%; background-size: 100% 0.07em; }
+.roll__p { position: absolute; left: 0; top: 0; white-space: nowrap; color: var(--accent); }
 .roll__c { display: inline-block; transform: translateY(115%); transition: transform 0.6s var(--ease); transition-delay: calc(var(--k, 0) * 26ms); }
 .roll__p.is-on .roll__c { transform: none; }
 .roll__p.is-out .roll__c { transform: translateY(-115%); }

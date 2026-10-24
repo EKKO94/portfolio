@@ -52,15 +52,6 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-
   background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 96%; background-size: 100% 0.07em; }
 .night em.it { color: #ff7a59; }
 
-/* ---- Case hero facts as chips ------------------------------------------ */
-.case-hero .meta, .about-hero .meta { display: flex; flex-wrap: wrap; gap: 8px; }
-.case-hero .meta__item, .about-hero .meta__item {
-  display: inline-flex; align-items: baseline; gap: 8px;
-  padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, 0.55);
-}
-.case-hero .meta__label, .about-hero .meta__label { font-size: 0.75rem; }
-.case-hero .meta__value, .about-hero .meta__value { font-size: 0.9375rem; }
-
 /* ---- Product screens live in a browser frame ---------------------------- */
 .case .shot {
   padding-top: 30px;
@@ -203,3 +194,18 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); padding-
   em.it { background-size: 0% 0.07em; animation: it-draw 0.9s var(--ease) 0.5s forwards; }
   @keyframes it-draw { to { background-size: 100% 0.07em; } }
 }
+
+/* Framed screens take the image's own proportions: no white letterbox inside the window. */
+.case .shot--wide, .case .shot--decision, .case .shot--inline { aspect-ratio: auto; }
+.case .shot--wide img, .case .shot--decision img, .case .shot--inline img { width: 100%; height: auto; display: block; }
+.case .shot--ref img { object-fit: cover; }
+.iter__shots { align-items: stretch; }
+.iter__shot { display: flex; flex-direction: column; }
+.iter__shot .shot--natural { flex: 1; aspect-ratio: auto; }
+.case .shot--natural img { max-width: 78%; max-height: 78%; }
+
+/* ---- Case hero facts: quiet columns instead of pills --------------------- */
+.case-hero .meta, .about-hero .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px 28px; margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--ink); }
+.case-hero .meta__item, .about-hero .meta__item { display: flex; flex-direction: column; gap: 6px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.case-hero .meta__label, .about-hero .meta__label { font-size: 0.75rem; color: var(--muted); }
+.case-hero .meta__value, .about-hero .meta__value { font-size: 1rem; line-height: 1.35; color: var(--ink); font-weight: 500; }

@@ -270,3 +270,13 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
   .annotated.is-visible .pin.is-active { transform: translate(-50%, -50%) scale(1.28); transition-delay: 0s; }
 }
 @media (max-width: 860px) { .annotated { grid-template-columns: minmax(0, 1fr); } .annotated__list { grid-column: 1; grid-row: auto; } }
+
+/* ---- About: experience in serif, recommendations at night ---------------- */
+.tl__org { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.2vw, 1.875rem); letter-spacing: -0.015em; }
+.how h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; }
+.night .said__item { background: var(--night-2); border-color: var(--night-line); }
+.night .said__item blockquote p { font-family: var(--serif); font-weight: 400; font-size: clamp(1.1875rem, 1.7vw, 1.4375rem); line-height: 1.5; color: var(--night-ink); }
+.night .said__item figcaption { color: var(--night-ink-2); }
+.night .said__item figcaption strong { color: var(--night-ink); }
+.night .said__item figcaption span { color: var(--night-muted); }
+.night .said__item figcaption img { box-shadow: 0 0 0 2px var(--night-line); }

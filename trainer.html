@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Trainer case study: designing the dataset module | Adrian Carballo</title>
   <meta name="description" content="Adrian Carballo’s AI Trainer case study: new dataset forms live in the Sorba demo, proposed management views, and the limits of internal feedback.">
-  <meta name="theme-color" content="#f8f8f8">
+  <meta name="theme-color" content="#f7f3ec">
   <link rel="canonical" href="https://ekko94.github.io/portfolio/trainer.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -21,6 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/v2.css">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.remove("js");},2500);</script>
 <script type="application/ld+json">
   {
@@ -79,7 +80,7 @@
       <div class="case-opening">
         <section class="case-hero" aria-labelledby="case-title">
           <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; AI Trainer</p>
-          <h1 class="case-hero__title" id="case-title">Preparing data<br>for machine learning.</h1>
+          <h1 class="case-hero__title" id="case-title">Preparing data<br>for <em class="it">machine learning</em>.</h1>
           <p class="case-hero__sub">I designed the dataset forms and flows of Sorba’s AI Trainer, which are in the Sorba demo, and proposed a redesign with a new visual style and new layouts.</p>
           <dl class="meta">
             <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Sole Product Designer</dd></div>
@@ -90,7 +91,7 @@
         </section>
 
         <figure class="case-hero-image hero-fig">
-          <div class="hero-stage">
+          <div class="hero-stage tilt">
             <div class="browser hero-stage__back" aria-hidden="true">
               <div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__title">AI Trainer · versions</span></div>
               <img src="assets/img/trainer-hero-back.webp" alt="" width="1440" height="900" loading="lazy">
@@ -155,21 +156,16 @@
             <p>The overview in the product duplicates navigation and labels the Projects card “Datasets”; its Predictions card also uses dataset actions. My proposal removes the extra navigation column, gives each object its own labels and actions, and places status summaries below.</p>
           </div>
         </div>
+        <figure class="compare" data-reveal aria-label="Overview in the product versus the redesign proposal">
+          <img class="compare__img" src="assets/img/trainer-overview-old.webp" alt="Overview in the product: Quick Navigation, three summary cards, repeated activity rows, empty Favorites and one dataset-status pie chart" width="2400" height="1805" loading="lazy">
+          <div class="compare__after"><img src="assets/img/trainer-overview-new.webp" alt="Proposed overview with dataset, project and prediction summaries, three status charts, a model-type chart, templates, favorites and activity" width="2400" height="1805" loading="lazy"></div>
+          <input class="compare__range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the overview in the product with the redesign proposal">
+          <span class="compare__handle" aria-hidden="true"></span>
+          <span class="compare__tag compare__tag--l">In the product</span><span class="compare__tag compare__tag--r">Redesign proposal</span>
+        </figure>
         <div class="pair">
-          <figure class="figure" data-reveal>
-            <div class="shot shot--auto"><img src="assets/img/trainer-overview-old.webp" alt="Overview in the product: Quick Navigation, three summary cards, repeated activity rows, empty Favorites and one dataset-status pie chart" width="2400" height="1805" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">In the product</p>
-              <p class="cap__text">A quick-navigation list beside the side rail, two cards titled “Datasets”, a Predictions card with a “New Dataset” button and repeated activity rows.</p>
-            </figcaption>
-          </figure>
-          <figure class="figure" data-reveal style="--d:80ms">
-            <div class="shot shot--auto"><img src="assets/img/trainer-overview-new.webp" alt="Proposed overview with dataset, project and prediction summaries, three status charts, a model-type chart, templates, favorites and activity" width="2400" height="1805" loading="lazy"></div>
-            <figcaption class="cap">
-              <p class="cap__title">Redesign proposal</p>
-              <p class="cap__text">Object-specific actions above status charts, templates, favorites and activity. Chart counts and percentages are inconsistent placeholders in the saved design, not product metrics.</p>
-            </figcaption>
-          </figure>
+          <div class="pair__text"><p class="cap__title">In the product</p><p class="cap__text">A quick-navigation list beside the side rail, two cards titled “Datasets”, a Predictions card with a “New Dataset” button and repeated activity rows.</p></div>
+          <div class="pair__text"><p class="cap__title">Redesign proposal</p><p class="cap__text">Object-specific actions above status charts, templates, favorites and activity. Chart counts and percentages are inconsistent placeholders in the saved design, not product metrics.</p></div>
         </div>
         <div class="reflect">
           <h3 class="decision__title">Three decisions in the proposal</h3>
@@ -270,6 +266,17 @@
             </figcaption>
           </figure>
         </div>
+        <figure class="scrollframe" data-reveal>
+          <div class="scrollframe__win">
+            <div class="scrollframe__bar" aria-hidden="true"><i></i><i></i><i></i><span>New dataset · the complete form</span></div>
+            <div class="scrollframe__vp">
+              <img src="assets/img/trainer-live-form-full.webp" alt="The complete dataset form in the product, from general information through source settings, aggregation, field selection, synthetic tags and advanced rules" width="1100" height="2732" loading="lazy">
+              <div class="scrollframe__meter" aria-hidden="true"><i></i></div>
+              <span class="scrollframe__hint" aria-hidden="true">Scroll to walk the form</span>
+            </div>
+          </div>
+          <figcaption class="footnote">The complete form in the product. It moves as you scroll the page; click it to open it larger.</figcaption>
+        </figure>
         <div class="pair pair--text">
           <div class="pair__text" data-reveal>
             <h3 class="decision__title">Settings for every field.</h3>
@@ -474,7 +481,7 @@
       <hr class="rule">
 
       <!-- 07 Outcome -->
-      <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
+      <section class="ed night" data-nav="Outcome" aria-labelledby="s-outcome">
         <p class="label">Design outcome &amp; reflection</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-outcome">Dataset forms in the demo. Module redesign proposed.</h2>
@@ -483,7 +490,11 @@
             <p>The designs show how I structure a technical product and make its decisions visible: new forms, rules, versions, status and recovery states. They do not establish fewer errors, faster completion, higher adoption or successful usability with end users, and I do not have usage data.</p>
           </div>
         </div>
-        <div class="reflect">
+                <div class="bigstats" data-reveal>
+            <div class="bigstat" style="--i:0"><p class="bigstat__n">≈<span data-count="4">4</span></p><p class="bigstat__t">months, as the only product designer</p></div>
+            <div class="bigstat" style="--i:1"><p class="bigstat__n"><span data-count="2">2</span></p><p class="bigstat__t">layers: in the product, and a redesign proposal</p></div>
+          </div>
+          <div class="reflect">
           <h3 class="decision__title">What I would test next</h3>
           <ol class="case-validation" role="list">
             <li><h4>Choose and configure a source</h4><p>Can someone pick the right source and set the date and time options without help?</p></li>
@@ -530,5 +541,6 @@
   </div>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/v2.js" defer></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sorbot case study: AI inside the workflow | Adrian Carballo</title>
   <meta name="description" content="Case study: designing Sorbot to guide users through IoT Unified configuration, in a dedicated assistant and alongside their work.">
-  <meta name="theme-color" content="#f8f8f8">
+  <meta name="theme-color" content="#f7f3ec">
   <link rel="canonical" href="https://ekko94.github.io/portfolio/sorbot.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -21,6 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/v2.css">
   <script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__revealReady)document.documentElement.classList.remove("js");},2500);</script>
 <script type="application/ld+json">
   {
@@ -104,7 +105,7 @@
       <div class="case-opening">
         <section class="case-hero" aria-labelledby="case-title">
           <p class="kicker">Case study &nbsp;·&nbsp; Sorba.ai &nbsp;·&nbsp; Sorbot</p>
-          <h1 class="case-hero__title" id="case-title">AI guidance,<br>inside the workflow.</h1>
+          <h1 class="case-hero__title" id="case-title">AI guidance,<br>inside the <em class="it">workflow</em>.</h1>
           <p class="case-hero__sub">I designed two ways to ask for help in IoT Unified: a dedicated assistant for broader questions and a panel beside node configuration.</p>
           <dl class="meta">
             <div class="meta__item"><dt class="meta__label">Role</dt><dd class="meta__value">Product Designer</dd></div>
@@ -115,7 +116,7 @@
         </section>
 
         <figure class="case-hero-image hero-fig">
-          <div class="hero-stage">
+          <div class="hero-stage tilt">
             <div class="browser hero-stage__back" aria-hidden="true">
               <div class="browser__bar"><span class="browser__dots"><i></i><i></i><i></i></span><span class="browser__title">Sorbot · sources</span></div>
               <img src="assets/img/sorbot-chat-sources.webp" alt="" width="1440" height="900" loading="lazy">
@@ -393,7 +394,7 @@
       </section>
 
       <!-- 06 Outcome -->
-      <section class="ed" data-nav="Outcome" aria-labelledby="s-outcome">
+      <section class="ed night" data-nav="Outcome" aria-labelledby="s-outcome">
         <p class="label">Design outcome &amp; next steps</p>
         <div class="split">
           <h2 class="h2 h2--ed" id="s-outcome">Two ways to ask.<br>Next: validate with users.</h2>
@@ -403,7 +404,11 @@
             <p>Configuration success, completion time and support needs are the outcomes to evaluate next with end users.</p>
           </div>
         </div>
-        <div class="reflect">
+                <div class="bigstats" data-reveal>
+            <div class="bigstat" style="--i:0"><p class="bigstat__n"><span data-count="2">2</span></p><p class="bigstat__t">assistant surfaces designed</p></div>
+            <div class="bigstat" style="--i:1"><p class="bigstat__n">≈<span data-count="2">2</span></p><p class="bigstat__t">months of work</p></div>
+          </div>
+          <div class="reflect">
           <h3 class="decision__title">What I would test next</h3>
           <p class="lead">Proposed tasks. I would use representative configuration questions and check the answers independently.</p>
           <ol class="case-validation" role="list">
@@ -454,5 +459,6 @@
   </div>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/v2.js" defer></script>
 </body>
 </html>

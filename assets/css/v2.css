@@ -296,3 +296,8 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 /* Viewer: a zoomed image is reachable from its left edge */
 .viewer.is-zoomed .viewer__stage { display: block; }
 .viewer.is-zoomed .viewer__stage img { display: block; margin: 0 auto; }
+
+/* Home grid: one featured case, then the other three side by side */
+.work__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 56px 28px; }
+.work__grid .project--feature { grid-column: 1 / -1; }
+@media (max-width: 1000px) { .work__grid { grid-template-columns: minmax(0, 1fr); } }

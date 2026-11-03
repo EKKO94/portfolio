@@ -86,7 +86,7 @@
     zoomBtn.textContent = "Zoom in";
     stage.removeAttribute("tabindex");
   }
-  document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img, .browser__body img, .scrollframe__vp img").forEach(function (shot) {
+  document.querySelectorAll(".shot, .fig-full img, .model img, .fig-white img, .browser__body img, .scrollframe__vp img, .sketchphoto img").forEach(function (shot) {
     if (shot.closest(".hero-fig, .hero-stage")) return;
     var pic = shot.tagName === "IMG" ? shot : shot.querySelector("img");
     items.push(shot);

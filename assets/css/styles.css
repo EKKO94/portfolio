@@ -1191,7 +1191,7 @@ h1, h2, h3 { text-wrap: balance; }
 .viewer[open] { display: block; }
 .viewer::backdrop { background: transparent; }
 .viewer__stage { position: absolute; inset: 0; display: grid; place-items: center; padding: 72px 24px 96px; overflow: hidden; }
-.viewer__stage img { max-width: min(86vw, 1100px); max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 8px; background: var(--white); cursor: zoom-in; }
+.viewer__stage img { max-width: min(86vw, 1100px); max-height: calc(100dvh - 176px); width: auto; height: auto; object-fit: contain; border-radius: 8px; background: var(--white); cursor: zoom-in; }
 .viewer.is-zoomed .viewer__stage { overflow: auto; place-items: start center; }
 .viewer.is-zoomed .viewer__stage img { max-width: none; max-height: none; cursor: zoom-out; }
 .viewer__btn { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.1); color: var(--white); cursor: pointer; transition: background 0.2s var(--ease); }
@@ -1202,9 +1202,44 @@ h1, h2, h3 { text-wrap: balance; }
 .viewer__bar { position: fixed; left: 0; right: 0; bottom: 24px; z-index: 2; display: flex; justify-content: center; align-items: center; gap: 12px; }
 .viewer__zoom { min-height: 40px; padding: 0 20px; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.9); font: inherit; font-size: 0.875rem; cursor: pointer; }
 .viewer__zoom:hover { background: rgba(255, 255, 255, 0.22); }
-@media (max-width: 700px) { .viewer__stage { padding: 64px 12px 88px; } .viewer__stage img { max-width: 100%; } }
+@media (max-width: 700px) { .viewer__stage { padding: 64px 12px 88px; } .viewer__stage img { max-width: 100%; max-height: calc(100dvh - 160px); } }
 @media (prefers-reduced-motion: no-preference) { .viewer[open] .viewer__stage img { animation: hero-fade 0.25s var(--ease) both; } }
 @media (forced-colors: active) { .viewer__btn, .viewer__zoom { border: 1px solid ButtonText; } }
 
 /* Vision: smaller sketch row */
 .sketches__grid { max-width: 720px; gap: 12px; }
+
+/* Case pages: tall screenshots keep their natural height */
+.case .shot--auto { aspect-ratio: auto; }
+.case .shot--auto img { width: 100%; height: auto; object-fit: contain; }
+
+.viewer__stage:focus-visible { outline: 2px solid var(--white); outline-offset: -6px; }
+
+/* Image viewer: the page behind does not scroll while it is open. */
+html.viewer-open { overflow: hidden; padding-right: var(--sbw, 0); }
+.viewer, .viewer__stage { overscroll-behavior: contain; }
+
+/* Tonal bands: full-bleed fields that group exhibit sections (screens, diagrams) and set them off from reading sections.
+   The tint comes from the case colour at low strength; text stays on the quiet neutral/ink scale. */
+:root { --band-bg: #ececec; --band-bg: color-mix(in srgb, var(--surface) 70%, var(--bg)); }
+.case { --band-bg: #e6ece9; --band-bg: color-mix(in srgb, var(--case-bg, var(--surface)) 42%, var(--bg)); }
+.band { --accent: #b23318; box-shadow: 0 0 0 100vmax var(--band-bg); clip-path: inset(0 -100vmax); background: var(--band-bg); }
+hr.rule:has(+ .band), .band + hr.rule { display: none; }
+@media (forced-colors: active) { .band { box-shadow: none; clip-path: none; background: transparent; } }
+@media print { .band { box-shadow: none; clip-path: none; background: transparent; } }
+
+.about-page .case { --band-bg: #f5ede8; --band-bg: color-mix(in srgb, var(--case-bg) 30%, var(--bg)); }
+
+/* Inside a tonal band, containers sit on white; the case tint is not stacked on itself. */
+.band .card, .band .iter, .band .card--change, .band .card--loop, .band .quote, .band .model, .band .placeholder { background: var(--white); }
+.band .card, .band .iter, .band .card--change, .band .card--loop { border: 1px solid var(--line); }
+.band .fj-board, .band .fj-board--after { background-color: var(--white); }
+/* Pair rows: equal columns; a text cell pairs with an image (Z reading order), centred on the image. */
+.pair--text { align-items: center; }
+.pair__text { display: flex; flex-direction: column; gap: 16px; padding-inline: clamp(0px, 2vw, 24px); min-width: 0; }
+.pair__text p { font-size: var(--fs-body, 1.0625rem); line-height: 1.55; color: var(--ink-2); }
+.pair__text .small { font-size: 1rem; color: var(--muted); }
+@media (max-width: 860px) { .pair--text { align-items: start; } .pair__text { padding-inline: 0; } }
+
+.pair + .pair { margin-top: 28px; }
+.band .note, .band .said__item { background: var(--white); }

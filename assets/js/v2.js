@@ -87,19 +87,22 @@
       var lens = document.createElement("span");
       lens.className = "lens"; lens.setAttribute("aria-hidden", "true");
       shot.appendChild(lens);
-      var Z = 2.4, S = 168, off = false;
+      var S = 168, off = false;
       document.addEventListener("keydown", function (e) { if (e.key === "Escape") { off = true; lens.style.opacity = 0; } });
       shot.addEventListener("pointermove", function (e) {
         if (off) return;
         var r = img.getBoundingClientRect(), sr = shot.getBoundingClientRect();
-        var nw = img.naturalWidth || r.width;
-        if (nw < 900 || document.querySelector(".viewer[open]")) { lens.style.opacity = 0; return; }
-        // object-fit: contain -> compute the drawn image box
-        var ar = img.naturalWidth / img.naturalHeight, dw = r.width, dh = r.height;
-        if (dw / dh > ar) dw = dh * ar; else dh = dw / ar;
+        if (!img.naturalWidth || document.querySelector(".viewer[open]")) { lens.style.opacity = 0; return; }
+        // Drawn image box, for both object-fit: contain and cover.
+        var nw = img.naturalWidth, nh = img.naturalHeight;
+        var cover = getComputedStyle(img).objectFit === "cover";
+        var sc = cover ? Math.max(r.width / nw, r.height / nh) : Math.min(r.width / nw, r.height / nh);
+        var dw = nw * sc, dh = nh * sc;
         var ox = r.left + (r.width - dw) / 2, oy = r.top + (r.height - dh) / 2;
         var x = e.clientX - ox, y = e.clientY - oy;
-        if (x < 0 || y < 0 || x > dw || y > dh) { lens.style.opacity = 0; return; }
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) { lens.style.opacity = 0; return; }
+        // Low-resolution sources get a gentler zoom so they stay legible.
+        var Z = nw >= 1100 ? 2.4 : (nw >= 700 ? 2 : 1.7);
         lens.style.opacity = 1;
         lens.style.left = (e.clientX - sr.left - S / 2) + "px";
         lens.style.top = (e.clientY - sr.top - S / 2) + "px";

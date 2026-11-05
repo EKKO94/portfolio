@@ -232,6 +232,50 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .roll__p.is-out .roll__c { transform: translateY(-115%); }
 @media (prefers-reduced-motion: reduce) { .roll__c { transition: none; } }
 
+/* ---- Annotated screens: numbered pins + matching notes ------------------- */
+.annotated { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); align-items: start; margin: 0; }
+.annotated .shot { grid-column: 1; grid-row: 1; }
+.annotated__list { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 6px; }
+.annotated__cap { grid-column: 1 / -1; margin-top: -4px; }
+.pins { position: relative; line-height: 0; }
+.pins img { display: block; width: 100%; height: auto; }
+.pin { position: absolute; left: var(--x); top: var(--y); z-index: 3; transform: translate(-50%, -50%); width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent); color: #fff; font-family: var(--mono); font-weight: 600; font-size: 0.8125rem; line-height: 1;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.92), 0 8px 16px rgba(20, 18, 12, 0.35); transition: transform 0.2s var(--ease); }
+.pin.is-active { transform: translate(-50%, -50%) scale(1.28); }
+.annotated__list li { display: grid; grid-template-columns: 28px 1fr; column-gap: 14px; padding: 14px 16px; border-radius: 12px; border: 1px solid transparent; counter-increment: ann; transition: background 0.2s var(--ease), border-color 0.2s var(--ease); }
+.annotated__list { counter-reset: ann; }
+.annotated__list li::before { content: counter(ann); grid-row: 1 / span 2; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: #fff; font-family: var(--mono); font-weight: 600; font-size: 0.8125rem; }
+.annotated__list li.is-active { background: var(--white); border-color: var(--line); }
+.annotated__t { font-weight: 600; font-size: 1.0625rem; line-height: 1.3; color: var(--ink); }
+.annotated__d { margin-top: 4px; font-size: 1rem; line-height: 1.5; color: var(--ink-2); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .annotated .pin { opacity: 0; transform: translate(-50%, -50%) scale(0.4); transition: opacity 0.4s var(--ease), transform 0.4s var(--ease); transition-delay: calc(var(--n, 1) * 120ms + 300ms); }
+  .annotated.is-visible .pin { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  .annotated.is-visible .pin.is-active { transform: translate(-50%, -50%) scale(1.28); transition-delay: 0s; }
+}
+@media (max-width: 860px) { .annotated { grid-template-columns: minmax(0, 1fr); } .annotated__list { grid-column: 1; grid-row: auto; } }
+
+/* ---- About: experience in serif, recommendations at night ---------------- */
+.tl__org { font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem, 2.2vw, 1.875rem); letter-spacing: -0.015em; }
+.how h3 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.01em; }
+.night .said__item { background: var(--night-2); border-color: var(--night-line); }
+.night .said__item blockquote p { font-family: var(--serif); font-weight: 400; font-size: clamp(1.1875rem, 1.7vw, 1.4375rem); line-height: 1.5; color: var(--night-ink); }
+.night .said__item figcaption { color: var(--night-ink-2); }
+.night .said__item figcaption strong { color: var(--night-ink); }
+.night .said__item figcaption span { color: var(--night-muted); }
+.night .said__item figcaption img { box-shadow: 0 0 0 2px var(--night-line); }
+
+/* Pause control for the rotating words */
+.roll__pause { display: inline-grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink-2); cursor: pointer; transition: background 0.2s var(--ease), color 0.2s var(--ease); }
+.roll__pause:hover { background: var(--ink); color: var(--bg); }
+.hero__cta { align-items: center; }
+@media (forced-colors: active) { .roll__pause { border-color: ButtonText; } }
+
+/* Viewer: a zoomed image is reachable from its left edge */
+.viewer.is-zoomed .viewer__stage { display: block; }
+.viewer.is-zoomed .viewer__stage img { display: block; margin: 0 auto; }
+
 /* ---- Home: four equal cards; Vision leads by order and a small label ---- */
 .work__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 32px; }
 .project__kicker { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent); }

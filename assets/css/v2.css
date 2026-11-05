@@ -282,18 +282,13 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .project__flag { display: inline-block; margin-right: 8px; padding: 2px 8px; border-radius: 999px; background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; vertical-align: 1px; }
 @media (max-width: 620px) { .work__grid { grid-template-columns: minmax(0, 1fr); } }
 
-/* ---- Sketch photos: paper sheets on the desk ------------------------------ */
-.sketchphotos { margin: 0; display: flex; flex-direction: column; gap: 18px; }
-.sketchphotos__row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 3vw, 40px); padding: clamp(24px, 4vw, 48px) clamp(16px, 3vw, 40px); border-radius: 18px; background: #e7e4dd; }
-.sketchphoto { position: relative; display: block; padding: 10px 10px 14px; background: #fbf9f4; border-radius: 3px; transform: rotate(var(--r, 0deg));
-  box-shadow: 0 1px 1px rgba(30, 26, 18, 0.18), 0 10px 22px -8px rgba(30, 26, 18, 0.38), 0 26px 44px -26px rgba(30, 26, 18, 0.35); cursor: zoom-in; }
-.sketchphoto::before { content: ""; position: absolute; z-index: 2; top: -11px; left: 50%; width: 76px; height: 22px; transform: translateX(-50%) rotate(calc(var(--r, 0deg) * -2)); background: rgba(231, 214, 170, 0.78); box-shadow: 0 1px 2px rgba(30, 26, 18, 0.18); }
-.sketchphoto img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; filter: contrast(0.97) saturate(0.94); }
-.sketchphoto:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-@media (prefers-reduced-motion: no-preference) {
-  .sketchphoto { transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
-  @media (hover: hover) { .sketchphoto:hover { transform: rotate(0deg) translateY(-4px); } }
-}
-@media (max-width: 860px) { .sketchphotos__row { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; width: 100%; } }
-@media (forced-colors: active) { .sketchphoto { border: 1px solid CanvasText; } .sketchphoto::before { display: none; } }
-#s-sketches ~ .sketchphotos, [aria-labelledby="s-sketches"] .sketchphotos { margin-top: 32px; }
+
+/* ---- Home: how I work now ---- */
+.howwork { padding-block: clamp(56px, 8vw, 104px); }
+.howwork__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 40px; list-style: none; padding: 0; counter-reset: none; }
+.howwork__list li { display: flex; flex-direction: column; gap: 8px; padding-top: 20px; border-top: 1px solid var(--rule); }
+.howwork__n { font-family: var(--mono); font-size: .8125rem; color: var(--accent); }
+.howwork__list h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; line-height: 1.25; letter-spacing: -0.01em; }
+.howwork__list p { font-size: 1rem; line-height: 1.55; color: var(--ink-2); }
+@media (max-width: 900px) { .howwork__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .howwork__list { grid-template-columns: 1fr; gap: 20px; } }

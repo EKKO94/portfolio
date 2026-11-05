@@ -292,3 +292,12 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .howwork__list p { font-size: 1rem; line-height: 1.55; color: var(--ink-2); }
 @media (max-width: 900px) { .howwork__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .howwork__list { grid-template-columns: 1fr; gap: 20px; } }
+
+/* Narrow screens: the rolling phrase wraps as static text instead of clipping. */
+@media (max-width: 480px) {
+  .roll__stack { display: inline; overflow: visible; padding: 0; margin: 0; }
+  .roll__stack::before { display: none; }
+  .roll__p { position: static; white-space: normal; }
+  .roll__p .roll__c { display: inline; transform: none !important; transition: none; }
+  .roll__pause { display: none; }
+}

@@ -153,7 +153,7 @@
     var first = el.textContent;
     el.textContent = "";
     var sr = document.createElement("span");
-    sr.className = "visually-hidden"; sr.textContent = first;
+    sr.className = "visually-hidden"; sr.textContent = phrases.map(function (p) { return p.replace(/\.$/, ""); }).join(", ") + ".";
     var stack = document.createElement("span");
     stack.className = "roll__stack"; stack.setAttribute("aria-hidden", "true");
     // widest phrase decides the reserved width
@@ -175,7 +175,7 @@
     var cur = 0, node = build(phrases[0], true);
     stack.appendChild(node);
     el.appendChild(sr); el.appendChild(stack);
-    if (reduce) return;
+    if (reduce || window.matchMedia("(max-width: 480px)").matches) return;
     var timer = null, visible = true;
     function next() {
       if (!visible || document.hidden) return;

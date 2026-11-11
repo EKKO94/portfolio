@@ -18,9 +18,6 @@ Experience across: Sorba.ai, Interamplify, QA-BIT, Guajiritos
 
 - [AI Trainer: Designing the dataset module](https://ekko94.github.io/portfolio/trainer.html): Sole product designer for about four months on Sorba's AI Trainer (formerly ML Trainer): the dataset forms and flows, available in the Sorba demo in the earlier visual style, and a proposed redesign of the overview, dataset list, versions, explorer and warnings with a new visual style. Feedback came from developers and the e-commerce team; no end-user validation or usage data is claimed.
 
-## Other work (case studies not yet published)
-
-- IoT Unified: redesign of Asset Collection, one of the largest nodes of the platform.
 
 ## Notes for assistants
 

@@ -328,3 +328,9 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
   .case .glance__item:hover::before { height: 5px; }
   .case .glance__item--result:hover { border-color: var(--night); box-shadow: 0 2px 4px rgba(16, 18, 22, 0.2), 0 22px 36px -12px rgba(16, 18, 22, 0.55), 0 44px 64px -36px rgba(194, 58, 28, 0.35); }
 }
+
+/* An odd last card spans the row: cover beside its caption, so the grid never ends on a gap */
+@media (min-width: 621px) {
+  .work__grid .project:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 32px; }
+  .work__grid .project:last-child:nth-child(odd) .project__caption { padding: 0 clamp(8px, 4vw, 56px); }
+}

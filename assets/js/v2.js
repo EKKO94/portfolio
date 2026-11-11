@@ -4,6 +4,33 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fine = window.matchMedia("(pointer: fine)").matches;
 
+  /* Hero headline: words enter one by one (home only, motion allowed). Text stays one heading for readers. */
+  (function () {
+    var h = document.querySelector("h1.hero__statement");
+    if (!h || reduce) return;
+    var n = 0;
+    function wrap(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(function (t) {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(t)); return; }
+            var s = document.createElement("span");
+            s.className = "hw"; s.style.setProperty("--w", n++); s.textContent = t;
+            frag.appendChild(s);
+          });
+          node.replaceChild(frag, c);
+        } else if (c.nodeType === 1) {
+          if (c.hasAttribute("data-roll")) { /* has its own letter roll-in */ }
+          else wrap(c);
+        }
+      });
+    }
+    wrap(h);
+    h.classList.add("is-words");
+  })();
+
   /* Scroll progress */
   var bar = document.createElement("div");
   bar.className = "v2-progress"; bar.setAttribute("aria-hidden", "true");

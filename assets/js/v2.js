@@ -184,10 +184,16 @@
     var stack = document.createElement("span");
     stack.className = "roll__stack"; stack.setAttribute("aria-hidden", "true");
     // widest phrase decides the reserved width
-    var cv = document.createElement("canvas").getContext("2d"), cs = getComputedStyle(el);
-    cv.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
-    var widest = phrases.reduce(function (a, p) { return cv.measureText(p).width > cv.measureText(a).width ? p : a; }, phrases[0]);
-    stack.setAttribute("data-sizer", widest);
+    // Measured again once the web fonts are loaded, so the reserved width matches what is drawn.
+    function size() {
+      var cv = document.createElement("canvas").getContext("2d"), cs = getComputedStyle(el);
+      cv.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+      var widest = phrases.reduce(function (a, p) { return cv.measureText(p).width > cv.measureText(a).width ? p : a; }, phrases[0]);
+      stack.setAttribute("data-sizer", widest);
+    }
+    size();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(size);
+    window.addEventListener("resize", size);
     function build(p, on) {
       var s = document.createElement("span");
       s.className = "roll__p" + (on ? " is-on" : "");

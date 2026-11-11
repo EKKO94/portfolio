@@ -341,3 +341,5 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
   .hero__statement .hw { display: inline-block; opacity: 0; transform: translateY(0.45em); animation: hw-in 0.7s var(--ease) forwards; animation-delay: calc(var(--w, 0) * 45ms + 80ms); }
   @keyframes hw-in { to { opacity: 1; transform: none; } }
 }
+
+.roll__stack { padding-right: 0.08em; }

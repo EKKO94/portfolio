@@ -205,9 +205,16 @@
       });
       return s;
     }
-    var cur = 0, node = build(phrases[0], true);
+    // On the home hero the first phrase enters after the other words, with the same letter roll as later phrases.
+    var narrow = window.matchMedia("(max-width: 480px)").matches;
+    var enter = !reduce && !narrow && !!el.closest(".is-words");
+    var cur = 0, node = build(phrases[0], !enter);
     stack.appendChild(node);
     el.appendChild(sr); el.appendChild(stack);
+    if (enter) {
+      var words = document.querySelectorAll(".hero__statement .hw").length;
+      setTimeout(function () { node.classList.add("is-on"); }, words * 45 + 260);
+    }
     if (reduce || window.matchMedia("(max-width: 480px)").matches) return;
     var timer = null, visible = true;
     function next() {

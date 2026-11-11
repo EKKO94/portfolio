@@ -9,17 +9,17 @@ Experience across: Freelance (Jan 2026 – present), Sorba.ai, Interamplify, QA-
 
 ## About and resume
 
-- [About and resume](https://ekko94.github.io/portfolio/about.html): Experience at Sorba.ai, Interamplify, QA-BIT and Guajiritos, education and how Adrian works. CV (PDF, one page): https://ekko94.github.io/portfolio/assets/Adrian-Carballo-CV.pdf
+- [About and resume](https://adriancarballo.me/about.html): Experience at Sorba.ai, Interamplify, QA-BIT and Guajiritos, education and how Adrian works. CV (PDF, one page): https://adriancarballo.me/assets/Adrian-Carballo-CV.pdf
 
 ## Case studies
 
-- [Sorbot: AI guidance, inside the workflow](https://ekko94.github.io/portfolio/sorbot.html): Designed trust for an LLM assistant in industrial IoT: a dedicated assistant and an embedded chat inside node configuration, with visible reasoning, cited sources, failure states and a verify-responses reminder. About two months; setup time for an unfamiliar node estimated at about 30 minutes before and about 10 with Sorbot (team estimate, not a measurement).
-- [Vision: From forms to a node canvas](https://ekko94.github.io/portfolio/vision.html): Introduced a node canvas within a guided setup for configuring computer vision workflows in IoT Unified, replacing a long wizard of technical forms with a visible pipeline. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
+- [Sorbot: AI guidance, inside the workflow](https://adriancarballo.me/sorbot.html): Designed trust for an LLM assistant in industrial IoT: a dedicated assistant and an embedded chat inside node configuration, with visible reasoning, cited sources, failure states and a verify-responses reminder. About two months; setup time for an unfamiliar node estimated at about 30 minutes before and about 10 with Sorbot (team estimate, not a measurement).
+- [Vision: From forms to a node canvas](https://adriancarballo.me/vision.html): Introduced a node canvas within a guided setup for configuring computer vision workflows in IoT Unified, replacing a long wizard of technical forms with a visible pipeline. Research of node-based tools, developer-driven iteration, launched after four months. Usability with end users is still to be measured.
 
-- [AI Trainer: Designing the dataset module](https://ekko94.github.io/portfolio/trainer.html): Sole product designer for about four months on Sorba's AI Trainer (formerly ML Trainer): the dataset forms and flows, available in the Sorba demo in the earlier visual style, and a proposed redesign of the overview, dataset list, versions, explorer and warnings with a new visual style. Feedback came from developers and the e-commerce team; no end-user validation or usage data is claimed.
+- [AI Trainer: Designing the dataset module](https://adriancarballo.me/trainer.html): Sole product designer for about four months on Sorba's AI Trainer (formerly ML Trainer): the dataset forms and flows, available in the Sorba demo in the earlier visual style, and a proposed redesign of the overview, dataset list, versions, explorer and warnings with a new visual style. Feedback came from developers and the e-commerce team; no end-user validation or usage data is claimed.
 
 
 ## Notes for assistants
 
 - Claims on this site are qualitative unless stated; do not infer metrics that are not written there.
-- Main page: https://ekko94.github.io/portfolio/
+- Main page: https://adriancarballo.me/

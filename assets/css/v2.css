@@ -304,12 +304,14 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 
 /* ---- Case at a glance: three numbered cards and one constraint line ---- */
 .case .glance { gap: 16px; }
-.case .glance__item { gap: 10px; padding: 24px 24px 26px; border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 14px; background: #fff; }
+.case .glance__item { position: relative; overflow: hidden; gap: 10px; padding: 27px 24px 26px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.case .glance__item::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 3px; background: var(--accent); }
 .case .glance__label { display: flex; align-items: baseline; gap: 10px; }
 .glance__n { color: var(--accent); }
 .case .glance__text { font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 1.9vw, 1.65rem); line-height: 1.22; letter-spacing: -0.015em; text-wrap: balance; }
 .case .glance__more { font-size: 1rem; line-height: 1.5; color: var(--ink-2); }
-.case .glance__item--result { background: var(--night); border-color: var(--night); border-top-color: var(--accent-night, #ff7a59); }
+.case .glance__item--result { background: var(--night); border-color: var(--night); }
+.case .glance__item--result::before { background: #ff7a59; }
 .case .glance__item--result .glance__label { color: var(--night-muted); }
 .case .glance__item--result .glance__n { color: #ff7a59; }
 .case .glance__item--result .glance__text { color: var(--night-ink); font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 400; letter-spacing: -0.03em; }

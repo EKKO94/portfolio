@@ -319,3 +319,12 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .glance__constraint { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin: 4px 0 0; padding: 14px 4px 0; border-top: 1px solid var(--line); font-size: 0.9375rem; line-height: 1.5; color: var(--ink-2); }
 .glance__constraint span { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted); }
 @media (max-width: 860px) { .case .glance__item { padding: 20px; } }
+
+/* Glance cards: lift and soft shadow on hover (fine pointers, motion allowed) */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .case .glance__item { transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease); }
+  .case .glance__item::before { transition: height 0.35s var(--ease); }
+  .case .glance__item:hover { transform: translateY(-6px); box-shadow: 0 2px 4px rgba(16, 18, 22, 0.06), 0 18px 32px -12px rgba(16, 18, 22, 0.28), 0 40px 60px -36px rgba(16, 18, 22, 0.3); border-color: #c9cbd0; }
+  .case .glance__item:hover::before { height: 5px; }
+  .case .glance__item--result:hover { border-color: var(--night); box-shadow: 0 2px 4px rgba(16, 18, 22, 0.2), 0 22px 36px -12px rgba(16, 18, 22, 0.55), 0 44px 64px -36px rgba(194, 58, 28, 0.35); }
+}

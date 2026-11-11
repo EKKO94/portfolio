@@ -365,3 +365,15 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 }
 .case .glance__item { padding: 32px 30px 34px; gap: 14px; }
 .glance__constraint { margin-top: 12px; padding-top: 20px; }
+
+/* Home cards: names, tags, descriptions and the case link sit on the same lines across a row */
+.work__grid .project { display: flex; flex-direction: column; }
+.work__grid .project__caption { flex: 1; display: flex; flex-direction: column; }
+.work__grid .project__tag { display: flex; align-items: center; gap: 10px; min-height: 28px; }
+.work__grid .project__desc { min-height: calc(2 * 1.5em); }
+.work__grid .project__cta { margin-top: auto; align-self: flex-start; }
+@media (min-width: 621px) {
+  .work__grid .project:last-child:nth-child(odd) { display: grid; }
+  .work__grid .project:last-child:nth-child(odd) .project__desc { min-height: 0; }
+}
+@media (max-width: 620px) { .work__grid .project__desc { min-height: 0; } }

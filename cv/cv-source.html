@@ -5,27 +5,28 @@
   <meta name="robots" content="noindex">
   <title>Adrian Carballo — AI Product Designer — CV</title>
   <style>
-    @font-face { font-family: "IBM Plex Sans"; src: url("../assets/fonts/ibm-plex-sans-variable.woff2") format("woff2"); font-weight: 100 700; }
+    @font-face { font-family: "IBM Plex Serif"; src: url("../assets/fonts/ibm-plex-serif-600-normal.woff2") format("woff2"); font-weight: 600 700; }
     @font-face { font-family: "IBM Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-500.woff2") format("woff2"); font-weight: 500; }
     @page { size: Letter; margin: 0.4in 0.6in; }
     :root { --ink: #040403; --ink-2: #363636; --muted: #5a5a5a; --accent: #cb3d1d; --rule: #d6d6d6; }
     * { box-sizing: border-box; }
     html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    body { margin: 0; font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 8.4pt; line-height: 1.32; color: var(--ink); }
+    body { margin: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 8.8pt; line-height: 1.32; color: var(--ink); }
     a { color: inherit; text-decoration: none; }
     h1, h2, h3, p, ul { margin: 0; padding: 0; }
     ul { list-style: none; }
     header { display: flex; flex-direction: column; gap: 6pt; padding-bottom: 10pt; border-bottom: 2px solid var(--ink); }
-    h1 { font-size: 26pt; line-height: 1; font-weight: 700; letter-spacing: -0.03em; }
+    h1 { font-family: "IBM Plex Serif", Georgia, serif; font-size: 27pt; line-height: 1; font-weight: 600; letter-spacing: 0; }
     .title { font-size: 11.5pt; font-weight: 500; color: var(--accent); }
     .contact { display: flex; flex-wrap: wrap; gap: 2pt 14pt; font-family: "IBM Plex Mono", monospace; font-size: 8pt; color: var(--ink-2); padding-top: 4pt; }
     section { padding-top: 7pt; break-inside: auto; }
     h2 { font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: 8pt; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-bottom: 6pt; }
     .summary { font-size: 9.2pt; line-height: 1.4; max-width: 100ch; }
-    .job { display: grid; grid-template-columns: 1.28in minmax(0, 1fr); gap: 0 10pt; padding: 4.5pt 0; border-top: 1px solid var(--rule); break-inside: avoid; }
+    .job { display: block; padding: 5pt 0; border-top: 1px solid var(--rule); break-inside: avoid; }
     .job:first-of-type { border-top: 0; padding-top: 2pt; }
-    .date { font-family: "IBM Plex Mono", monospace; font-size: 7.6pt; white-space: nowrap; line-height: 1.6; color: var(--ink-2); padding-top: 2pt; }
-    h3 { font-size: 11pt; font-weight: 700; letter-spacing: -0.01em; }
+    .jobhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12pt; }
+    .date { font-family: "IBM Plex Mono", monospace; font-size: 8.4pt; white-space: nowrap; color: var(--ink-2); }
+    h3 { font-size: 11pt; font-weight: 700; letter-spacing: 0; }
     .role { font-size: 8.8pt; font-weight: 500; color: var(--accent); padding-bottom: 2pt; }
     .job li { position: relative; padding-left: 10pt; margin-top: 2pt; color: var(--ink-2); }
     .job li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 3.5pt; height: 3.5pt; border-radius: 50%; background: var(--accent); }
@@ -58,62 +59,48 @@
   <section>
     <h2>Experience</h2>
     <div class="job">
-      <p class="date">Aug 2019 – Present</p>
-      <div>
-        <h3>Freelance</h3>
-        <p class="role">Product Designer · Web design and development</p>
-        <ul>
+      <div class="jobhead"><h3>Freelance</h3><p class="date">Aug 2019 – Present</p></div>
+      <p class="role">Product Designer · Web design and development</p>
+      <ul>
           <li>Design and build websites for small businesses to get found online, including Google Business profiles and search visibility.</li>
           <li>Current workflow: design in Figma, then build and review with Claude Code and Codex, with accessibility checks on every pass.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
     <div class="job">
-      <p class="date">May 2023 – Jan 2026</p>
-      <div>
-        <h3>Sorba.ai</h3>
-        <p class="role">Product Designer · UX Designer · Full-time</p>
-        <ul>
+      <div class="jobhead"><h3>Sorba.ai</h3><p class="date">May 2023 – Jan 2026</p></div>
+      <p class="role">Product Designer · UX Designer · Full-time</p>
+      <ul>
           <li>Designed and evolved AI and machine learning platforms, focusing on complex workflows, system thinking and usability.</li>
-          <li>Partnered with product, engineering and stakeholders to turn complex requirements into scalable, clear solutions.</li>
+          <li>Designed Sorbot, an LLM assistant for industrial IoT: a dedicated workspace and an embedded panel with visible reasoning, cited sources and connection-loss states.</li>
+          <li>Designed Vision’s node canvas inside a four-step guided setup, replacing a five-sub-step camera wizard.</li>
           <li>Ran UX research and UI/UX design for the redesign of Sorba University: new course views, improved interactions and courses organized into chapters.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
     <div class="job">
-      <p class="date">Dec 2022 – Apr 2023</p>
-      <div>
-        <h3>QA-BIT</h3>
-        <p class="role">UX Designer · Temporary</p>
-        <ul>
+      <div class="jobhead"><h3>QA-BIT</h3><p class="date">Dec 2022 – Apr 2023</p></div>
+      <p class="role">UX Designer · Temporary</p>
+      <ul>
           <li>Contributed to the ideation, definition and design of user-centered digital products, from concept to final UI.</li>
           <li>Collaborated with cross-functional teams to align user needs, business goals and technical constraints.</li>
           <li>Created accessible experiences for freelancers and small business owners, applying usability and accessibility best practices, and iterated on feedback from stakeholders.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
     <div class="job">
-      <p class="date">Jun 2022 – Jan 2023</p>
-      <div>
-        <h3>Guajiritos</h3>
-        <p class="role">UX Designer · Graphic Designer · Full-time</p>
-        <ul>
+      <div class="jobhead"><h3>Guajiritos</h3><p class="date">Jun 2022 – Jan 2023</p></div>
+      <p class="role">UX Designer · Graphic Designer · Full-time</p>
+      <ul>
           <li>Designed social media content, vouchers and visual assets for marketing and retail use.</li>
           <li>Worked on store design concepts and promotional materials, combining UX principles with strong visual communication.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
     <div class="job">
-      <p class="date">Jan 2021 – May 2024</p>
-      <div>
-        <h3>Interamplify</h3>
-        <p class="role">UX Designer · Full-time</p>
-        <ul>
+      <div class="jobhead"><h3>Interamplify</h3><p class="date">Jan 2021 – May 2024</p></div>
+      <p class="role">UX Designer · Full-time</p>
+      <ul>
           <li>Led the UX/UI design of a self-service SEO system, so users could configure SEO settings by goal and manage content, keywords and optimizations without relying on support.</li>
           <li>Worked with stakeholders on requirements, feature prioritization and iterating on user feedback.</li>
           <li>Designed a task management system to organize, prioritize and track SEO tasks, plus SEO dashboards and data visualizations to support decisions.</li>
-        </ul>
-      </div>
+      </ul>
     </div>
   </section>
 
@@ -127,8 +114,8 @@
       <p>Spanish<br>English</p>
     </div>
     <div>
-      <h2>Strengths</h2>
-      <p class="strengths">Systems thinking, trade-off analysis and prototyping in code. Works closely with developers.</p>
+      <h2>Skills and tools</h2>
+      <p class="strengths">Figma, interaction design, design systems, data visualization, prototyping, HTML, CSS, JavaScript, Claude Code, Codex.</p>
     </div>
   </section>
 </body>

@@ -75,8 +75,9 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
   --ink: var(--night-ink); --ink-2: var(--night-ink-2); --muted: var(--night-muted);
   --line: var(--night-line); --rule: var(--night-line); --accent: #ff7a59;
   background-color: #101216; color: var(--night-ink);
-  box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax);
+  position: relative; isolation: isolate;
 }
+.night::before, .case-contact::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: #101216; pointer-events: none; }
 .night .label, .night .sub-label { color: var(--night-muted); }
 .night .h2, .night .h2--ed, .night .decision__title, .night .card__title { color: var(--night-ink); }
 .night .lead, .night .ed__text p, .night p { color: var(--night-ink-2); }
@@ -90,11 +91,11 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 .night .case-options dt, .night .case-options dd { color: var(--night-ink-2); }
 .night .case-options dt { color: var(--night-ink); }
 .night .reflect { border-color: var(--night-line); }
-@media (forced-colors: active), print { .night { box-shadow: none; clip-path: none; background: transparent; color: CanvasText; } }
+@media (forced-colors: active), print { .night, .case-contact { background: transparent; color: CanvasText; } .night::before, .case-contact::before { display: none; } }
 
 /* Dark contact block closes every page */
 .case-contact { --ink: var(--night-ink); --ink-2: var(--night-ink-2); --muted: var(--night-muted); --accent: #ff7a59;
-  background-color: #101216; color: var(--night-ink); box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax); }
+  background-color: #101216; color: var(--night-ink); position: relative; isolation: isolate; }
 .case-contact__title { color: var(--night-ink); }
 .case-contact__email { color: var(--night-ink-2); }
 .case-contact .btn--primary { background: #ff6a45; color: #111216; }
@@ -184,7 +185,8 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
 @media (hover: none) { .lens { display: none; } }
 
 /* Proof strip: where I have worked, with real dates (static) */
-.proofstrip { padding: clamp(36px, 5vw, 64px) 0; margin-block: clamp(24px, 4vw, 56px); background-color: #101216; box-shadow: 0 0 0 100vmax #101216; clip-path: inset(0 -100vmax); color: var(--night-ink); }
+.proofstrip { padding: clamp(36px, 5vw, 64px) 0; margin-block: clamp(24px, 4vw, 56px); background-color: #101216; position: relative; isolation: isolate; color: var(--night-ink); }
+.proofstrip::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: #101216; pointer-events: none; }
 .proofstrip__label { font-family: var(--mono); font-size: 0.875rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--night-muted); margin-bottom: 28px; }
 .proofstrip__list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; border-top: 1px solid var(--night-line); }
 .proofstrip__item { padding: 22px 24px 8px 0; border-bottom: 1px solid var(--night-line); }
@@ -384,3 +386,11 @@ em.it { font-style: normal; font-weight: inherit; color: var(--accent); }
   .footer__links { gap: 22px; flex-wrap: nowrap; font-size: 0.8125rem; }
   .footer__links a { white-space: nowrap; }
 }
+
+/* Two dark blocks never touch: a strip of paper keeps the closing contact block apart from the one above it */
+.night + .case-contact { margin-top: clamp(56px, 7vw, 112px); }
+
+/* Full-bleed bands are painted by pseudo-elements, so the page never scrolls sideways and no hairline shows at their edges */
+html, body { overflow-x: clip; }
+.band { box-shadow: none; clip-path: none; position: relative; isolation: isolate; }
+.band::before { content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 50%; width: 100vw; transform: translateX(-50%); background: var(--band-bg); pointer-events: none; }
